@@ -44,9 +44,10 @@ module Discordrb::Commands
     # @option attributes [Symbol, Array<Symbol>, false] :help_command The name of the command that displays info for
     #   other commands. Use an array if you want to have aliases. Default is "help". If none should be created, use
     #   `false` as the value.
-    # @option attributes [String] :command_doesnt_exist_message The message that should be displayed if a user attempts
+    # @option attributes [String, #call] :command_doesnt_exist_message The message that should be displayed if a user attempts
     #   to use a command that does not exist. If none is specified, no message will be displayed. In the message, you
-    #   can use the string '%command%' that will be replaced with the name of the command.
+    #   can use the string '%command%' that will be replaced with the name of the command. Anything responding to call
+    #   such as a proc will be called with the event, and is expected to return a String or nil.
     # @option attributes [String] :no_permission_message The message to be displayed when `NoPermission` error is raised.
     # @option attributes [true, false] :spaces_allowed Whether spaces are allowed to occur between the prefix and the
     #   command. Default is false.
@@ -69,7 +70,9 @@ module Discordrb::Commands
     # @option attributes [String] :quote_end Character that should end a quoted string (see
     #   :advanced_functionality). Default is '"' or the same as :quote_start. Set to an empty string to disable.
     # @option attributes [true, false] :ignore_bots Whether the bot should ignore bot accounts or not. Default is false.
-    def initialize(attributes = {})
+    def initialize(**attributes)
+      # TODO: This needs to be revisited. undefined attributes are treated
+      # as explicitly passed nils.
       super(
         log_mode: attributes[:log_mode],
         token: attributes[:token],
@@ -84,7 +87,7 @@ module Discordrb::Commands
         redact_token: attributes.key?(:redact_token) ? attributes[:redact_token] : true,
         ignore_bots: attributes[:ignore_bots],
         compress_mode: attributes[:compress_mode],
-        intents: attributes[:intents]
+        intents: attributes[:intents] || :all
       )
 
       @prefix = attributes[:prefix]
@@ -217,7 +220,11 @@ module Discordrb::Commands
                     (command && !command.attributes[:channels].nil?)
 
       unless command
-        event.respond @attributes[:command_doesnt_exist_message].gsub('%command%', name.to_s) if @attributes[:command_doesnt_exist_message]
+        if @attributes[:command_doesnt_exist_message]
+          message = @attributes[:command_doesnt_exist_message]
+          message = message.call(event) if message.respond_to?(:call)
+          event.respond message.gsub('%command%', name.to_s) if message
+        end
         return
       end
       return unless !check_permissions || channels?(event.channel, command.attributes[:channels])
