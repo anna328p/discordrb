@@ -158,7 +158,7 @@ module Discordrb
       @channel.send_message(content)
     end
 
-    # Sends a message to this channel.
+    # Responds to this message as an inline reply.
     # @param content [String] The content to send. Should not be longer than 2000 characters or it will result in an error.
     # @param tts [true, false] Whether or not this message should be sent using Discord text-to-speech.
     # @param embed [Hash, Discordrb::Webhooks::Embed, nil] The rich embed to append to this message.
@@ -220,6 +220,19 @@ module Discordrb
     # @see Bot#add_await!
     def await!(attributes = {}, &block)
       @bot.add_await!(Discordrb::Events::MessageEvent, { from: @author.id, in: @channel.id }.merge(attributes), &block)
+    end
+
+    # Add an {Await} for a reaction to be added on this message.
+    # @see Bot#add_await
+    # @deprecated Will be changed to blocking behavior in v4.0. Use {#await_reaction!} instead.
+    def await_reaction(key, attributes = {}, &block)
+      @bot.add_await(key, Discordrb::Events::ReactionAddEvent, { message: @id }.merge(attributes), &block)
+    end
+
+    # Add a blocking {Await} for a reaction to be added on this message.
+    # @see Bot#add_await!
+    def await_reaction!(attributes = {}, &block)
+      @bot.add_await!(Discordrb::Events::ReactionAddEvent, { message: @id }.merge(attributes), &block)
     end
 
     # @return [true, false] whether this message was sent by the current {Bot}.

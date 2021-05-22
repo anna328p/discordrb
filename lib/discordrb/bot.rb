@@ -24,6 +24,9 @@ require 'discordrb/api'
 require 'discordrb/api/channel'
 require 'discordrb/api/server'
 require 'discordrb/api/invite'
+require 'discordrb/api/interaction'
+require 'discordrb/api/application'
+
 require 'discordrb/errors'
 require 'discordrb/data'
 require 'discordrb/await'
@@ -1203,7 +1206,7 @@ module Discordrb
 
         new_activities = (data['activities'] || []).map { |act_data| Activity.new(act_data, self) }
         presence_user = @users[data['user']['id'].to_i]
-        old_activities = presence_user.activities.to_a
+        old_activities = (presence_user&.activities || [])
         update_presence(data)
 
         # Starting a new game
