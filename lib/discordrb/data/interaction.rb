@@ -639,7 +639,7 @@ module Discordrb
         attachment: 11
       }.freeze
 
-      # Channel types that can be provided to #channel
+      # Channel types that can be provided to {#channel}.
       CHANNEL_TYPES = {
         text: 0,
         dm: 1,
@@ -651,7 +651,10 @@ module Discordrb
         news_thread: 10,
         public_thread: 11,
         private_thread: 12,
-        stage: 13
+        stage: 13,
+        directory: 14,
+        forum: 15,
+        media: 16
       }.freeze
 
       # @return [Array<Hash>]
@@ -803,9 +806,11 @@ module Discordrb
       # @param required [true, false] Whether this option must be provided.
       # @param name_localizations [Hash, nil] The localized names of the argument.
       # @param description_localizations [Hash, nil] The localized descriptions of the argument.
+      # @param types [Array<String, Symbol>] The file extensions or file groups to
+      #   restrict the option to. This restriction is **only** a client-side check.
       # @return (see #option)
-      def attachment(name, description, required: nil, name_localizations: nil, description_localizations: nil)
-        option(TYPES[:attachment], name, description, required: required, name_localizations: name_localizations, description_localizations: description_localizations)
+      def attachment(name, description, required: nil, types: nil, name_localizations: nil, description_localizations: nil)
+        option(TYPES[:attachment], name, description, required: required, file_types: types, name_localizations: name_localizations, description_localizations: description_localizations)
       end
 
       # @!visibility private
@@ -821,15 +826,16 @@ module Discordrb
       # @param autocomplete [true, false] Whether this option can dynamically show options.
       # @param name_localizations [Hash, nil] The localized names of the argument.
       # @param description_localizations [Hash, nil] The localized descriptions of the argument.
+      # @param file_types [Array<String, Symbol>] The file types to restrict this option to in the client.
       # @return Hash
       def option(type, name, description, required: nil, choices: nil, options: nil, min_value: nil, max_value: nil,
-                 min_length: nil, max_length: nil, channel_types: nil, autocomplete: nil, name_localizations: nil, description_localizations: nil)
+                 min_length: nil, max_length: nil, channel_types: nil, autocomplete: nil, file_types: nil, name_localizations: nil, description_localizations: nil)
         opt = { type: type, name: name, description: description, name_localizations: name_localizations, description_localizations: description_localizations }
         choices = choices.map { |option_name, value| { name: option_name, value: value } } if choices
 
         opt.merge!({ required: required, choices: choices, options: options, min_value: min_value,
                      max_value: max_value, min_length: min_length, max_length: max_length,
-                     channel_types: channel_types, autocomplete: autocomplete }.compact)
+                     channel_types: channel_types, autocomplete: autocomplete, file_types: file_types }.compact)
 
         @options << opt
         opt
