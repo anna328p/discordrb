@@ -25,6 +25,7 @@ require 'discordrb/events/scheduled_events'
 require 'discordrb/events/polls'
 require 'discordrb/events/auto_moderation'
 require 'discordrb/events/stage_instances'
+require 'discordrb/events/soundboard'
 
 require 'discordrb/api'
 require 'discordrb/api/channel'
@@ -1254,8 +1255,8 @@ module Discordrb
         rule&.update_data(data)
       else
         server&.cache_automod_rule(AutoModRule.new(data, server, self))
-        end
       end
+    end
 
     # Internal handler for STAGE_INSTANCE_CREATE and STAGE_INSTANCE_UPDATE
     def update_stage_instance(data)
@@ -1266,6 +1267,17 @@ module Discordrb
         instance&.update_data(data)
       else
         channel&.process_stage_instance(StageInstance.new(data, channel, self))
+      end
+    end
+
+    # Internal handler for GUILD_SOUNDBOARD_SOUND_CREATE and GUILD_SOUNDBOARD_SOUND_UPDATE
+    def update_soundboard_sound(data)
+      server = @servers[data['guild_id'].to_i]
+
+      if (sound = server&.soundboard_sound(data['sound_id'].to_i, request: false))
+        sound.update_data(data)
+      else
+        server&.cache_soundboard_sound(SoundboardSound.new(data, server, self))
       end
     end
 
@@ -1885,6 +1897,26 @@ module Discordrb
 
         event = StageInstanceDeleteEvent.new(data, self)
         raise_event(event)
+      when :GUILD_SOUNDBOARD_SOUND_CREATE
+        update_soundboard_sound(data)
+
+        event = SoundboardSoundCreateEvent.new(data, self)
+        raise_event(event)
+      when :GUILD_SOUNDBOARD_SOUND_UPDATE
+        update_soundboard_sound(data)
+
+        event = SoundboardSoundUpdateEvent.new(data, self)
+        raise_event(event)
+      when :GUILD_SOUNDBOARD_SOUND_DELETE
+        @servers[data['guild_id'].to_i]&.delete_soundboard_sound(data['sound_id'].to_i)
+
+        event = SoundboardSoundDeleteEvent.new(data, self)
+        raise_event(event)
+      when :VOICE_CHANNEL_EFFECT_SEND
+        event = VoiceChannelEffectEvent.new(data, self)
+        raise_event(event)
+      when :SOUNDBOARD_SOUNDS, :GUILD_SOUNDBOARD_SOUNDS_UPDATE
+        @servers[data['guild_id'].to_i]&.__send__(:process_soundboard_sounds, data['soundboard_sounds'])
       when :MESSAGE_POLL_VOTE_ADD
         event = PollVoteAddEvent.new(data, self)
         raise_event(event)

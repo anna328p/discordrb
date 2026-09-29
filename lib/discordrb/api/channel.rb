@@ -417,6 +417,20 @@ module Discordrb::API::Channel
     )
   end
 
+  # Play a soundboard sound in a voice channel.
+  # https://discord.com/developers/docs/resources/soundboard#send-soundboard-sound
+  def send_soundboard_sound(token, channel_id, sound_id, source_guild_id = nil)
+    Discordrb::API.request(
+      :channels_cid_send_soundboard_sound,
+      channel_id,
+      :post,
+      "#{Discordrb::API.api_base}/channels/#{channel_id}/send-soundboard-sound",
+      { sound_id:, source_guild_id: }.compact.to_json,
+      content_type: :json,
+      Authorization: token
+    )
+  end
+
   # Create a stage instance in a stage channel.
   # https://discord.com/developers/docs/resources/stage-instance#create-stage-instance
   def create_stage_instance(token, channel_id, topic: :undef, send_start_notification: :undef, guild_scheduled_event_id: :undef, privacy_level: :undef, reason: nil)

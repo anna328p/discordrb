@@ -290,6 +290,11 @@ module Discordrb::API
     "#{domain}/stickers/#{sticker_id}.#{format}"
   end
 
+  # make a soundboard sound URL from a soundboard sound ID.
+  def soundboard_sound_url(soundboard_sound_id)
+    "#{cdn_url}/soundboard-sounds/#{soundboard_sound_id}"
+  end
+
   # make a scheduled event cover URL from a scheduled event ID and a cover ID.
   def scheduled_event_cover_url(scheduled_event_id, cover_id, format = 'webp', size = nil)
     "#{cdn_url}/guild-events/#{scheduled_event_id}/#{cover_id}.#{format}#{"?size=#{size}" if size}"
@@ -412,6 +417,18 @@ module Discordrb::API
       pack_id,
       :get,
       "#{api_base}/sticker-packs/#{pack_id}",
+      Authorization: token
+    )
+  end
+
+  # Get a list of the soundboard sounds that everyone can use.
+  # https://discord.com/developers/docs/resources/soundboard#list-default-soundboard-sounds
+  def list_default_soundboard_sounds(token)
+    request(
+      :soundboard_default_sounds,
+      nil,
+      :get,
+      "#{api_base}/soundboard-default-sounds",
       Authorization: token
     )
   end

@@ -19,6 +19,7 @@ require 'discordrb/events/scheduled_events'
 require 'discordrb/events/polls'
 require 'discordrb/events/auto_moderation'
 require 'discordrb/events/stage_instances'
+require 'discordrb/events/soundboard'
 
 require 'discordrb/await'
 
@@ -829,6 +830,56 @@ module Discordrb
     # @return [ServerStickersUpdateEventHandler] The event handler that was registered.
     def server_stickers_update(attributes = {}, &block)
       register_event(ServerStickersUpdateEvent, attributes, block)
+    end
+
+    # This **event** is raised whenever an soundboard sound is created in a server.
+    # @param attributes [Hash] The event's attributes.
+    # @option attributes [String, Integer, SoundboardSound] :id A soundboard sound to match against.
+    # @option attributes [String, Regexp] :name A name to match against.
+    # @option attributes [String, Integer, Server] :server A server to match against.
+    # @option attributes [String, Integer, User, Member, Recipient] :creator A creator to match against.
+    # @yield The block is executed when the event is raised.
+    # @yieldparam event [SoundboardSoundCreateEvent] The event that was raised.
+    # @return [SoundboardSoundCreateEventHandler] The event handler that was registered.
+    def soundboard_sound_create(attributes = {}, &block)
+      register_event(SoundboardSoundCreateEvent, attributes, block)
+    end
+
+    # This **event** is raised whenever an soundboard sound is updated in a server.
+    # @param attributes [Hash] The event's attributes.
+    # @option attributes [String, Integer, SoundboardSound] :id A soundboard sound to match against.
+    # @option attributes [String, Regexp] :name A name to match against.
+    # @option attributes [String, Integer, Server] :server A server to match against.
+    # @option attributes [String, Integer, User, Member, Recipient] :creator A creator to match against.
+    # @yield The block is executed when the event is raised.
+    # @yieldparam event [SoundboardSoundUpdateEvent] The event that was raised.
+    # @return [SoundboardSoundUpdateEventHandler] The event handler that was registered.
+    def soundboard_sound_update(attributes = {}, &block)
+      register_event(SoundboardSoundUpdateEvent, attributes, block)
+    end
+
+    # This **event** is raised whenever an soundboard sound is deleted in a server.
+    # @param attributes [Hash] The event's attributes.
+    # @option attributes [String, Integer, SoundboardSound] :id A soundboard sound to match against.
+    # @option attributes [String, Integer, Server] :server A server to match against.
+    # @yield The block is executed when the event is raised.
+    # @yieldparam event [SoundboardSoundDeleteEvent] The event that was raised.
+    # @return [SoundboardSoundDeleteEventHandler] The event handler that was registered.
+    def soundboard_sound_delete(attributes = {}, &block)
+      register_event(SoundboardSoundDeleteEvent, attributes, block)
+    end
+
+    # This **event** is raised whenever an effect is sent to a voice channel the bot is connected to.
+    # @param attributes [Hash] The event's attributes.
+    # @option attributes [String, Integer, Server] :server A server to match against.
+    # @option attributes [String, Integer, Channel] :channel A channel to match against.
+    # @option attributes [Integer, String, Member, User, Recipient] :user A user to match against (you can also pass `:member`).
+    # @option attributes [String, Integer, SoundboardSound] :soundboard_sound A soundboard sound to match against.
+    # @yield The block is executed when the event is raised.
+    # @yieldparam event [VoiceChannelEffectEvent] The event that was raised.
+    # @return [VoiceChannelEffectEventEventHandler] The event handler that was registered.
+    def voice_channel_effect(attributes = {}, &block)
+      register_event(VoiceChannelEffectEvent, attributes, block)
     end
 
     # This **event** is raised whenever a user votes on a poll.

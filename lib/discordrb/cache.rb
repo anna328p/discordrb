@@ -25,6 +25,7 @@ module Discordrb
       @server_previews = {}
       @stickers = {}
       @sticker_packs = {}
+      @default_soundboard_sounds = {}
     end
 
     # Returns or caches the available voice regions
@@ -148,6 +149,24 @@ module Discordrb
       @server_previews[id] = ServerPreview.new(response, self)
     rescue StandardError
       nil
+    end
+
+    # Get a list of the soundboard sounds that everyone can use.
+    # @return [Array<SoundboardSound>] The soundboard sounds everyone can use.
+    def default_soundboard_sounds
+      return @default_soundboard_sounds unless @default_soundboard_sounds.empty?
+
+      sounds = JSON.parse(API.list_default_soundboard_sounds(@token))
+
+      @default_soundboard_sounds = sounds.map { |sound| SoundboardSound.new(sound, nil, self) }
+    end
+
+    # Get a single soundboard sound that everyone can use.
+    # @param id [Sound, Integer, String] The ID of the default soundboard sound to get.
+    # @return [SoundboardSound, nil] The default soundboard sound that was identified by its ID, or `nil`.
+    def default_soundboard_sound(id)
+      id = id.resolve_id
+      default_soundboard_sounds.find { |sound| sound.id == id }
     end
 
     # Ensures a given user object is cached and if not, cache it from the given data hash.
@@ -278,6 +297,12 @@ module Discordrb
         @gateway.send_request_members(id, '', 0)
         bucket[:time] = (Time.now + 30)
       end
+    end
+
+    # Request the soundboard sounds for a set of servers.
+    # @param servers [Array<Integer, String, Server>, Integer, String, Server] The servers to request soundboard sounds for.
+    def request_soundboard_sounds(*servers)
+      @gateway.send_request_soundboard_sounds(servers.flatten.map(&:resolve_id))
     end
 
     # Gets the code for an invite.
