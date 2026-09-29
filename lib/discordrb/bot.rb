@@ -1158,7 +1158,7 @@ module Discordrb
       if (member = server.member(data['user']['id'].to_i, false))
         member.update_data(data)
       else
-        ensure_user(data['user'])
+        ensure_user(data['user'], true)
       end
     end
 
@@ -1301,6 +1301,7 @@ module Discordrb
         # replaced.
         init_cache
 
+        data['user']['public_flags'] = data['user']['flags']
         @profile = Profile.new(data['user'], self)
 
         @client_id ||= data['application']['id']&.to_i
@@ -1338,7 +1339,8 @@ module Discordrb
         server = server(id)
         server.process_chunk(data['members'], data['chunk_index'], data['chunk_count'])
       when :USER_UPDATE
-        @profile = Profile.new(data, self)
+        @users[data['id'].to_i]&.update_data(data)
+        @profile ? @profile.update_data(data) : (@profile = Profile.new(data, self))
       when :INVITE_CREATE
         invite = Invite.new(data, self)
         raise_event(InviteCreateEvent.new(data, invite, self))
@@ -1363,13 +1365,32 @@ module Discordrb
         # If create_message is overwritten with a method that returns the parsed message, use that instead, so we don't
         # parse the message twice (which is just thrown away performance)
         message = create_message(data)
-        message = Message.new(data, self) unless message.is_a? Message
+        message = Message.new(data, self) unless message.is_a?(Message)
 
-        # Update the existing member if it exists in the cache.
-        if data['member']
-          member = message.channel.server&.member(data['author']['id'].to_i, false)
-          data['member']['user'] = data['author']
-          member&.update_data(data['member'])
+        if (server = message.server)
+          # Update or create the existing member from the given data hash.
+          if data['member']
+            data['member']['user'] = data['author']
+            cached_member = server.member(data['author']['id'], false)
+
+            if cached_member
+              cached_member&.update_data(data['member'])
+            else
+              server.cache_member(Member.new(data['member'], server, self))
+            end
+          end
+
+          data['mentions']&.each do |mention|
+            next unless (member = mention['member'])
+
+            member['user'] = mention
+
+            if (cached_member = server.member(mention['id'], false))
+              cached_member&.update_data(mention['member'])
+            else
+              server.cache_member(Member.new(mention['member'], server, self))
+            end
+          end
         end
 
         # Dispatch a ChannelCreateEvent for channels we don't have cached
@@ -1418,11 +1439,30 @@ module Discordrb
           return
         end
 
-        # Update the existing member if it exists in the cache.
-        if data['member']
-          member = message.channel.server&.member(data['author']['id'].to_i, false)
-          data['member']['user'] = data['author']
-          member&.update_data(data['member'])
+        if (server = message.server)
+          # Update or create the existing member from the given data hash.
+          if data['member']
+            data['member']['user'] = data['author']
+            cached_member = server.member(data['author']['id'], false)
+
+            if cached_member
+              cached_member&.update_data(data['member'])
+            else
+              server.cache_member(Member.new(data['member'], server, self))
+            end
+          end
+
+          data['mentions']&.each do |mention|
+            next unless (member = mention['member'])
+
+            member['user'] = mention
+
+            if (cached_member = server.member(mention['id'], false))
+              cached_member&.update_data(mention['member'])
+            else
+              server.cache_member(Member.new(mention['member'], server, self))
+            end
+          end
         end
 
         event = MessageEditEvent.new(message, self)
@@ -1450,6 +1490,14 @@ module Discordrb
         end
       when :TYPING_START
         start_typing(data)
+
+        if (member = data['member']) && (server = @servers[data['guild_id']&.to_i])
+          if (found = server.member(member['user']['id'], false))
+            found.update_data(member)
+          else
+            server.cache_member(Member.new(member, server, self))
+          end
+        end
 
         begin
           event = TypingEvent.new(data, self)
