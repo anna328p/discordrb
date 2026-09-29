@@ -1078,7 +1078,7 @@ module Discordrb
     # @return [String, nil] The status of the voice channel, or `nil`.
     def status
       if !instance_variable_defined?(:@status) && voice?
-        @bot.gateway.send_request_channel_info(@server_id, %i[status voice_start_time])
+        @bot.gateway.request_channel_info(server: @server_id, fields: %i[status voice_start_time])
 
         sleep(0.01) until instance_variable_defined?(:@status)
       end
@@ -1090,7 +1090,7 @@ module Discordrb
     # @return [Time, nil] The time at when the voice session started, or `nil`.
     def start_time
       if !instance_variable_defined?(:@start_time) && voice?
-        @bot.gateway.send_request_channel_info(@server_id, %i[status voice_start_time])
+        @bot.gateway.request_channel_info(server: @server_id, fields: %i[status voice_start_time])
 
         sleep(0.01) until instance_variable_defined?(:@start_time)
       end

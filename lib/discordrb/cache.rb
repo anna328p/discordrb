@@ -291,7 +291,7 @@ module Discordrb
           sleep(duration)
         end
 
-        @gateway.send_request_members(id, '', 0)
+        @gateway.request_server_members(server: id, query: '', limit: 0)
         bucket[:time] = (Time.now + 30)
       end
     end
@@ -299,7 +299,7 @@ module Discordrb
     # Request the soundboard sounds for a set of servers.
     # @param servers [Array<Integer, String, Server>, Integer, String, Server] The servers to request soundboard sounds for.
     def request_soundboard_sounds(*servers)
-      @gateway.send_request_soundboard_sounds(servers.flatten.map(&:resolve_id))
+      @gateway.request_soundboard_sounds(servers: servers.flatten)
     end
 
     # Gets the code for an invite.

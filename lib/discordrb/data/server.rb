@@ -734,7 +734,7 @@ module Discordrb
 
       @member_chunk_queries[nonce] = nil
 
-      @bot.gateway.send_request_members(@id, nil, nil, nonce, ids.map(&:resolve_id))
+      @bot.gateway.request_server_members(server: @id, users: ids, nonce: nonce)
 
       sleep(0.01) until (@member_chunk_queries[nonce]) || (Time.now > time)
 
