@@ -180,6 +180,9 @@ module Discordrb
       end
 
       # rubocop:enable Style/IfUnlessModifier
+      # The bot can't do anything in channels that have been obfuscated from it.
+      return false if channel&.obfuscated? && current_bot?
+
       computed = if channel
                    compute_overwrites(base, channel, true)
                  else
