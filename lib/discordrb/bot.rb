@@ -24,6 +24,7 @@ require 'discordrb/events/integrations'
 require 'discordrb/events/scheduled_events'
 require 'discordrb/events/polls'
 require 'discordrb/events/auto_moderation'
+require 'discordrb/events/stage_instances'
 
 require 'discordrb/api'
 require 'discordrb/api/channel'
@@ -1250,6 +1251,18 @@ module Discordrb
         rule&.update_data(data)
       else
         server&.cache_automod_rule(AutoModRule.new(data, server, self))
+        end
+      end
+
+    # Internal handler for STAGE_INSTANCE_CREATE and STAGE_INSTANCE_UPDATE
+    def update_stage_instance(data)
+      channel = @channels[data['channel_id'].to_i]
+      instance = channel&.stage_instance(request: false)
+
+      if instance&.id == data['id'].to_i
+        instance&.update_data(data)
+      else
+        channel&.process_stage_instance(StageInstance.new(data, channel, self))
       end
     end
 
@@ -1848,6 +1861,21 @@ module Discordrb
         raise_event(event)
       when :AUTO_MODERATION_ACTION_EXECUTION
         event = AutoModActionEvent.new(data, self)
+        raise_event(event)
+      when :STAGE_INSTANCE_CREATE
+        update_stage_instance(data)
+
+        event = StageInstanceCreateEvent.new(data, self)
+        raise_event(event)
+      when :STAGE_INSTANCE_UPDATE
+        update_stage_instance(data)
+
+        event = StageInstanceUpdateEvent.new(data, self)
+        raise_event(event)
+      when :STAGE_INSTANCE_DELETE
+        @channels[data['channel_id'].to_i]&.process_stage_instance(nil)
+
+        event = StageInstanceDeleteEvent.new(data, self)
         raise_event(event)
       when :MESSAGE_POLL_VOTE_ADD
         event = PollVoteAddEvent.new(data, self)
