@@ -680,7 +680,7 @@ module Discordrb::API::Channel
       :channels_cid_thread_members_me,
       channel_id,
       :delete,
-      "#{Discordrb::API.api_base}/channels/#{channel_id}/thread-members/#{user_id}",
+      "#{Discordrb::API.api_base}/channels/#{channel_id}/thread-members/@me",
       Authorization: token
     )
   end
