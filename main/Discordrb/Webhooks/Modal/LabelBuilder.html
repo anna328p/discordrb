@@ -223,7 +223,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#file_upload-instance_method" title="#file_upload (instance method)">#<strong>file_upload</strong>(custom_id:, id: nil, min_values: nil, max_values: nil, required: nil, types: nil)  &#x21d2; Object </a>
+      <a href="#file_upload-instance_method" title="#file_upload (instance method)">#<strong>file_upload</strong>(custom_id:, id: nil, min_values: nil, max_values: nil, required: nil)  &#x21d2; Object </a>
     
 
     
@@ -785,12 +785,12 @@ There is a limit of 100 characters to each custom_id.</p></div>
       <pre class="lines">
 
 
-217
-218
-219</pre>
+215
+216
+217</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/modal.rb', line 217</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/modal.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_checkbox'>checkbox</span><span class='lparen'>(</span><span class='label'>custom_id:</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='ivar'>@component</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='const'><span class='object_link'><a href="../Modal.html#COMPONENT_TYPES-constant" title="Discordrb::Webhooks::Modal::COMPONENT_TYPES (constant)">COMPONENT_TYPES</a></span></span><span class='lbracket'>[</span><span class='symbol'>:checkbox</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>custom_id:</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='id identifier rubyid_default'>default</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
@@ -936,16 +936,16 @@ There is a limit of 100 characters to each custom_id.</p></div>
       <pre class="lines">
 
 
+241
+242
 243
 244
 245
 246
-247
-248
-249</pre>
+247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/modal.rb', line 243</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/modal.rb', line 241</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_checkbox_group'>checkbox_group</span><span class='lparen'>(</span><span class='label'>custom_id:</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>checkboxes:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>min_values:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_values:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_builder'>builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GroupBuilder.html" title="Discordrb::Webhooks::Modal::GroupBuilder (class)">GroupBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:checkbox_group</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_checkboxes'>checkboxes</span><span class='comma'>,</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='id identifier rubyid_min_values'>min_values</span><span class='comma'>,</span> <span class='id identifier rubyid_max_values'>max_values</span><span class='rparen'>)</span>
@@ -962,7 +962,7 @@ There is a limit of 100 characters to each custom_id.</p></div>
       <div class="method_details ">
   <h3 class="signature " id="file_upload-instance_method">
   
-    #<strong>file_upload</strong>(custom_id:, id: nil, min_values: nil, max_values: nil, required: nil, types: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>file_upload</strong>(custom_id:, id: nil, min_values: nil, max_values: nil, required: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1057,23 +1057,6 @@ There is a limit of 100 characters to each custom_id.</p></div>
       
     </li>
   
-    <li>
-      
-        <span class='name'>types</span>
-      
-      
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span>, Symbol&gt;</tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>The types of files that a user can upload. This can be a file extension or one of:
-<code>image</code>, <code>video</code>, or <code>audio</code>. This is only a <strong>client-side restriction</strong>, meaning that you must continue to ensure that the file is valid.</p></div>
-      
-    </li>
-  
 </ul>
 
 
@@ -1083,15 +1066,15 @@ There is a limit of 100 characters to each custom_id.</p></div>
       <pre class="lines">
 
 
-208
-209
-210</pre>
+206
+207
+208</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/modal.rb', line 208</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/modal.rb', line 206</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_file_upload'>file_upload</span><span class='lparen'>(</span><span class='label'>custom_id:</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>min_values:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_values:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>types:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='ivar'>@component</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='const'><span class='object_link'><a href="../Modal.html#COMPONENT_TYPES-constant" title="Discordrb::Webhooks::Modal::COMPONENT_TYPES (constant)">COMPONENT_TYPES</a></span></span><span class='lbracket'>[</span><span class='symbol'>:file_upload</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>custom_id:</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>min_values:</span> <span class='id identifier rubyid_min_values'>min_values</span><span class='comma'>,</span> <span class='label'>max_values:</span> <span class='id identifier rubyid_max_values'>max_values</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>file_types:</span> <span class='id identifier rubyid_types'>types</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_file_upload'>file_upload</span><span class='lparen'>(</span><span class='label'>custom_id:</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>min_values:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_values:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@component</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='const'><span class='object_link'><a href="../Modal.html#COMPONENT_TYPES-constant" title="Discordrb::Webhooks::Modal::COMPONENT_TYPES (constant)">COMPONENT_TYPES</a></span></span><span class='lbracket'>[</span><span class='symbol'>:file_upload</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>custom_id:</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>min_values:</span> <span class='id identifier rubyid_min_values'>min_values</span><span class='comma'>,</span> <span class='label'>max_values:</span> <span class='id identifier rubyid_max_values'>max_values</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1356,16 +1339,16 @@ There is a limit of 100 characters to each custom_id.</p></div>
       <pre class="lines">
 
 
+225
+226
 227
 228
 229
 230
-231
-232
-233</pre>
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/modal.rb', line 227</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/modal.rb', line 225</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_radio_group'>radio_group</span><span class='lparen'>(</span><span class='label'>custom_id:</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>buttons:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_builder'>builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="GroupBuilder.html" title="Discordrb::Webhooks::Modal::GroupBuilder (class)">GroupBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:radio_group</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_id'>custom_id</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_buttons'>buttons</span><span class='comma'>,</span> <span class='id identifier rubyid_required'>required</span><span class='rparen'>)</span>
@@ -2084,7 +2067,7 @@ There is a limit of 100 characters to each custom_id.</p></div>
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:36 2026 by
+  Generated on Tue Sep 29 17:01:42 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

@@ -918,12 +918,12 @@ whether it should return immediately after sending the message.</p></div>
 
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_builder'>builder</span><span class='comma'>,</span> <span class='id identifier rubyid_view'>view</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
 
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;file&#39; and &#39;attachments&#39; are mutually exclusive.&#39;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_attachments'>attachments</span>
+  <span class='id identifier rubyid_components'>components</span> <span class='op'>||=</span> <span class='id identifier rubyid_view'>view</span>
 
-  <span class='kw'>if</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span> <span class='op'>||</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_attachments'>attachments</span>
-    <span class='id identifier rubyid_post_multipart'>post_multipart</span><span class='lparen'>(</span><span class='id identifier rubyid_builder'>builder</span><span class='comma'>,</span> <span class='id identifier rubyid_components'>components</span> <span class='op'>||</span> <span class='id identifier rubyid_view'>view</span><span class='comma'>,</span> <span class='id identifier rubyid_wait'>wait</span><span class='comma'>,</span> <span class='id identifier rubyid_thread_id'>thread_id</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span>
+    <span class='id identifier rubyid_post_multipart'>post_multipart</span><span class='lparen'>(</span><span class='id identifier rubyid_builder'>builder</span><span class='comma'>,</span> <span class='id identifier rubyid_components'>components</span><span class='comma'>,</span> <span class='id identifier rubyid_wait'>wait</span><span class='comma'>,</span> <span class='id identifier rubyid_thread_id'>thread_id</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
-    <span class='id identifier rubyid_post_json'>post_json</span><span class='lparen'>(</span><span class='id identifier rubyid_builder'>builder</span><span class='comma'>,</span> <span class='id identifier rubyid_components'>components</span> <span class='op'>||</span> <span class='id identifier rubyid_view'>view</span><span class='comma'>,</span> <span class='id identifier rubyid_wait'>wait</span><span class='comma'>,</span> <span class='id identifier rubyid_thread_id'>thread_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_post_json'>post_json</span><span class='lparen'>(</span><span class='id identifier rubyid_builder'>builder</span><span class='comma'>,</span> <span class='id identifier rubyid_components'>components</span><span class='comma'>,</span> <span class='id identifier rubyid_wait'>wait</span><span class='comma'>,</span> <span class='id identifier rubyid_thread_id'>thread_id</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1043,7 +1043,7 @@ whether it should return immediately after sending the message.</p></div>
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:37 2026 by
+  Generated on Tue Sep 29 17:01:43 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

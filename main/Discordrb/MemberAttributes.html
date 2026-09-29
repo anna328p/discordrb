@@ -173,11 +173,11 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#communication_disabled_until-instance_method" title="#communication_disabled_until (instance method)">#<strong>communication_disabled_until</strong>  &#x21d2; Time<sup>?</sup> </a>
+      <a href="#communication_disabled_until-instance_method" title="#communication_disabled_until (instance method)">#<strong>communication_disabled_until</strong>  &#x21d2; Time </a>
     
 
     
-      (also: #timeout, #timeout_until)
+      (also: #timeout)
     
   </span>
   
@@ -600,12 +600,12 @@
       <div class="method_details ">
   <h3 class="signature " id="communication_disabled_until-instance_method">
   
-    #<strong>communication_disabled_until</strong>  &#x21d2; <tt>Time</tt><sup>?</sup>  <span class="extras">(readonly)</span>
+    #<strong>communication_disabled_until</strong>  &#x21d2; <tt>Time</tt>  <span class="extras">(readonly)</span>
   
 
   
     <span class="aliases">Also known as:
-    <span class="names"><span id='timeout-instance_method'>timeout</span>, <span id='timeout_until-instance_method'>timeout_until</span></span>
+    <span class="names"><span id='timeout-instance_method'>timeout</span></span>
     </span>
   
 
@@ -624,7 +624,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Time</tt>, <tt>nil</tt>)</span>
+        <span class='type'>(<tt>Time</tt>)</span>
       
       
       
@@ -698,12 +698,12 @@
       <pre class="lines">
 
 
+41
 42
-43
-44</pre>
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_flags'>flags</span>
   <span class='ivar'>@flags</span>
@@ -877,12 +877,12 @@
       <pre class="lines">
 
 
+44
 45
-46
-47</pre>
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pending'>pending</span>
   <span class='ivar'>@pending</span>
@@ -1048,12 +1048,12 @@
       <pre class="lines">
 
 
+56
 57
-58
-59</pre>
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server_avatar_decoration'>server_avatar_decoration</span>
   <span class='ivar'>@server_avatar_decoration</span>
@@ -1112,12 +1112,12 @@
       <pre class="lines">
 
 
+49
 50
-51
-52</pre>
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server_avatar_id'>server_avatar_id</span>
   <span class='ivar'>@server_avatar_id</span>
@@ -1176,12 +1176,12 @@
       <pre class="lines">
 
 
+53
 54
-55
-56</pre>
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server_banner_id'>server_banner_id</span>
   <span class='ivar'>@server_banner_id</span>
@@ -1233,12 +1233,12 @@
       <pre class="lines">
 
 
+59
 60
-61
-62</pre>
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server_collectibles'>server_collectibles</span>
   <span class='ivar'>@server_collectibles</span>
@@ -1315,12 +1315,12 @@
       <pre class="lines">
 
 
+64
 65
-66
-67</pre>
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server_avatar_url'>server_avatar_url</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_avatar_url'><span class='object_link'><a href="API/Server.html#avatar_url-class_method" title="Discordrb::API::Server.avatar_url (method)">avatar_url</a></span></span><span class='lparen'>(</span><span class='ivar'>@server_id</span><span class='comma'>,</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='ivar'>@server_avatar_id</span><span class='comma'>,</span> <span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@server_avatar_id</span>
@@ -1390,12 +1390,12 @@
       <pre class="lines">
 
 
+71
 72
-73
-74</pre>
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/member.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server_banner_url'>server_banner_url</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_banner_url'><span class='object_link'><a href="API/Server.html#banner_url-class_method" title="Discordrb::API::Server.banner_url (method)">banner_url</a></span></span><span class='lparen'>(</span><span class='ivar'>@server_id</span><span class='comma'>,</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='ivar'>@server_banner_id</span><span class='comma'>,</span> <span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@server_banner_id</span>
@@ -1410,7 +1410,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:28 2026 by
+  Generated on Tue Sep 29 17:01:34 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

@@ -297,6 +297,60 @@
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#install_params-instance_method" title="#install_params (instance method)">#<strong>install_params</strong>  &#x21d2; InstallParams </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The settings for the application's default authorization link.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#integration_types-instance_method" title="#integration_types (instance method)">#<strong>integration_types</strong>  &#x21d2; Hash&lt;Integer =&gt; InstallParams&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The default scopes and permissions for each supported installation context.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#interactions_endpoint_url-instance_method" title="#interactions_endpoint_url (instance method)">#<strong>interactions_endpoint_url</strong>  &#x21d2; String<sup>?</sup> </a>
     
 
@@ -397,7 +451,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The game SKU ID if the application is a game sold on Discord.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>The game SKU ID if this application is a game sold on Discord.</p></div></span>
   
 </li>
 
@@ -592,7 +646,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The ID of the server that is associated with the application.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>The ID of the server that is associated with this application.</p></div></span>
   
 </li>
 
@@ -700,7 +754,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The team that owns the application, or <code>nil</code> if the application isn't owned by a team.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>The team that owns this application, or <code>nil</code> if the application isn't owned by a team.</p></div></span>
   
 </li>
 
@@ -915,6 +969,28 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#add_integration_type-instance_method" title="#add_integration_type (instance method)">#<strong>add_integration_type</strong>(type:, scopes: nil, permissions: nil)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Add an integration types config for the application.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#application_command_badge%3F-instance_method" title="#application_command_badge? (instance method)">#<strong>application_command_badge?</strong>  &#x21d2; true, false </a>
     
 
@@ -951,7 +1027,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether or not the application has reached more than 10,000 unique users and has access to the message content intent.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Whether or not the application is in more than 100 servers and has access to the message content intent.</p></div></span>
   
 </li>
 
@@ -973,7 +1049,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether or not the application has reached more than 10,000 unique users and has access to the server presences intent.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Whether or not the application is in less than 100 servers and has access to the server presences intent.</p></div></span>
   
 </li>
 
@@ -995,7 +1071,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether or not the application has reached more than 10,000 unique users and has access to the server members intent.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Whether or not the application is in more than 100 servers and has access to the server members intent.</p></div></span>
   
 </li>
 
@@ -1025,7 +1101,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#cover_image_url-instance_method" title="#cover_image_url (instance method)">#<strong>cover_image_url</strong>(format: &#39;webp&#39;, size: 4096)  &#x21d2; String<sup>?</sup> </a>
+      <a href="#cover_image_url-instance_method" title="#cover_image_url (instance method)">#<strong>cover_image_url</strong>(format: &#39;webp&#39;)  &#x21d2; String<sup>?</sup> </a>
     
 
     
@@ -1091,7 +1167,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#icon_url-instance_method" title="#icon_url (instance method)">#<strong>icon_url</strong>(format: &#39;webp&#39;, size: 4096)  &#x21d2; String<sup>?</sup> </a>
+      <a href="#icon_url-instance_method" title="#icon_url (instance method)">#<strong>icon_url</strong>(format: &#39;webp&#39;)  &#x21d2; String<sup>?</sup> </a>
     
 
     
@@ -1127,7 +1203,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether or not the application has reached less than 10,000 unique users and has access to the message content intent.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Whether or not the application is in less than 100 servers and has access to the message content intent.</p></div></span>
   
 </li>
 
@@ -1149,7 +1225,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether or not the application has reached less than 10,000 unique users and has access to the server presences intent.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Whether or not the application is in more than 100 servers and has access to the server presences intent.</p></div></span>
   
 </li>
 
@@ -1171,7 +1247,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether or not the application has reached less than 10,000 unique users and has access to the server members intent.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Whether or not the application is in less than 100 servers and has access to the server members intent.</p></div></span>
   
 </li>
 
@@ -1201,7 +1277,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#modify-instance_method" title="#modify (instance method)">#<strong>modify</strong>(icon: :undef, cover_image: :undef, flags: :undef, tags: :undef, description: :undef, custom_install_url: :undef, webhook_events_url: :undef, webhook_events_status: :undef, webhook_event_types: :undef, interactions_endpoint_url: :undef, integration_types: :undef, role_connections_verification_url: :undef, add_flags: :undef, remove_flags: :undef)  &#x21d2; nil </a>
+      <a href="#modify-instance_method" title="#modify (instance method)">#<strong>modify</strong>(icon: :undef, cover_image: :undef, flags: :undef, tags: :undef, description: :undef, custom_install_url: :undef, webhook_events_url: :undef, webhook_events_status: :undef, webhook_event_types: :undef, interactions_endpoint_url: :undef, install_scopes: :undef, install_permissions: :undef, role_connections_verification_url: :undef, add_flags: :undef, remove_flags: :undef, integration_types: :undef)  &#x21d2; nil </a>
     
 
     
@@ -1216,28 +1292,6 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Modify the properties of the application.</p></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#modify_integration_type-instance_method" title="#modify_integration_type (instance method)">#<strong>modify_integration_type</strong>(type:, scopes: :undef, permissions: :undef)  &#x21d2; nil </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Add or update an integration types config for the application.</p></div></span>
   
 </li>
 
@@ -1303,7 +1357,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Get the server associated with the application.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Get the server associated with this application.</p></div></span>
   
 </li>
 
@@ -1502,12 +1556,12 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-108
-109
-110</pre>
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_custom_install_url'>custom_install_url</span>
   <span class='ivar'>@custom_install_url</span>
@@ -1698,6 +1752,120 @@ Can be used to generate a cover image URL.</p></div>
       
       <span id=""></span>
       <div class="method_details ">
+  <h3 class="signature " id="install_params-instance_method">
+  
+    #<strong>install_params</strong>  &#x21d2; <tt><span class='object_link'><a href="InstallParams.html" title="Discordrb::InstallParams (class)">InstallParams</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the settings for the application's default authorization link.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="InstallParams.html" title="Discordrb::InstallParams (class)">InstallParams</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the settings for the application's default authorization link.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_install_params'>install_params</span>
+  <span class='ivar'>@install_params</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="integration_types-instance_method">
+  
+    #<strong>integration_types</strong>  &#x21d2; <tt>Hash&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span> =&gt; <span class='object_link'><a href="InstallParams.html" title="Discordrb::InstallParams (class)">InstallParams</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the default scopes and permissions for each supported installation context.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span> =&gt; <span class='object_link'><a href="InstallParams.html" title="Discordrb::InstallParams (class)">InstallParams</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the default scopes and permissions for each supported installation context.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_integration_types'>integration_types</span>
+  <span class='ivar'>@integration_types</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
   <h3 class="signature " id="interactions_endpoint_url-instance_method">
   
     #<strong>interactions_endpoint_url</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt><sup>?</sup>  <span class="extras">(readonly)</span>
@@ -1879,7 +2047,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the game SKU ID if the application is a game sold on Discord.</p>
+    <p>Returns the game SKU ID if this application is a game sold on Discord.</p>
 
   </div>
 </div>
@@ -1896,7 +2064,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>the game SKU ID if the application is a game sold on Discord.</p></div>
+        <div class='inline'><p>the game SKU ID if this application is a game sold on Discord.</p></div>
       
     </li>
   
@@ -2290,7 +2458,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the ID of the server that is associated with the application.</p>
+    <p>Returns the ID of the server that is associated with this application.</p>
 
   </div>
 </div>
@@ -2307,7 +2475,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>the ID of the server that is associated with the application.</p></div>
+        <div class='inline'><p>the ID of the server that is associated with this application.</p></div>
       
     </li>
   
@@ -2518,7 +2686,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the team that owns the application, or <code>nil</code> if the application isn't owned by a team.</p>
+    <p>Returns the team that owns this application, or <code>nil</code> if the application isn't owned by a team.</p>
 
   </div>
 </div>
@@ -2535,7 +2703,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>the team that owns the application, or <code>nil</code> if the application isn't owned by a team.</p></div>
+        <div class='inline'><p>the team that owns this application, or <code>nil</code> if the application isn't owned by a team.</p></div>
       
     </li>
   
@@ -2971,7 +3139,125 @@ Can be used to generate a cover image URL.</p></div>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="application_command_badge?-instance_method">
+  <h3 class="signature first" id="add_integration_type-instance_method">
+  
+    #<strong>add_integration_type</strong>(type:, scopes: nil, permissions: nil)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Add an integration types config for the application.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The type of the integration type.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>scopes</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>, Symbol&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The default Oauth scopes for the config.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>permissions</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Permissions.html" title="Discordrb::Permissions (class)">Permissions</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The default permissions for the config.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_integration_type'>add_integration_type</span><span class='lparen'>(</span><span class='label'>type:</span><span class='comma'>,</span> <span class='label'>scopes:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>permissions:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_permissions'>permissions</span> <span class='op'>=</span> <span class='id identifier rubyid_permisisons'>permisisons</span><span class='period'>.</span><span class='id identifier rubyid_bits'>bits</span> <span class='kw'>if</span> <span class='id identifier rubyid_permissions'>permissions</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:bits</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new_data'>new_data</span> <span class='op'>=</span> <span class='ivar'>@integration_types</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+
+  <span class='id identifier rubyid_new_data'>new_data</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>scopes:</span> <span class='id identifier rubyid_scopes'>scopes</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>permissions:</span> <span class='id identifier rubyid_permissions'>permissions</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span><span class='label'>integration_types:</span> <span class='id identifier rubyid_collect_integration_types'>collect_integration_types</span><span class='lparen'>(</span><span class='id identifier rubyid_new_data'>new_data</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="application_command_badge?-instance_method">
   
     #<strong>application_command_badge?</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt> 
   
@@ -3010,14 +3296,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -3040,7 +3326,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether or not the application has reached more than 10,000 unique users and has access to the message content intent.</p>
+    <p>Returns whether or not the application is in more than 100 servers and has access to the message content intent.</p>
 
   </div>
 </div>
@@ -3057,7 +3343,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>whether or not the application has reached more than 10,000 unique users and has access to the message content intent.</p></div>
+        <div class='inline'><p>whether or not the application is in more than 100 servers and has access to the message content intent.</p></div>
       
     </li>
   
@@ -3069,14 +3355,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -3099,7 +3385,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether or not the application has reached more than 10,000 unique users and has access to the server presences intent.</p>
+    <p>Returns whether or not the application is in less than 100 servers and has access to the server presences intent.</p>
 
   </div>
 </div>
@@ -3116,7 +3402,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>whether or not the application has reached more than 10,000 unique users and has access to the server presences intent.</p></div>
+        <div class='inline'><p>whether or not the application is in less than 100 servers and has access to the server presences intent.</p></div>
       
     </li>
   
@@ -3128,14 +3414,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -3158,7 +3444,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether or not the application has reached more than 10,000 unique users and has access to the server members intent.</p>
+    <p>Returns whether or not the application is in more than 100 servers and has access to the server members intent.</p>
 
   </div>
 </div>
@@ -3175,7 +3461,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>whether or not the application has reached more than 10,000 unique users and has access to the server members intent.</p></div>
+        <div class='inline'><p>whether or not the application is in more than 100 servers and has access to the server members intent.</p></div>
       
     </li>
   
@@ -3187,14 +3473,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -3246,14 +3532,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -3268,7 +3554,7 @@ Can be used to generate a cover image URL.</p></div>
       <div class="method_details ">
   <h3 class="signature " id="cover_image_url-instance_method">
   
-    #<strong>cover_image_url</strong>(format: &#39;webp&#39;, size: 4096)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+    #<strong>cover_image_url</strong>(format: &#39;webp&#39;)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
   
 
   
@@ -3300,22 +3586,6 @@ Can be used to generate a cover image URL.</p></div>
       
     </li>
   
-    <li>
-      
-        <span class='name'>size</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>4096</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>The URL will default to <code>4096</code>. You can otherwise specify any number that's a power of two to override this.</p></div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -3341,15 +3611,15 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-136
-137
-138</pre>
+140
+141
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 140</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_cover_image_url'>cover_image_url</span><span class='lparen'>(</span><span class='label'>format:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>webp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>size:</span> <span class='int'>4096</span><span class='rparen'>)</span>
-  <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='period'>.</span><span class='id identifier rubyid_app_cover_url'><span class='object_link'><a href="API.html#app_cover_url-class_method" title="Discordrb::API.app_cover_url (method)">app_cover_url</a></span></span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='ivar'>@cover_image_id</span><span class='comma'>,</span> <span class='id identifier rubyid_format'>format</span><span class='comma'>,</span> <span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@cover_image_id</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cover_image_url'>cover_image_url</span><span class='lparen'>(</span><span class='label'>format:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>webp</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='period'>.</span><span class='id identifier rubyid_app_cover_url'><span class='object_link'><a href="API.html#app_cover_url-class_method" title="Discordrb::API.app_cover_url (method)">app_cover_url</a></span></span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='ivar'>@cover_image_id</span><span class='comma'>,</span> <span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@cover_image_id</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3380,7 +3650,7 @@ Can be used to generate a cover image URL.</p></div>
         <span class='name'>type</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>Symbol</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
@@ -3411,27 +3681,17 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-143
-144
-145
-146
 147
 148
 149
-150
-151</pre>
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_integration_type'>delete_integration_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Interaction.html" title="Discordrb::Interaction (class)">Interaction</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Interaction.html#INTEGRATION_TYPES-constant" title="Discordrb::Interaction::INTEGRATION_TYPES (constant)">INTEGRATION_TYPES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_integration_types'>integration_types</span> <span class='op'>=</span> <span class='ivar'>@integration_types</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_integration_type'>integration_type</span><span class='op'>|</span>
-    <span class='id identifier rubyid_integration_type'>integration_type</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span><span class='label'>integration_types:</span> <span class='id identifier rubyid_collect_integration_types'>collect_integration_types</span><span class='lparen'>(</span><span class='id identifier rubyid_integration_types'>integration_types</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new_data'>new_data</span> <span class='op'>=</span> <span class='ivar'>@integration_types</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span><span class='label'>integration_types:</span> <span class='id identifier rubyid_collect_integration_types'>collect_integration_types</span><span class='lparen'>(</span><span class='id identifier rubyid_new_data'>new_data</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3478,14 +3738,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -3500,7 +3760,7 @@ Can be used to generate a cover image URL.</p></div>
       <div class="method_details ">
   <h3 class="signature " id="icon_url-instance_method">
   
-    #<strong>icon_url</strong>(format: &#39;webp&#39;, size: 4096)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+    #<strong>icon_url</strong>(format: &#39;webp&#39;)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
   
 
   
@@ -3532,22 +3792,6 @@ Can be used to generate a cover image URL.</p></div>
       
     </li>
   
-    <li>
-      
-        <span class='name'>size</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>4096</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>The URL will default to <code>4096</code>. You can otherwise specify any number that's a power of two to override this.</p></div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -3573,15 +3817,15 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-128
-129
-130</pre>
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 133</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_icon_url'>icon_url</span><span class='lparen'>(</span><span class='label'>format:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>webp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>size:</span> <span class='int'>4096</span><span class='rparen'>)</span>
-  <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='period'>.</span><span class='id identifier rubyid_app_icon_url'><span class='object_link'><a href="API.html#app_icon_url-class_method" title="Discordrb::API.app_icon_url (method)">app_icon_url</a></span></span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='ivar'>@icon_id</span><span class='comma'>,</span> <span class='id identifier rubyid_format'>format</span><span class='comma'>,</span> <span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@icon_id</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_icon_url'>icon_url</span><span class='lparen'>(</span><span class='label'>format:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>webp</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='period'>.</span><span class='id identifier rubyid_app_icon_url'><span class='object_link'><a href="API.html#app_icon_url-class_method" title="Discordrb::API.app_icon_url (method)">app_icon_url</a></span></span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='ivar'>@icon_id</span><span class='comma'>,</span> <span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@icon_id</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3599,7 +3843,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether or not the application has reached less than 10,000 unique users and has access to the message content intent.</p>
+    <p>Returns whether or not the application is in less than 100 servers and has access to the message content intent.</p>
 
   </div>
 </div>
@@ -3616,7 +3860,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>whether or not the application has reached less than 10,000 unique users and has access to the message content intent.</p></div>
+        <div class='inline'><p>whether or not the application is in less than 100 servers and has access to the message content intent.</p></div>
       
     </li>
   
@@ -3628,14 +3872,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -3658,7 +3902,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether or not the application has reached less than 10,000 unique users and has access to the server presences intent.</p>
+    <p>Returns whether or not the application is in more than 100 servers and has access to the server presences intent.</p>
 
   </div>
 </div>
@@ -3675,7 +3919,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>whether or not the application has reached less than 10,000 unique users and has access to the server presences intent.</p></div>
+        <div class='inline'><p>whether or not the application is in more than 100 servers and has access to the server presences intent.</p></div>
       
     </li>
   
@@ -3687,14 +3931,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -3717,7 +3961,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether or not the application has reached less than 10,000 unique users and has access to the server members intent.</p>
+    <p>Returns whether or not the application is in less than 100 servers and has access to the server members intent.</p>
 
   </div>
 </div>
@@ -3734,7 +3978,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>whether or not the application has reached less than 10,000 unique users and has access to the server members intent.</p></div>
+        <div class='inline'><p>whether or not the application is in less than 100 servers and has access to the server members intent.</p></div>
       
     </li>
   
@@ -3746,14 +3990,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -3805,12 +4049,12 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-275
-276
-277</pre>
+283
+284
+285</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 275</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 283</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message_content_intent?'>message_content_intent?</span>
   <span class='id identifier rubyid_approved_message_content_intent?'>approved_message_content_intent?</span> <span class='op'>||</span> <span class='id identifier rubyid_limited_message_content_intent?'>limited_message_content_intent?</span>
@@ -3823,7 +4067,7 @@ Can be used to generate a cover image URL.</p></div>
       <div class="method_details ">
   <h3 class="signature " id="modify-instance_method">
   
-    #<strong>modify</strong>(icon: :undef, cover_image: :undef, flags: :undef, tags: :undef, description: :undef, custom_install_url: :undef, webhook_events_url: :undef, webhook_events_status: :undef, webhook_event_types: :undef, interactions_endpoint_url: :undef, integration_types: :undef, role_connections_verification_url: :undef, add_flags: :undef, remove_flags: :undef)  &#x21d2; <tt>nil</tt> 
+    #<strong>modify</strong>(icon: :undef, cover_image: :undef, flags: :undef, tags: :undef, description: :undef, custom_install_url: :undef, webhook_events_url: :undef, webhook_events_status: :undef, webhook_event_types: :undef, interactions_endpoint_url: :undef, install_scopes: :undef, install_permissions: :undef, role_connections_verification_url: :undef, add_flags: :undef, remove_flags: :undef, integration_types: :undef)  &#x21d2; <tt>nil</tt> 
   
 
   
@@ -4007,6 +4251,38 @@ Can be used to generate a cover image URL.</p></div>
   
     <li>
       
+        <span class='name'>install_scopes</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>, Symbol&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new default scopes to add the application to a server with.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>install_permissions</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Permissions.html" title="Discordrb::Permissions (class)">Permissions</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new default permissions to add the application to a server with.</p></div>
+      
+    </li>
+  
+    <li>
+      
         <span class='name'>role_connections_verification_url</span>
       
       
@@ -4050,6 +4326,22 @@ Can be used to generate a cover image URL.</p></div>
       
         &mdash;
         <div class='inline'><p>The limited intent flags to remove from the application.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>integration_types</span>
+      
+      
+        <span class='type'>(<tt>#to_h</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new integration types configuration for the application.</p></div>
       
     </li>
   
@@ -4108,7 +4400,15 @@ Can be used to generate a cover image URL.</p></div>
 230
 231
 232
-233</pre>
+233
+234
+235
+236
+237
+238
+239
+240
+241</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 200</span>
@@ -4116,13 +4416,14 @@ Can be used to generate a cover image URL.</p></div>
 <span class='kw'>def</span> <span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span>
   <span class='label'>icon:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>cover_image:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>flags:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>tags:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
   <span class='label'>custom_install_url:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>webhook_events_url:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>webhook_events_status:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
-  <span class='label'>webhook_event_types:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>interactions_endpoint_url:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>integration_types:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
-  <span class='label'>role_connections_verification_url:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>add_flags:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>remove_flags:</span> <span class='symbol'>:undef</span>
+  <span class='label'>webhook_event_types:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>interactions_endpoint_url:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>install_scopes:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+  <span class='label'>install_permissions:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>role_connections_verification_url:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>add_flags:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+  <span class='label'>remove_flags:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>integration_types:</span> <span class='symbol'>:undef</span>
 <span class='rparen'>)</span>
   <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
     <span class='label'>icon:</span> <span class='id identifier rubyid_icon'>icon</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:read</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span><span class='period'>.</span><span class='id identifier rubyid_encode64'><span class='object_link'><a href="../Discordrb.html#encode64-class_method" title="Discordrb.encode64 (method)">encode64</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_icon'>icon</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_icon'>icon</span><span class='comma'>,</span>
     <span class='label'>cover_image:</span> <span class='id identifier rubyid_cover_image'>cover_image</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:read</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span><span class='period'>.</span><span class='id identifier rubyid_encode64'><span class='object_link'><a href="../Discordrb.html#encode64-class_method" title="Discordrb.encode64 (method)">encode64</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_cover_image'>cover_image</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_cover_image'>cover_image</span><span class='comma'>,</span>
-    <span class='label'>flags:</span> <span class='id identifier rubyid_flags'>flags</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='id identifier rubyid_flags'>flags</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='op'>*</span><span class='id identifier rubyid_flags'>flags</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_sum'>sum</span><span class='comma'>,</span> <span class='id identifier rubyid_bit'>bit</span><span class='op'>|</span> <span class='id identifier rubyid_sum'>sum</span> <span class='op'>|</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_bit'>bit</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_bit'>bit</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>flags:</span> <span class='id identifier rubyid_flags'>flags</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='id identifier rubyid_flags'>flags</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='op'>*</span><span class='id identifier rubyid_flags'>flags</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_bit'>bit</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_bit'>bit</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_bit'>bit</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:|</span><span class='rparen'>)</span><span class='comma'>,</span>
     <span class='label'>tags:</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span>
     <span class='label'>description:</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
     <span class='label'>custom_install_url:</span> <span class='id identifier rubyid_custom_install_url'>custom_install_url</span><span class='comma'>,</span>
@@ -4134,11 +4435,18 @@ Can be used to generate a cover image URL.</p></div>
     <span class='label'>integration_types_config:</span> <span class='id identifier rubyid_integration_types'>integration_types</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='id identifier rubyid_integration_types'>integration_types</span> <span class='op'>:</span> <span class='id identifier rubyid_integration_types'>integration_types</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_h'>to_h</span>
   <span class='rbrace'>}</span>
 
+  <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:install_params</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='ivar'>@install_params</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:scopes</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_install_scopes'>install_scopes</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_install_scopes'>install_scopes</span> <span class='op'>!=</span> <span class='symbol'>:undef</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_install_permissions'>install_permissions</span> <span class='op'>!=</span> <span class='symbol'>:undef</span>
+    <span class='id identifier rubyid_install_permissions'>install_permissions</span> <span class='op'>=</span> <span class='id identifier rubyid_install_permissions'>install_permissions</span><span class='period'>.</span><span class='id identifier rubyid_bits'>bits</span> <span class='kw'>if</span> <span class='id identifier rubyid_install_permissions'>install_permissions</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:bits</span><span class='rparen'>)</span>
+    <span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:install_params</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='ivar'>@install_params</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:permissions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_install_permissions'>install_permissions</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>end</span>
+
   <span class='kw'>if</span> <span class='id identifier rubyid_add_flags'>add_flags</span> <span class='op'>!=</span> <span class='symbol'>:undef</span> <span class='op'>||</span> <span class='id identifier rubyid_remove_flags'>remove_flags</span> <span class='op'>!=</span> <span class='symbol'>:undef</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;add_flags&#39; and &#39;remove_flags&#39; are mutually exclusive with &#39;flags&#39;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_flags'>flags</span> <span class='op'>!=</span> <span class='symbol'>:undef</span>
 
-    <span class='id identifier rubyid_to_flags'>to_flags</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_bits'>bits</span><span class='op'>|</span>
-      <span class='id identifier rubyid_bits'>bits</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='int'>0</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='op'>*</span><span class='id identifier rubyid_bits'>bits</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_sum'>sum</span><span class='comma'>,</span> <span class='id identifier rubyid_bit'>bit</span><span class='op'>|</span> <span class='id identifier rubyid_sum'>sum</span> <span class='op'>|</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_bit'>bit</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_bit'>bit</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_to_flags'>to_flags</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+      <span class='lbracket'>[</span><span class='op'>*</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='int'>0</span> <span class='op'>:</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_bit'>bit</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_bit'>bit</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_bit'>bit</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:|</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
 
     <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:flags</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@flags</span> <span class='op'>&amp;</span> <span class='op'>~</span><span class='id identifier rubyid_to_flags'>to_flags</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_remove_flags'>remove_flags</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='id identifier rubyid_to_flags'>to_flags</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_add_flags'>add_flags</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -4146,128 +4454,6 @@ Can be used to generate a cover image URL.</p></div>
 
   <span class='id identifier rubyid_update_data'>update_data</span><span class='lparen'>(</span><span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Application.html" title="Discordrb::API::Application (module)">Application</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_current_application'><span class='object_link'><a href="API/Application.html#update_current_application-class_method" title="Discordrb::API::Application.update_current_application (method)">update_current_application</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='kw'>nil</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="modify_integration_type-instance_method">
-  
-    #<strong>modify_integration_type</strong>(type:, scopes: :undef, permissions: :undef)  &#x21d2; <tt>nil</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Add or update an integration types config for the application.</p>
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>type</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>Symbol</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The type of the integration type to upsert.</p></div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>scopes</span>
-      
-      
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>, Symbol&gt;</tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>:undef</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>The default Oauth scopes for the config.</p></div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>permissions</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Permissions.html" title="Discordrb::Permissions (class)">Permissions</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>:undef</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>The default permissions for the config.</p></div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>nil</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 158</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_modify_integration_type'>modify_integration_type</span><span class='lparen'>(</span><span class='label'>type:</span><span class='comma'>,</span> <span class='label'>scopes:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>permissions:</span> <span class='symbol'>:undef</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_permissions'>permissions</span> <span class='op'>=</span> <span class='id identifier rubyid_permissions'>permissions</span><span class='period'>.</span><span class='id identifier rubyid_bits'>bits</span> <span class='kw'>if</span> <span class='id identifier rubyid_permissions'>permissions</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:bits</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Interaction.html" title="Discordrb::Interaction (class)">Interaction</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Interaction.html#INTEGRATION_TYPES-constant" title="Discordrb::Interaction::INTEGRATION_TYPES (constant)">INTEGRATION_TYPES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_integration_types'>integration_types</span> <span class='op'>=</span> <span class='ivar'>@integration_types</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
-
-  <span class='id identifier rubyid_integration_types'>integration_types</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-    <span class='label'>scopes:</span> <span class='id identifier rubyid_scopes'>scopes</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id identifier rubyid_integration_types'>integration_types</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span><span class='op'>&amp;.</span><span class='id identifier rubyid_scopes'>scopes</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_scopes'>scopes</span><span class='comma'>,</span>
-    <span class='label'>permissions:</span> <span class='lparen'>(</span><span class='id identifier rubyid_permissions'>permissions</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id identifier rubyid_integration_types'>integration_types</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span><span class='op'>&amp;.</span><span class='id identifier rubyid_permissions'>permissions</span><span class='op'>&amp;.</span><span class='id identifier rubyid_bits'>bits</span> <span class='op'>||</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_permissions'>permissions</span><span class='rparen'>)</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_s'>to_s</span>
-  <span class='rbrace'>}</span>
-
-  <span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span><span class='label'>integration_types:</span> <span class='id identifier rubyid_collect_integration_types'>collect_integration_types</span><span class='lparen'>(</span><span class='id identifier rubyid_integration_types'>integration_types</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -4314,14 +4500,14 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-255
-256
-257
-258
-259</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Application::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
   <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -4373,12 +4559,12 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-263
-264
-265</pre>
+271
+272
+273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 263</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 271</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_presence_intent?'>presence_intent?</span>
   <span class='id identifier rubyid_approved_presence_intent?'>approved_presence_intent?</span> <span class='op'>||</span> <span class='id identifier rubyid_limited_presence_intent?'>limited_presence_intent?</span>
@@ -4399,7 +4585,7 @@ Can be used to generate a cover image URL.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Get the server associated with the application.</p>
+    <p>Get the server associated with this application.</p>
 
   </div>
 </div>
@@ -4416,7 +4602,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>This will be <code>nil</code> if the bot does not have an associated server set.</p></div>
+        <div class='inline'><p>This will be nil if the bot does not have an associated server set.</p></div>
       
     </li>
   
@@ -4444,12 +4630,12 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-120
-121
-122</pre>
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server'>server</span>
   <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_server'>server</span><span class='lparen'>(</span><span class='ivar'>@server_id</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@server_id</span>
@@ -4487,7 +4673,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The defaults install params for when the application is installed in a server.</p></div>
+        <div class='inline'><p>The defaults install params for when the application's is installed in a server.</p></div>
       
     </li>
   
@@ -4499,12 +4685,12 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-180
-181
-182</pre>
+177
+178
+179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 180</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 177</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server_integration_type'>server_integration_type</span>
   <span class='ivar'>@integration_types</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -4554,12 +4740,12 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-269
-270
-271</pre>
+277
+278
+279</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 269</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server_members_intent?'>server_members_intent?</span>
   <span class='id identifier rubyid_approved_server_members_intent?'>approved_server_members_intent?</span> <span class='op'>||</span> <span class='id identifier rubyid_limited_server_members_intent?'>limited_server_members_intent?</span>
@@ -4597,7 +4783,7 @@ Can be used to generate a cover image URL.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The default install params for when the application is installed to a user.</p></div>
+        <div class='inline'><p>The default install params for when the application's is installed to a user.</p></div>
       
     </li>
   
@@ -4609,12 +4795,12 @@ Can be used to generate a cover image URL.</p></div>
       <pre class="lines">
 
 
-174
-175
-176</pre>
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/application.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user_integration_type'>user_integration_type</span>
   <span class='ivar'>@integration_types</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
@@ -4629,7 +4815,7 @@ Can be used to generate a cover image URL.</p></div>
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:38 2026 by
+  Generated on Tue Sep 29 17:01:43 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

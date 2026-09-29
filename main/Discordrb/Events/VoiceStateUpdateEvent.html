@@ -106,7 +106,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Event raised when a user's voice state updates.</p>
+    <p>Event raised when a user's voice state updates</p>
 
   </div>
 </div>
@@ -123,7 +123,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#channel-instance_method" title="#channel (instance method)">#<strong>channel</strong>  &#x21d2; Channel<sup>?</sup> </a>
+      <a href="#channel-instance_method" title="#channel (instance method)">#<strong>channel</strong>  &#x21d2; Object </a>
     
 
     
@@ -142,7 +142,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The channel that the user is connected to, or <code>nil</code> if the user has left the voice channel.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute channel.</p></div></span>
   
 </li>
 
@@ -150,11 +150,9 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#deaf-instance_method" title="#deaf (instance method)">#<strong>deaf</strong>  &#x21d2; true, false </a>
+      <a href="#deaf-instance_method" title="#deaf (instance method)">#<strong>deaf</strong>  &#x21d2; Object </a>
     
 
-    
-      (also: #deaf?)
     
   </span>
   
@@ -171,7 +169,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether this voice state's user is deafened server-wide.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute deaf.</p></div></span>
   
 </li>
 
@@ -179,11 +177,9 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#mute-instance_method" title="#mute (instance method)">#<strong>mute</strong>  &#x21d2; true, false </a>
+      <a href="#mute-instance_method" title="#mute (instance method)">#<strong>mute</strong>  &#x21d2; Object </a>
     
 
-    
-      (also: #mute?)
     
   </span>
   
@@ -200,7 +196,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether this voice state's user is muted server-wide.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute mute.</p></div></span>
   
 </li>
 
@@ -227,7 +223,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The old channel this user was on, or <code>nil</code> if the user is newly joining voice.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>The old channel this user was on, or nil if the user is newly joining voice.</p></div></span>
   
 </li>
 
@@ -235,7 +231,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#requested_to_speak_at-instance_method" title="#requested_to_speak_at (instance method)">#<strong>requested_to_speak_at</strong>  &#x21d2; Time<sup>?</sup> </a>
+      <a href="#self_deaf-instance_method" title="#self_deaf (instance method)">#<strong>self_deaf</strong>  &#x21d2; Object </a>
     
 
     
@@ -254,7 +250,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The time at when this voice state's user requested to speak in the stage channel.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute self_deaf.</p></div></span>
   
 </li>
 
@@ -262,123 +258,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#self_deaf-instance_method" title="#self_deaf (instance method)">#<strong>self_deaf</strong>  &#x21d2; true, false </a>
-    
-
-    
-      (also: #self_deaf?)
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Whether this voice state's user has deafened themselves.</p></div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#self_mute-instance_method" title="#self_mute (instance method)">#<strong>self_mute</strong>  &#x21d2; true, false </a>
-    
-
-    
-      (also: #self_mute?)
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Whether this voice state's user has muted themselves.</p></div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#self_stream-instance_method" title="#self_stream (instance method)">#<strong>self_stream</strong>  &#x21d2; true, false </a>
-    
-
-    
-      (also: #self_stream?)
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Whether this voice state's user is currently streaming via go-live.</p></div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#self_video-instance_method" title="#self_video (instance method)">#<strong>self_video</strong>  &#x21d2; true, false </a>
-    
-
-    
-      (also: #self_video?)
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Whether this voice state's user currently has their cameria enabled.</p></div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#server-instance_method" title="#server (instance method)">#<strong>server</strong>  &#x21d2; Server </a>
+      <a href="#self_mute-instance_method" title="#self_mute (instance method)">#<strong>self_mute</strong>  &#x21d2; Object </a>
     
 
     
@@ -397,7 +277,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The server that the voice state is from.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute self_mute.</p></div></span>
   
 </li>
 
@@ -405,7 +285,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#session_id-instance_method" title="#session_id (instance method)">#<strong>session_id</strong>  &#x21d2; String </a>
+      <a href="#server-instance_method" title="#server (instance method)">#<strong>server</strong>  &#x21d2; Object </a>
     
 
     
@@ -424,7 +304,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The ID of the session the voice state is from.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute server.</p></div></span>
   
 </li>
 
@@ -432,36 +312,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#suppress-instance_method" title="#suppress (instance method)">#<strong>suppress</strong>  &#x21d2; true, false </a>
-    
-
-    
-      (also: #suppress?)
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Whether this voice state's user has been suppressed in the stage channel.</p></div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#user-instance_method" title="#user (instance method)">#<strong>user</strong>  &#x21d2; User </a>
+      <a href="#session_id-instance_method" title="#session_id (instance method)">#<strong>session_id</strong>  &#x21d2; Object </a>
     
 
     
@@ -480,7 +331,88 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The user whose voice state was updated.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute session_id.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#suppress-instance_method" title="#suppress (instance method)">#<strong>suppress</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute suppress.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#token-instance_method" title="#token (instance method)">#<strong>token</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute token.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user-instance_method" title="#user (instance method)">#<strong>user</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute user.</p></div></span>
   
 </li>
 
@@ -511,7 +443,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="channel-instance_method">
   
-    #<strong>channel</strong>  &#x21d2; <tt><span class='object_link'><a href="../Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt><sup>?</sup>  <span class="extras">(readonly)</span>
+    #<strong>channel</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -519,30 +451,12 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the channel that the user is connected to, or <code>nil</code> if the user has left
-the voice channel.</p>
+    <p>Returns the value of attribute channel.</p>
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the channel that the user is connected to, or <code>nil</code> if the user has left
-the voice channel.</p></div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -550,12 +464,12 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
-56
-57
-58</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_channel'>channel</span>
   <span class='ivar'>@channel</span>
@@ -570,40 +484,20 @@ the voice channel.</p></div>
       <div class="method_details ">
   <h3 class="signature " id="deaf-instance_method">
   
-    #<strong>deaf</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
+    #<strong>deaf</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='deaf?-instance_method'>deaf?</span></span>
-    </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether this voice state's user is deafened server-wide.</p>
+    <p>Returns the value of attribute deaf.</p>
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>whether this voice state's user is deafened server-wide.</p></div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -611,12 +505,12 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
-25
-26
-27</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_deaf'>deaf</span>
   <span class='ivar'>@deaf</span>
@@ -631,40 +525,20 @@ the voice channel.</p></div>
       <div class="method_details ">
   <h3 class="signature " id="mute-instance_method">
   
-    #<strong>mute</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
+    #<strong>mute</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='mute?-instance_method'>mute?</span></span>
-    </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether this voice state's user is muted server-wide.</p>
+    <p>Returns the value of attribute mute.</p>
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>whether this voice state's user is muted server-wide.</p></div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -672,12 +546,12 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mute'>mute</span>
   <span class='ivar'>@mute</span>
@@ -700,7 +574,7 @@ the voice channel.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the old channel this user was on, or <code>nil</code> if the user is newly joining voice.</p>
+    <p>Returns the old channel this user was on, or nil if the user is newly joining voice.</p>
 
   </div>
 </div>
@@ -717,7 +591,7 @@ the voice channel.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>the old channel this user was on, or <code>nil</code> if the user is newly joining voice.</p></div>
+        <div class='inline'><p>the old channel this user was on, or nil if the user is newly joining voice.</p></div>
       
     </li>
   
@@ -729,12 +603,12 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
-59
-60
-61</pre>
+12
+13
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_old_channel'>old_channel</span>
   <span class='ivar'>@old_channel</span>
@@ -747,99 +621,22 @@ the voice channel.</p></div>
       
       <span id=""></span>
       <div class="method_details ">
-  <h3 class="signature " id="requested_to_speak_at-instance_method">
-  
-    #<strong>requested_to_speak_at</strong>  &#x21d2; <tt>Time</tt><sup>?</sup>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns the time at when this voice state's user requested to speak in the stage channel.</p>
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Time</tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the time at when this voice state's user requested to speak in the stage channel.</p></div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-49
-50
-51</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 49</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_requested_to_speak_at'>requested_to_speak_at</span>
-  <span class='ivar'>@requested_to_speak_at</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
   <h3 class="signature " id="self_deaf-instance_method">
   
-    #<strong>self_deaf</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
+    #<strong>self_deaf</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='self_deaf?-instance_method'>self_deaf?</span></span>
-    </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether this voice state's user has deafened themselves.</p>
+    <p>Returns the value of attribute self_deaf.</p>
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>whether this voice state's user has deafened themselves.</p></div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -847,12 +644,12 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
-33
-34
-35</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_self_deaf'>self_deaf</span>
   <span class='ivar'>@self_deaf</span>
@@ -867,40 +664,20 @@ the voice channel.</p></div>
       <div class="method_details ">
   <h3 class="signature " id="self_mute-instance_method">
   
-    #<strong>self_mute</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
+    #<strong>self_mute</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='self_mute?-instance_method'>self_mute?</span></span>
-    </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether this voice state's user has muted themselves.</p>
+    <p>Returns the value of attribute self_mute.</p>
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>whether this voice state's user has muted themselves.</p></div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -908,12 +685,12 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
-29
-30
-31</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_self_mute'>self_mute</span>
   <span class='ivar'>@self_mute</span>
@@ -926,131 +703,9 @@ the voice channel.</p></div>
       
       <span id=""></span>
       <div class="method_details ">
-  <h3 class="signature " id="self_stream-instance_method">
-  
-    #<strong>self_stream</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
-  
-
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='self_stream?-instance_method'>self_stream?</span></span>
-    </span>
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns whether this voice state's user is currently streaming via go-live.</p>
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>whether this voice state's user is currently streaming via go-live.</p></div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-37
-38
-39</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 37</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_self_stream'>self_stream</span>
-  <span class='ivar'>@self_stream</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
-  <h3 class="signature " id="self_video-instance_method">
-  
-    #<strong>self_video</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
-  
-
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='self_video?-instance_method'>self_video?</span></span>
-    </span>
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns whether this voice state's user currently has their cameria enabled.</p>
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>whether this voice state's user currently has their cameria enabled.</p></div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-41
-42
-43</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 41</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_self_video'>self_video</span>
-  <span class='ivar'>@self_video</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
   <h3 class="signature " id="server-instance_method">
   
-    #<strong>server</strong>  &#x21d2; <tt><span class='object_link'><a href="../Server.html" title="Discordrb::Server (class)">Server</a></span></tt>  <span class="extras">(readonly)</span>
+    #<strong>server</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -1058,28 +713,12 @@ the voice channel.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the server that the voice state is from.</p>
+    <p>Returns the value of attribute server.</p>
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Server.html" title="Discordrb::Server (class)">Server</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the server that the voice state is from.</p></div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1087,12 +726,12 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
-18
-19
-20</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_server'>server</span>
   <span class='ivar'>@server</span>
@@ -1107,7 +746,7 @@ the voice channel.</p></div>
       <div class="method_details ">
   <h3 class="signature " id="session_id-instance_method">
   
-    #<strong>session_id</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>  <span class="extras">(readonly)</span>
+    #<strong>session_id</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -1115,28 +754,12 @@ the voice channel.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the ID of the session the voice state is from.</p>
+    <p>Returns the value of attribute session_id.</p>
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the ID of the session the voice state is from.</p></div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1144,12 +767,12 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
-52
-53
-54</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_session_id'>session_id</span>
   <span class='ivar'>@session_id</span>
@@ -1164,40 +787,20 @@ the voice channel.</p></div>
       <div class="method_details ">
   <h3 class="signature " id="suppress-instance_method">
   
-    #<strong>suppress</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
+    #<strong>suppress</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
-  
-    <span class="aliases">Also known as:
-    <span class="names"><span id='suppress?-instance_method'>suppress?</span></span>
-    </span>
   
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether this voice state's user has been suppressed in the stage channel.</p>
+    <p>Returns the value of attribute suppress.</p>
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>whether this voice state's user has been suppressed in the stage channel.</p></div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1205,12 +808,12 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
-45
-46
-47</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_suppress'>suppress</span>
   <span class='ivar'>@suppress</span>
@@ -1223,9 +826,9 @@ the voice channel.</p></div>
       
       <span id=""></span>
       <div class="method_details ">
-  <h3 class="signature " id="user-instance_method">
+  <h3 class="signature " id="token-instance_method">
   
-    #<strong>user</strong>  &#x21d2; <tt><span class='object_link'><a href="../User.html" title="Discordrb::User (class)">User</a></span></tt>  <span class="extras">(readonly)</span>
+    #<strong>token</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -1233,28 +836,12 @@ the voice channel.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the user whose voice state was updated.</p>
+    <p>Returns the value of attribute token.</p>
 
   </div>
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../User.html" title="Discordrb::User (class)">User</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the user whose voice state was updated.</p></div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1262,12 +849,53 @@ the voice channel.</p></div>
       <pre class="lines">
 
 
+9
 10
-11
-12</pre>
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_token'>token</span>
+  <span class='ivar'>@token</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="user-instance_method">
+  
+    #<strong>user</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute user.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span>
   <span class='ivar'>@user</span>
@@ -1283,7 +911,7 @@ the voice channel.</p></div>
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:42 2026 by
+  Generated on Tue Sep 29 17:01:46 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

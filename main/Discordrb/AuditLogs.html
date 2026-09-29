@@ -211,9 +211,7 @@
   <span class='int'>166</span> <span class='op'>=&gt;</span> <span class='symbol'>:onboarding_create</span><span class='comma'>,</span>
   <span class='int'>167</span> <span class='op'>=&gt;</span> <span class='symbol'>:onboarding_update</span><span class='comma'>,</span>
   <span class='int'>190</span> <span class='op'>=&gt;</span> <span class='symbol'>:home_settings_create</span><span class='comma'>,</span>
-  <span class='int'>191</span> <span class='op'>=&gt;</span> <span class='symbol'>:home_settings_update</span><span class='comma'>,</span>
-  <span class='int'>192</span> <span class='op'>=&gt;</span> <span class='symbol'>:voice_channel_status_create</span><span class='comma'>,</span>
-  <span class='int'>193</span> <span class='op'>=&gt;</span> <span class='symbol'>:voice_channel_status_delete</span>
+  <span class='int'>191</span> <span class='op'>=&gt;</span> <span class='symbol'>:home_settings_update</span>
 <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
     </dl>
@@ -255,7 +253,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#users-instance_method" title="#users (instance method)">#<strong>users</strong>  &#x21d2; Hash&lt;Integer =&gt; User&gt; </a>
+      <a href="#users-instance_method" title="#users (instance method)">#<strong>users</strong>  &#x21d2; Hash&lt;String =&gt; User&gt; </a>
     
 
     
@@ -282,7 +280,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#webhooks-instance_method" title="#webhooks (instance method)">#<strong>webhooks</strong>  &#x21d2; Hash&lt;Integer =&gt; Webhook&gt; </a>
+      <a href="#webhooks-instance_method" title="#webhooks (instance method)">#<strong>webhooks</strong>  &#x21d2; Hash&lt;String =&gt; Webhook&gt; </a>
     
 
     
@@ -437,12 +435,12 @@
       <pre class="lines">
 
 
-120
-121
-122</pre>
+117
+118
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_entries'>entries</span>
   <span class='ivar'>@entries</span>
@@ -457,7 +455,7 @@
       <div class="method_details ">
   <h3 class="signature " id="users-instance_method">
   
-    #<strong>users</strong>  &#x21d2; <tt>Hash&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span> =&gt; <span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+    #<strong>users</strong>  &#x21d2; <tt>Hash&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span> =&gt; <span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -477,7 +475,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Hash&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span> =&gt; <span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Hash&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span> =&gt; <span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span>&gt;</tt>)</span>
       
       
       
@@ -494,12 +492,12 @@
       <pre class="lines">
 
 
-114
-115
-116</pre>
+111
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_users'>users</span>
   <span class='ivar'>@users</span>
@@ -514,7 +512,7 @@
       <div class="method_details ">
   <h3 class="signature " id="webhooks-instance_method">
   
-    #<strong>webhooks</strong>  &#x21d2; <tt>Hash&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span> =&gt; <span class='object_link'><a href="Webhook.html" title="Discordrb::Webhook (class)">Webhook</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+    #<strong>webhooks</strong>  &#x21d2; <tt>Hash&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span> =&gt; <span class='object_link'><a href="Webhook.html" title="Discordrb::Webhook (class)">Webhook</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -534,7 +532,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Hash&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span> =&gt; <span class='object_link'><a href="Webhook.html" title="Discordrb::Webhook (class)">Webhook</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Hash&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span> =&gt; <span class='object_link'><a href="Webhook.html" title="Discordrb::Webhook (class)">Webhook</a></span>&gt;</tt>)</span>
       
       
       
@@ -551,12 +549,12 @@
       <pre class="lines">
 
 
-117
-118
-119</pre>
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_webhooks'>webhooks</span>
   <span class='ivar'>@webhooks</span>
@@ -617,12 +615,12 @@
       <pre class="lines">
 
 
-364
-365
-366</pre>
+357
+358
+359</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 364</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 357</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_latest'>latest</span>
   <span class='ivar'>@entries</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
@@ -680,12 +678,12 @@
       <pre class="lines">
 
 
-372
-373
-374</pre>
+365
+366
+367</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 372</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 365</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
   <span class='ivar'>@users</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='rbracket'>]</span>
@@ -743,12 +741,12 @@
       <pre class="lines">
 
 
-379
-380
-381</pre>
+372
+373
+374</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 379</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/audit_logs.rb', line 372</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_webhook'>webhook</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
   <span class='ivar'>@webhooks</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='rbracket'>]</span>
@@ -763,7 +761,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:36 2026 by
+  Generated on Tue Sep 29 17:01:42 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>
