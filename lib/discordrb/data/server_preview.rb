@@ -21,6 +21,9 @@ module Discordrb
     # @return [Hash<Integer => Emoji>] a hash of all the emojis usable on this server.
     attr_reader :emojis
 
+    # @return [Array<Sticker>] an array of all of the stickers available on this server.
+    attr_reader :stickers
+
     # @return [Array<Symbol>] the features of this server, e.g. `:banner` or `:verified`.
     attr_reader :features
 
@@ -46,6 +49,7 @@ module Discordrb
       @member_count = data['approximate_member_count']
       @presence_count = data['approximate_presence_count']
       @features = data['features'].map { |feature| feature.downcase.to_sym }
+      @stickers = data['stickers'].map { |sticker| @bot.ensure_sticker(sticker) }
       @emojis = data['emojis'].to_h { |emoji| [emoji['id'].to_i, Emoji.new(emoji, bot)] }
     end
 
