@@ -660,6 +660,7 @@ module Discordrb
       builder.client_theme = client_theme
       embeds&.each { |embed| builder << embed }
       builder.allowed_mentions = allowed_mentions
+      builder.attachments = attachments if attachments
 
       yield(builder, view) if block_given?
 
@@ -668,9 +669,9 @@ module Discordrb
       builder = builder.to_json_hash
 
       if timeout
-        @bot.send_temporary_message(@id, builder[:content], timeout, builder[:tts], builder[:embeds], attachments, builder[:allowed_mentions], reference, components&.to_a || view.to_a, flags, nonce, enforce_nonce, builder[:poll], stickers, builder[:shared_client_theme])
+        @bot.send_temporary_message(@id, builder[:content], timeout, builder[:tts], builder[:embeds], builder[:attachments], builder[:allowed_mentions], reference, components&.to_a || view.to_a, flags, nonce, enforce_nonce, builder[:poll], stickers, builder[:shared_client_theme])
       else
-        @bot.send_message(@id, builder[:content], builder[:tts], builder[:embeds], attachments, builder[:allowed_mentions], reference, components&.to_a || view.to_a, flags, nonce, enforce_nonce, builder[:poll], stickers, builder[:shared_client_theme])
+        @bot.send_message(@id, builder[:content], builder[:tts], builder[:embeds], builder[:attachments], builder[:allowed_mentions], reference, components&.to_a || view.to_a, flags, nonce, enforce_nonce, builder[:poll], stickers, builder[:shared_client_theme])
       end
     end
 
@@ -1121,6 +1122,7 @@ module Discordrb
       builder.content = content
       embeds&.each { |embed| builder << embed }
       builder.allowed_mentions = allowed_mentions
+      builder.attachments = attachments if attachments
 
       yield(builder, view) if block_given?
 
@@ -1129,7 +1131,7 @@ module Discordrb
       builder = builder.to_json_hash
 
       message = { content: builder[:content], embeds: builder[:embeds], allowed_mentions: builder[:allowed_mentions], components: components&.to_a || view.to_a, sticker_ids: stickers ? Array(stickers)&.map(&:resolve_id) : stickers, flags: flags }
-      response = JSON.parse(API::Channel.start_thread_in_forum_or_media_channel(@bot.token, @id, name, message.compact, attachments, rate_limit_per_user, auto_archive_duration, tags&.map(&:resolve_id), reason))
+      response = JSON.parse(API::Channel.start_thread_in_forum_or_media_channel(@bot.token, @id, name, message.compact, builder[:attachments], rate_limit_per_user, auto_archive_duration, tags&.map(&:resolve_id), reason))
 
       Message.new(response['message'].merge!('channel_id' => response['id'], 'thread' => response), @bot)
     end
