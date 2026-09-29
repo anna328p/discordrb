@@ -1073,6 +1073,30 @@ module Discordrb
       @bot.ensure_channel(JSON.parse(data))
     end
 
+    # Fetch the status of the voice channel.
+    # @return [String, nil] The status of the voice channel, or `nil`.
+    def status
+      if !instance_variable_defined?(:@status) && voice?
+        @bot.gateway.send_request_channel_info(@server_id, %i[status voice_start_time])
+
+        sleep(0.01) until instance_variable_defined?(:@status)
+      end
+
+      @status
+    end
+
+    # Fetch the start time of the sesison for the voice channel.
+    # @return [Time, nil] The time at when the voice session started, or `nil`.
+    def start_time
+      if !instance_variable_defined?(:@start_time) && voice?
+        @bot.gateway.send_request_channel_info(@server_id, %i[status voice_start_time])
+
+        sleep(0.01) until instance_variable_defined?(:@start_time)
+      end
+
+      @start_time
+    end
+
     # Start a thread in a forum or media channel.
     # @param name [String] The name of the forum post to create.
     # @param auto_archive_duration [Integer, nil] How long before the post is automatically archived.
@@ -1252,6 +1276,7 @@ module Discordrb
     # @param position [Integer, nil] The new sorting position of the channel. Generally, this parameter should not be used. Please use {#sort_after} instead.
     # @param auto_archive_duration [Integer] The amount of minutes after which the thread will stop showing in the channel list.
     # @param default_thread_rate_limit_per_user [Integer] The default slowmode rate to set on threads created in the text or forum channel.
+    # @param status [String, nil] The status to set for the voice channel; between 1-500 characters, or `nil` to clear the existing status.
     # @param reason [String, nil] The reason to show in the server's audit log for modifying the channel.
     # @return [nil]
     def modify(
@@ -1259,7 +1284,7 @@ module Discordrb
       user_limit: :undef, permission_overwrites: :undef, parent: :undef, voice_region: :undef, video_quality_mode: :undef,
       default_auto_archive_duration: :undef, flags: :undef, tags: :undef, default_reaction: :undef, default_sort_order: :undef,
       default_forum_layout: :undef, archived: :undef, locked: :undef, invitable: :undef, add_flags: :undef, remove_flags: :undef,
-      position: :undef, auto_archive_duration: :undef, default_thread_rate_limit_per_user: :undef, reason: nil
+      position: :undef, auto_archive_duration: :undef, default_thread_rate_limit_per_user: :undef, status: :undef, reason: nil
     )
       data = {
         name: name,
@@ -1312,6 +1337,12 @@ module Discordrb
         data[:flags] = ((@flags & ~to_flags.call(remove_flags)) | to_flags.call(add_flags))
       end
 
+      if status != :undef && voice?
+        API::Channel.set_voice_channel_status(@bot.token, @id, status.to_s, reason: reason)
+
+        return unless data.any? { |_, value| value != :undef }
+      end
+
       update_data(JSON.parse(API::Channel.update!(@bot.token, @id, **data, reason: reason)))
       nil
     end
@@ -1322,7 +1353,7 @@ module Discordrb
     end
 
     # Set the last pin timestamp of a channel.
-    # @param time [String, nil] the time of the last pinned message in the channel
+    # @param time [String, nil] The time of the last pinned message in the channel.
     # @note For internal use only
     # @!visibility private
     def process_last_pin_timestamp(time)
@@ -1330,7 +1361,7 @@ module Discordrb
     end
 
     # Set the last message ID of a channel.
-    # @param id [Integer, nil] the ID of the last message in a channel
+    # @param id [Integer, nil] The ID of the last message in a channel.
     # @note For internal use only
     # @!visibility private
     def process_last_message_id(id)
@@ -1345,9 +1376,25 @@ module Discordrb
       @stage_instance = instance
     end
 
+    # Set the voice channel status of a channel.
+    # @param status [String, nil] The status of the voice channel.
+    # @note For internal use only
+    # @!visibility private
+    def process_voice_status(status)
+      @status = status&.empty? ? nil : status
+    end
+
+    # Set the start time of a voice channel.
+    # @param time [Integer, nil] The start time of the voice channel.
+    # @note For internal use only
+    # @!visibility private
+    def process_start_time(time)
+      @start_time = time ? Time.at(time) : time
+    end
+
     # Set the available tags of a channel.
-    # @param tag [Hash] the data for the tag to create
-    # @param reason [String, nil] the reason to show in the audit log
+    # @param tag [Hash] The data for the tag to create.
+    # @param reason [String, nil] The reason to show in the audit log.
     # @note For internal use only
     # @!visibility private
     def update_tags(tag, reason)

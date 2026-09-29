@@ -90,6 +90,11 @@ module Discordrb
     # to use this opcode to get the soundboard sounds for a single guild, as there is a REST endpoint that is much more
     # convenient to use. If you need to requests the soundboard sounds for more than one guild, this packet may be used.
     REQUEST_SOUNDBOARD_SOUNDS = 31
+
+    # **Sent**: This opcode identifies packets used to retrieve ephemeral channel data for channels in a server.
+    # This opcode is required to fetch the start time and status of a voice channel if the client does not already
+    # have them cached. (Sending this is never necessary for a gateway client to behave correctly)
+    REQUEST_CHANNEL_INFO = 43
   end
 
   # This class stores the data of an active gateway session. Note that this is different from a websocket connection -
@@ -437,6 +442,17 @@ module Discordrb
     # @param server_ids [Array<Integer, String>] The ID of the guilds you wish to request soundboard sounds for.
     def send_request_soundboard_sounds(server_ids)
       send_packet(Opcodes::REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: server_ids })
+    end
+
+    # Sends a request channel info (op 43). This will order Discord to send ephemeral channel data such as the status
+    # and voice start time of the channels in the server as dispatch events with type `CHANNEL_INFO`. It is necessary to
+    # use this method to get the start time of a voice channel's session, if the client has not already recieved it.
+    # @param fields [Array<String, Symbol>] The fields to include in the dispatch event.
+    # @param server_id [Integer] The ID of the server to fetch ephemeral channel data for.
+    def send_request_channel_info(server_id, fields)
+      data = { guild_id: server_id, fields: fields }
+
+      send_packet(Opcodes::REQUEST_CHANNEL_INFO, data)
     end
 
     # Sends a custom packet over the connection. This can be useful to implement future yet unimplemented functionality
