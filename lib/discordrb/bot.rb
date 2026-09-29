@@ -443,11 +443,12 @@ module Discordrb
     # @param poll [Hash, Poll::Builder, Poll, nil] The poll that should be attached to this message.
     # @param stickers [Array<Integer, String, Sticker>, Integer, String, Sticker, nil] The stickers that should be sent with the message; max of 3.
     # @param client_theme [hash, ClientTheme::Builder, ClientTheme, nil] The client-side theme to share via this message.
+    # @return [nil]
     def send_temporary_message(channel, content, timeout, tts = false, embeds = nil, attachments = nil, allowed_mentions = nil, message_reference = nil, components = nil, flags = 0, nonce = nil, enforce_nonce = false, poll = nil, stickers = nil, client_theme = nil)
+      message = send_message(channel, content, tts, embeds, attachments, allowed_mentions, message_reference, components, flags, nonce, enforce_nonce, poll, stickers, client_theme)
+
       Thread.new do
         Thread.current[:discordrb_name] = "#{@current_thread}-temp-msg"
-
-        message = send_message(channel, content, tts, embeds, attachments, allowed_mentions, message_reference, components, flags, nonce, enforce_nonce, poll, stickers, client_theme)
         sleep(timeout)
         message.delete
       end
