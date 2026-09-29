@@ -324,6 +324,20 @@
         </dt>
         <dd><pre class="code"><span class='const'><span class='object_link'><a href="#Code-class_method" title="Discordrb::Errors.Code (method)">Code</a></span></span><span class='lparen'>(</span><span class='int'>10_014</span><span class='rparen'>)</span></pre></dd>
       
+        <dt id="UnknownBan-constant" class="">UnknownBan =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Unknown Ban</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="#Code-class_method" title="Discordrb::Errors.Code (method)">Code</a></span></span><span class='lparen'>(</span><span class='int'>10_026</span><span class='rparen'>)</span></pre></dd>
+      
         <dt id="EndpointNotForBots-constant" class="">EndpointNotForBots =
           <div class="docstring">
   <div class="discussion">
@@ -868,18 +882,18 @@ rubocop:disable Naming/MethodName</p>
       <pre class="lines">
 
 
-88
-89
-90
-91
-92
-93
-94
-95
-96</pre>
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/errors.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/errors.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='const'>Code</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_classy'>classy</span> <span class='op'>=</span> <span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Errors/CodeError.html" title="Discordrb::Errors::CodeError (class)">CodeError</a></span></span><span class='rparen'>)</span>
@@ -953,12 +967,12 @@ rubocop:disable Naming/MethodName</p>
       <pre class="lines">
 
 
-101
-102
-103</pre>
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/errors.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/errors.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_error_class_for'>error_class_for</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span>
   <span class='ivar'>@code_classes</span><span class='lbracket'>[</span><span class='id identifier rubyid_code'>code</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="#Code-class_method" title="Discordrb::Errors.Code (method)">Code</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span>
@@ -973,7 +987,7 @@ rubocop:disable Naming/MethodName</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:33 2026 by
+  Generated on Tue Sep 29 18:43:10 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

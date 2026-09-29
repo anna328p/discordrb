@@ -71,14 +71,14 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="ThreadCreateEventHandler.html" title="Discordrb::Events::ThreadCreateEventHandler (class)">ThreadCreateEventHandler</a></span></span>
+      <span class="inheritName"><span class='object_link'><a href="ThreadEventHandler.html" title="Discordrb::Events::ThreadEventHandler (class)">ThreadEventHandler</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
           
             <li class="next"><span class='object_link'><a href="EventHandler.html" title="Discordrb::Events::EventHandler (class)">EventHandler</a></span></li>
           
-            <li class="next"><span class='object_link'><a href="ThreadCreateEventHandler.html" title="Discordrb::Events::ThreadCreateEventHandler (class)">ThreadCreateEventHandler</a></span></li>
+            <li class="next"><span class='object_link'><a href="ThreadEventHandler.html" title="Discordrb::Events::ThreadEventHandler (class)">ThreadEventHandler</a></span></li>
           
             <li class="next">Discordrb::Events::ThreadUpdateEventHandler</li>
           
@@ -108,7 +108,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Event handler for ThreadUpdateEvent</p>
+    <p>Event handler for :THREAD_UPDATE events.</p>
 
   </div>
 </div>
@@ -122,40 +122,6 @@
 
 
 
-  
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#matches%3F-instance_method" title="#matches? (instance method)">#<strong>matches?</strong>(event)  &#x21d2; Boolean </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-    </ul>
-    
-  
-
 
   
   
@@ -171,80 +137,16 @@
   
   
   
-  
+  <h2>Method Summary</h2>
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="EventHandler.html" title="Discordrb::Events::EventHandler (class)">EventHandler</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="EventHandler.html#after_call-instance_method" title="Discordrb::Events::EventHandler#after_call (method)">#after_call</a></span>, <span class='object_link'><a href="EventHandler.html#call-instance_method" title="Discordrb::Events::EventHandler#call (method)">#call</a></span>, <span class='object_link'><a href="EventHandler.html#match-instance_method" title="Discordrb::Events::EventHandler#match (method)">#match</a></span>, <span class='object_link'><a href="EventHandler.html#matches_all-instance_method" title="Discordrb::Events::EventHandler#matches_all (method)">#matches_all</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="EventHandler.html#after_call-instance_method" title="Discordrb::Events::EventHandler#after_call (method)">#after_call</a></span>, <span class='object_link'><a href="EventHandler.html#call-instance_method" title="Discordrb::Events::EventHandler#call (method)">#call</a></span>, <span class='object_link'><a href="EventHandler.html#match-instance_method" title="Discordrb::Events::EventHandler#match (method)">#match</a></span>, <span class='object_link'><a href="EventHandler.html#matches%3F-instance_method" title="Discordrb::Events::EventHandler#matches? (method)">#matches?</a></span>, <span class='object_link'><a href="EventHandler.html#matches_all-instance_method" title="Discordrb::Events::EventHandler#matches_all (method)">#matches_all</a></span></p>
 
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="matches?-instance_method">
-  
-    #<strong>matches?</strong>(event)  &#x21d2; <tt>Boolean</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-54
-55
-56
-57
-58
-59</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/threads.rb', line 54</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_matches?'>matches?</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
-  <span class='comment'># Check for the proper event type
-</span>  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'><span class='object_link'><a href="ThreadUpdateEvent.html" title="Discordrb::Events::ThreadUpdateEvent (class)">ThreadUpdateEvent</a></span></span>
-
-  <span class='kw'>super</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:41 2026 by
+  Generated on Tue Sep 29 18:43:19 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

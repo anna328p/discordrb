@@ -146,6 +146,31 @@
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#attachments-instance_method" title="#attachments (instance method)">#<strong>attachments</strong>  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The attachment and file-data to send with this message.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#avatar_url-instance_method" title="#avatar_url (instance method)">#<strong>avatar_url</strong>  &#x21d2; String </a>
     
 
@@ -164,6 +189,31 @@
 
   
     <span class="summary_desc"><div class='inline'><p>The URL of an image file to be used as an avatar.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#client_theme=-instance_method" title="#client_theme= (instance method)">#<strong>client_theme</strong>  &#x21d2; Hash, ... </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The client-side theme to share via this message.</p></div></span>
   
 </li>
 
@@ -220,7 +270,7 @@
 </li>
 
     
-      <li class="public ">
+      <li class="public deprecated">
   <span class="summary_signature">
     
       <a href="#file-instance_method" title="#file (instance method)">#<strong>file</strong>  &#x21d2; File<sup>?</sup> </a>
@@ -236,11 +286,11 @@
   
   
   
-  
+  <span class="deprecated note title">deprecated</span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The file attached to this message.</p></div></span>
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Please migrate to using <span class='object_link'><a href="#attachments-instance_method" title="Discordrb::Webhooks::Builder#attachments (method)">#attachments</a></span> instead.</p></div></span>
   
 </li>
 
@@ -358,6 +408,54 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#add_attachment-instance_method" title="#add_attachment (instance method)">#<strong>add_attachment</strong>(file, description: nil, filename: nil, spoiler: nil)  &#x21d2; void </a>
+    
+
+    
+      (also: #add_file)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Convinience method to add an attachment.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_client_theme-instance_method" title="#add_client_theme (instance method)">#<strong>add_client_theme</strong>(theme = nil) {|theme| ... } &#x21d2; ClientTheme::Builder, ClientTheme </a>
+    
+
+    
+      (also: #client_theme)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Convenience method to add a shared theme using a builder pattern.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#add_embed-instance_method" title="#add_embed (instance method)">#<strong>add_embed</strong>(embed = nil) {|embed| ... } &#x21d2; Embed </a>
     
 
@@ -380,7 +478,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_poll-instance_method" title="#add_poll (instance method)">#<strong>add_poll</strong>(poll = nil, **kwargs) {|poll| ... } &#x21d2; Poll::Builder, Poll </a>
+      <a href="#add_poll-instance_method" title="#add_poll (instance method)">#<strong>add_poll</strong>(poll = nil) {|poll| ... } &#x21d2; Poll::Builder, Poll </a>
     
 
     
@@ -404,7 +502,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(content: &#39;&#39;, username: nil, avatar_url: nil, tts: false, file: nil, embeds: [], allowed_mentions: nil, poll: nil)  &#x21d2; Builder </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(content: &#39;&#39;, username: nil, avatar_url: nil, tts: false, file: nil, embeds: [], allowed_mentions: nil, poll: nil, client_theme: nil, attachments: [])  &#x21d2; Builder </a>
     
 
     
@@ -479,7 +577,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(content: &#39;&#39;, username: nil, avatar_url: nil, tts: false, file: nil, embeds: [], allowed_mentions: nil, poll: nil)  &#x21d2; <tt><span class='object_link'><a href="" title="Discordrb::Webhooks::Builder (class)">Builder</a></span></tt> 
+    #<strong>initialize</strong>(content: &#39;&#39;, username: nil, avatar_url: nil, tts: false, file: nil, embeds: [], allowed_mentions: nil, poll: nil, client_theme: nil, attachments: [])  &#x21d2; <tt><span class='object_link'><a href="" title="Discordrb::Webhooks::Builder (class)">Builder</a></span></tt> 
   
 
   
@@ -509,12 +607,14 @@
 14
 15
 16
-17</pre>
+17
+18
+19</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 8</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>content:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>username:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>avatar_url:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>tts:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>file:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>poll:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>content:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>username:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>avatar_url:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>tts:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>file:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>embeds:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>allowed_mentions:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>poll:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>client_theme:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>attachments:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='ivar'>@content</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span>
   <span class='ivar'>@username</span> <span class='op'>=</span> <span class='id identifier rubyid_username'>username</span>
   <span class='ivar'>@avatar_url</span> <span class='op'>=</span> <span class='id identifier rubyid_avatar_url'>avatar_url</span>
@@ -523,6 +623,8 @@
   <span class='ivar'>@embeds</span> <span class='op'>=</span> <span class='id identifier rubyid_embeds'>embeds</span>
   <span class='ivar'>@allowed_mentions</span> <span class='op'>=</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span>
   <span class='ivar'>@poll</span> <span class='op'>=</span> <span class='id identifier rubyid_poll'>poll</span>
+  <span class='ivar'>@client_theme</span> <span class='op'>=</span> <span class='id identifier rubyid_client_theme'>client_theme</span>
+  <span class='ivar'>@attachments</span> <span class='op'>=</span> <span class='id identifier rubyid_attachments'>attachments</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -583,15 +685,79 @@
       <pre class="lines">
 
 
-95
-96
-97</pre>
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_allowed_mentions'>allowed_mentions</span>
   <span class='ivar'>@allowed_mentions</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="attachments=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="attachments-instance_method">
+  
+    #<strong>attachments</strong>  &#x21d2; <tt>Array&lt;Hash&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The attachment and file-data to send with this message.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The attachment and file-data to send with this message.</p></div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://discord.com/developers/docs/reference#uploading-files" target="_parent" title="https://discord.com/developers/docs/reference#uploading-files">https://discord.com/developers/docs/reference#uploading-files</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 145</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attachments'>attachments</span>
+  <span class='ivar'>@attachments</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -641,15 +807,79 @@ settings will be used instead.</p>
       <pre class="lines">
 
 
-31
-32
-33</pre>
+33
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_avatar_url'>avatar_url</span>
   <span class='ivar'>@avatar_url</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="client_theme-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="client_theme=-instance_method">
+  
+    #<strong>client_theme=</strong>(value)  &#x21d2; <tt>Hash</tt>, ... 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The client-side theme to share via this message.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt><span class='object_link'><a href="../ClientTheme/Builder.html" title="Discordrb::ClientTheme::Builder (class)">ClientTheme::Builder</a></span></tt>, <tt><span class='object_link'><a href="../ClientTheme.html" title="Discordrb::ClientTheme (class)">ClientTheme</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The client-side theme to share via this message.</p></div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://docs.discord.com/developers/resources/message#shared-client-theme-object" target="_parent" title="https://docs.discord.com/developers/resources/message#shared-client-theme-object">https://docs.discord.com/developers/resources/message#shared-client-theme-object</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_client_theme='>client_theme=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@client_theme</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -698,12 +928,12 @@ settings will be used instead.</p>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_content'>content</span>
   <span class='ivar'>@content</span>
@@ -755,12 +985,12 @@ settings will be used instead.</p>
       <pre class="lines">
 
 
-91
-92
-93</pre>
+129
+130
+131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embeds'>embeds</span>
   <span class='ivar'>@embeds</span>
@@ -783,7 +1013,8 @@ settings will be used instead.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the file attached to this message.</p>
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Please migrate to using <span class='object_link'><a href="#attachments-instance_method" title="Discordrb::Webhooks::Builder#attachments (method)">#attachments</a></span> instead.</p></div></div>
+<p>Returns the file attached to this message.</p>
 
   </div>
 </div>
@@ -812,12 +1043,12 @@ settings will be used instead.</p>
       <pre class="lines">
 
 
-88
-89
-90</pre>
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 126</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_file'>file</span>
   <span class='ivar'>@file</span>
@@ -876,12 +1107,12 @@ settings will be used instead.</p>
       <pre class="lines">
 
 
-99
-100
-101</pre>
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_poll='>poll=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@poll</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -933,12 +1164,12 @@ settings will be used instead.</p>
       <pre class="lines">
 
 
-35
-36
-37</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tts'>tts</span>
   <span class='ivar'>@tts</span>
@@ -991,12 +1222,12 @@ will be used instead.</p>
       <pre class="lines">
 
 
-26
-27
-28</pre>
+28
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_username'>username</span>
   <span class='ivar'>@username</span>
@@ -1048,15 +1279,229 @@ will be used instead.</p>
   
 </ul>
 
-<p class="tag_title">Raises:</p>
-<ul class="raise">
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_embed'>embed</span><span class='rparen'>)</span>
+  <span class='ivar'>@embeds</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_embed'>embed</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_attachment-instance_method">
+  
+    #<strong>add_attachment</strong>(file, description: nil, filename: nil, spoiler: nil)  &#x21d2; <tt>void</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='add_file-instance_method'>add_file</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Convinience method to add an attachment.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt>File</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The file or file-like object to upload.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The description of the attachment.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The filename to display when viewed on Discord.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>spoiler</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not to apply a spoiler label to the attachment.</p></div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_attachment'>add_attachment</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>filename:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>spoiler:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'>StringIO</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>StringIO</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:path</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>StringIO objects must implement &#39;path&#39;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_filename'>filename</span>
+
+    <span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span><span class='lparen'>(</span><span class='symbol'>:path</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_filename'>filename</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@attachments</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span> <span class='label'>file:</span><span class='comma'>,</span> <span class='label'>description:</span><span class='comma'>,</span> <span class='label'>filename:</span><span class='comma'>,</span> <span class='label'>is_spoiler:</span> <span class='id identifier rubyid_spoiler'>spoiler</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_client_theme-instance_method">
+  
+    #<strong>add_client_theme</strong>(theme = nil) {|theme| ... } &#x21d2; <tt><span class='object_link'><a href="../ClientTheme/Builder.html" title="Discordrb::ClientTheme::Builder (class)">ClientTheme::Builder</a></span></tt>, <tt><span class='object_link'><a href="../ClientTheme.html" title="Discordrb::ClientTheme (class)">ClientTheme</a></span></tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='client_theme-instance_method'>client_theme</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Convenience method to add a shared theme using a builder pattern.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Add a client theme to a message.</p></div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_client_theme'>client_theme</span><span class='lparen'>(</span><span class='label'>angle:</span> <span class='int'>257</span><span class='comma'>,</span> <span class='label'>intensity:</span> <span class='int'>20</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_theme'>theme</span><span class='op'>|</span>
+  <span class='id identifier rubyid_theme'>theme</span><span class='period'>.</span><span class='id identifier rubyid_colour'>colour</span><span class='lparen'>(</span><span class='int'>12746612</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_theme'>theme</span><span class='period'>.</span><span class='id identifier rubyid_colour'>colour</span><span class='lparen'>(</span><span class='int'>984328</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_theme'>theme</span><span class='period'>.</span><span class='id identifier rubyid_colour'>colour</span><span class='lparen'>(</span><span class='int'>12549746</span><span class='rparen'>)</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>theme</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../ClientTheme/Builder.html" title="Discordrb::ClientTheme::Builder (class)">ClientTheme::Builder</a></span></tt>, <tt><span class='object_link'><a href="../ClientTheme.html" title="Discordrb::ClientTheme (class)">ClientTheme</a></span></tt>, <tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The theme to start the building process with, or <code>nil</code> if one should be created anew.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
   
     <li>
       
       
-        <span class='type'>(<tt>ArgumentError</tt>)</span>
+        <span class='type'>(<tt>theme</tt>)</span>
       
       
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../ClientTheme/Builder.html" title="Discordrb::ClientTheme::Builder (class)">ClientTheme::Builder</a></span></tt>, <tt><span class='object_link'><a href="../ClientTheme.html" title="Discordrb::ClientTheme (class)">ClientTheme</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The created theme.</p></div>
       
     </li>
   
@@ -1068,19 +1513,21 @@ will be used instead.</p>
       <pre class="lines">
 
 
-48
-49
-50
-51
-52</pre>
+87
+88
+89
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 87</span>
 
-<span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_embed'>embed</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Embeds and files are mutually exclusive!</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='ivar'>@file</span>
-
-  <span class='ivar'>@embeds</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_embed'>embed</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_add_client_theme'>add_client_theme</span><span class='lparen'>(</span><span class='id identifier rubyid_theme'>theme</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>...</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_theme'>theme</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ClientTheme.html" title="Discordrb::ClientTheme (class)">ClientTheme</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../ClientTheme/Builder.html" title="Discordrb::ClientTheme::Builder (class)">Builder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../ClientTheme/Builder.html#initialize-instance_method" title="Discordrb::ClientTheme::Builder#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='op'>...</span><span class='rparen'>)</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_theme'>theme</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+  <span class='ivar'>@client_theme</span> <span class='op'>=</span> <span class='id identifier rubyid_theme'>theme</span>
+  <span class='id identifier rubyid_theme'>theme</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1098,7 +1545,7 @@ will be used instead.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Convenience method to add an embed using a block-style builder pattern</p>
+    <p>Convenience method to add an embed using a block-style builder pattern.</p>
 
   </div>
 </div>
@@ -1108,7 +1555,7 @@ will be used instead.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Add an embed to a message</p></div></h5>
+        <h5 class="example_title"><div class='inline'><p>Add an embed to a message.</p></div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_add_embed'>add_embed</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_embed'>embed</span><span class='op'>|</span>
   <span class='id identifier rubyid_embed'>embed</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Testing</span><span class='tstring_end'>&#39;</span></span>
@@ -1131,7 +1578,7 @@ will be used instead.</p>
       
       
         &mdash;
-        <div class='inline'><p>The embed to start the building process with, or nil if one should be created anew.</p></div>
+        <div class='inline'><p>The embed to start the building process with, or <code>nil</code> if one should be created anew.</p></div>
       
     </li>
   
@@ -1173,15 +1620,15 @@ will be used instead.</p>
       <pre class="lines">
 
 
-62
-63
-64
-65
-66
-67</pre>
+53
+54
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_embed'>add_embed</span><span class='lparen'>(</span><span class='id identifier rubyid_embed'>embed</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_embed'>embed</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Embed.html" title="Discordrb::Webhooks::Embed (class)">Embed</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Embed.html#initialize-instance_method" title="Discordrb::Webhooks::Embed#initialize (method)">new</a></span></span>
@@ -1197,7 +1644,7 @@ will be used instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_poll-instance_method">
   
-    #<strong>add_poll</strong>(poll = nil, **kwargs) {|poll| ... } &#x21d2; <tt><span class='object_link'><a href="../Poll/Builder.html" title="Discordrb::Poll::Builder (class)">Poll::Builder</a></span></tt>, <tt><span class='object_link'><a href="../Poll.html" title="Discordrb::Poll (class)">Poll</a></span></tt> 
+    #<strong>add_poll</strong>(poll = nil) {|poll| ... } &#x21d2; <tt><span class='object_link'><a href="../Poll/Builder.html" title="Discordrb::Poll::Builder (class)">Poll::Builder</a></span></tt>, <tt><span class='object_link'><a href="../Poll.html" title="Discordrb::Poll (class)">Poll</a></span></tt> 
   
 
   
@@ -1209,7 +1656,7 @@ will be used instead.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Convenience method to add a poll using a builder pattern</p>
+    <p>Convenience method to add a poll using a builder pattern.</p>
 
   </div>
 </div>
@@ -1219,7 +1666,7 @@ will be used instead.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Add a poll to a message</p></div></h5>
+        <h5 class="example_title"><div class='inline'><p>Add a poll to a message.</p></div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_poll'>poll</span><span class='lparen'>(</span><span class='label'>question:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Best Fruit?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>duration:</span> <span class='int'>48</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_poll'>poll</span><span class='op'>|</span>
   <span class='id identifier rubyid_poll'>poll</span><span class='period'>.</span><span class='id identifier rubyid_answer'>answer</span><span class='lparen'>(</span><span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Apple</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>🍎</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1243,7 +1690,7 @@ will be used instead.</p>
       
       
         &mdash;
-        <div class='inline'><p>The poll to start the building process with, or nil if one should be created anew.</p></div>
+        <div class='inline'><p>The poll to start the building process with, or <code>nil</code> if one should be created anew.</p></div>
       
     </li>
   
@@ -1285,18 +1732,18 @@ will be used instead.</p>
       <pre class="lines">
 
 
-78
-79
-80
-81
-82
-83</pre>
+69
+70
+71
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 69</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_add_poll'>add_poll</span><span class='lparen'>(</span><span class='id identifier rubyid_poll'>poll</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_poll'>poll</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Poll.html" title="Discordrb::Poll (class)">Poll</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Poll/Builder.html" title="Discordrb::Poll::Builder (class)">Builder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Poll/Builder.html#initialize-instance_method" title="Discordrb::Poll::Builder#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_add_poll'>add_poll</span><span class='lparen'>(</span><span class='id identifier rubyid_poll'>poll</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>...</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_poll'>poll</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Poll.html" title="Discordrb::Poll (class)">Poll</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Poll/Builder.html" title="Discordrb::Poll::Builder (class)">Builder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Poll/Builder.html#initialize-instance_method" title="Discordrb::Poll::Builder#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='op'>...</span><span class='rparen'>)</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_poll'>poll</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
   <span class='ivar'>@poll</span> <span class='op'>=</span> <span class='id identifier rubyid_poll'>poll</span>
   <span class='id identifier rubyid_poll'>poll</span>
@@ -1346,20 +1793,22 @@ will be used instead.</p>
       <pre class="lines">
 
 
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112</pre>
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_json_hash'>to_json_hash</span>
   <span class='lbrace'>{</span>
@@ -1369,7 +1818,9 @@ will be used instead.</p>
     <span class='label'>tts:</span> <span class='ivar'>@tts</span><span class='comma'>,</span>
     <span class='label'>embeds:</span> <span class='ivar'>@embeds</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span><span class='comma'>,</span>
     <span class='label'>allowed_mentions:</span> <span class='ivar'>@allowed_mentions</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
-    <span class='label'>poll:</span> <span class='ivar'>@poll</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_h'>to_h</span>
+    <span class='label'>poll:</span> <span class='ivar'>@poll</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='comma'>,</span>
+    <span class='label'>shared_client_theme:</span> <span class='ivar'>@client_theme</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='comma'>,</span>
+    <span class='label'>attachments:</span> <span class='ivar'>@attachments</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='op'>?</span> <span class='ivar'>@attachments</span> <span class='op'>:</span> <span class='kw'>nil</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1417,19 +1868,20 @@ will be used instead.</p>
       <pre class="lines">
 
 
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124</pre>
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/webhooks/builder.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_multipart_hash'>to_multipart_hash</span>
   <span class='lbrace'>{</span>
@@ -1438,7 +1890,8 @@ will be used instead.</p>
     <span class='label'>avatar_url:</span> <span class='ivar'>@avatar_url</span><span class='comma'>,</span>
     <span class='label'>tts:</span> <span class='ivar'>@tts</span><span class='comma'>,</span>
     <span class='label'>file:</span> <span class='ivar'>@file</span><span class='comma'>,</span>
-    <span class='label'>allowed_mentions:</span> <span class='ivar'>@allowed_mentions</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+    <span class='label'>allowed_mentions:</span> <span class='ivar'>@allowed_mentions</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
+    <span class='label'>attachments:</span> <span class='ivar'>@attachments</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='op'>?</span> <span class='ivar'>@attachments</span> <span class='op'>:</span> <span class='kw'>nil</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1451,7 +1904,7 @@ will be used instead.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:44 2026 by
+  Generated on Tue Sep 29 18:43:22 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

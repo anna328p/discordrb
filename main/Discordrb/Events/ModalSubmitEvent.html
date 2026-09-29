@@ -151,33 +151,6 @@
 </li>
 
     
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#resolved-instance_method" title="#resolved (instance method)">#<strong>resolved</strong>  &#x21d2; Resolved </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>The resolved channels, roles, users, members, and attachments for the modal.</p></div></span>
-  
-</li>
-
-    
   </ul>
 
 
@@ -185,7 +158,7 @@
   
   
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="ComponentEvent.html" title="Discordrb::Events::ComponentEvent (class)">ComponentEvent</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="ComponentEvent.html#custom_id-instance_method" title="Discordrb::Events::ComponentEvent#custom_id (method)">#custom_id</a></span>, <span class='object_link'><a href="ComponentEvent.html#message-instance_method" title="Discordrb::Events::ComponentEvent#message (method)">#message</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="ComponentEvent.html#custom_id-instance_method" title="Discordrb::Events::ComponentEvent#custom_id (method)">#custom_id</a></span>, <span class='object_link'><a href="ComponentEvent.html#message-instance_method" title="Discordrb::Events::ComponentEvent#message (method)">#message</a></span>, <span class='object_link'><a href="ComponentEvent.html#resolved-instance_method" title="Discordrb::Events::ComponentEvent#resolved (method)">#resolved</a></span></p>
 
   
   
@@ -348,72 +321,15 @@
       <pre class="lines">
 
 
-418
-419
-420</pre>
+424
+425
+426</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 418</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 424</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_components'>components</span>
   <span class='ivar'>@components</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
-  <h3 class="signature " id="resolved-instance_method">
-  
-    #<strong>resolved</strong>  &#x21d2; <tt><span class='object_link'><a href="InteractionCreateEvent/Resolved.html" title="Discordrb::Events::InteractionCreateEvent::Resolved (class)">Resolved</a></span></tt>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns The resolved channels, roles, users, members, and attachments for the modal.</p>
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="InteractionCreateEvent/Resolved.html" title="Discordrb::Events::InteractionCreateEvent::Resolved (class)">Resolved</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The resolved channels, roles, users, members, and attachments for the modal.</p></div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-421
-422
-423</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 421</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_resolved'>resolved</span>
-  <span class='ivar'>@resolved</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -485,15 +401,15 @@
       <pre class="lines">
 
 
-449
 450
-451</pre>
+451
+452</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 449</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 450</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attachments'>attachments</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_id'>custom_id</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_values'>values</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_id'>custom_id</span><span class='rparen'>)</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span> <span class='ivar'>@resolved</span><span class='lbracket'>[</span><span class='symbol'>:attachments</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rbracket'>]</span> <span class='rbrace'>}</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_values'>values</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_id'>custom_id</span><span class='rparen'>)</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span> <span class='ivar'>@resolved</span><span class='period'>.</span><span class='id identifier rubyid_attachments'>attachments</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rbracket'>]</span> <span class='rbrace'>}</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -558,12 +474,12 @@
       <pre class="lines">
 
 
-435
 436
-437</pre>
+437
+438</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 435</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 436</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_id'>custom_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get_component'>get_component</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_id'>custom_id</span><span class='rparen'>)</span><span class='op'>&amp;.</span><span class='id identifier rubyid_value'>value</span>
@@ -631,12 +547,12 @@
       <pre class="lines">
 
 
-442
 443
-444</pre>
+444
+445</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 442</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 443</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_values'>values</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_id'>custom_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get_component'>get_component</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_id'>custom_id</span><span class='rparen'>)</span><span class='op'>&amp;.</span><span class='id identifier rubyid_values'>values</span>
@@ -651,7 +567,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:45 2026 by
+  Generated on Tue Sep 29 18:43:23 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

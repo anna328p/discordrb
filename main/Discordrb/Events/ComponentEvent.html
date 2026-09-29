@@ -148,7 +148,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>User provided data for this button.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>User-defined identifier for the component.</p></div></span>
   
 </li>
 
@@ -175,7 +175,34 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The message the button originates from.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>The message the component originates from.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolved-instance_method" title="#resolved (instance method)">#<strong>resolved</strong>  &#x21d2; Resolved </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The resolved channels, roles, users, members, and attachments.</p></div></span>
   
 </li>
 
@@ -231,7 +258,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns User provided data for this button.</p>
+    <p>Returns user-defined identifier for the component.</p>
 
   </div>
 </div>
@@ -248,7 +275,7 @@
       
       
         &mdash;
-        <div class='inline'><p>User provided data for this button.</p></div>
+        <div class='inline'><p>user-defined identifier for the component.</p></div>
       
     </li>
   
@@ -260,12 +287,12 @@
       <pre class="lines">
 
 
-348
 349
-350</pre>
+350
+351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 348</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 349</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_custom_id'>custom_id</span>
   <span class='ivar'>@custom_id</span>
@@ -288,7 +315,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns The message the button originates from.</p>
+    <p>Returns the message the component originates from.</p>
 
   </div>
 </div>
@@ -305,7 +332,7 @@
       
       
         &mdash;
-        <div class='inline'><p>The message the button originates from.</p></div>
+        <div class='inline'><p>the message the component originates from.</p></div>
       
     </li>
   
@@ -317,15 +344,72 @@
       <pre class="lines">
 
 
-351
 352
-353</pre>
+353
+354</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 351</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 352</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message'>message</span>
   <span class='ivar'>@message</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="resolved-instance_method">
+  
+    #<strong>resolved</strong>  &#x21d2; <tt><span class='object_link'><a href="InteractionCreateEvent/Resolved.html" title="Discordrb::Events::InteractionCreateEvent::Resolved (class)">Resolved</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the resolved channels, roles, users, members, and attachments.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="InteractionCreateEvent/Resolved.html" title="Discordrb::Events::InteractionCreateEvent::Resolved (class)">Resolved</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the resolved channels, roles, users, members, and attachments.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+355
+356
+357</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/interactions.rb', line 355</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolved'>resolved</span>
+  <span class='ivar'>@resolved</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -338,7 +422,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:45 2026 by
+  Generated on Tue Sep 29 18:43:23 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

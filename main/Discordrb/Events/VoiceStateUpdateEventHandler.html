@@ -209,54 +209,6 @@
       <pre class="lines">
 
 
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
 84
 85
 86
@@ -277,10 +229,82 @@
 101
 102
 103
-104</pre>
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/events/voice_state_update.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_matches?'>matches?</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='comment'># Check for the proper event type
@@ -348,6 +372,30 @@
            <span class='kw'>else</span>
              <span class='id identifier rubyid_e'>e</span>
            <span class='kw'>end</span>
+    <span class='kw'>end</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_matches_all'>matches_all</span><span class='lparen'>(</span><span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='symbol'>:connected</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_old_channel'>old_channel</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
+      <span class='kw'>case</span> <span class='id identifier rubyid_a'>a</span>
+      <span class='kw'>when</span> <span class='const'>TrueClass</span>
+        <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='kw'>when</span> <span class='const'>FalseClass</span>
+        <span class='op'>!</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_matches_all'>matches_all</span><span class='lparen'>(</span><span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='symbol'>:disconnected</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
+      <span class='kw'>case</span> <span class='id identifier rubyid_a'>a</span>
+      <span class='kw'>when</span> <span class='const'>TrueClass</span>
+        <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='kw'>when</span> <span class='const'>FalseClass</span>
+        <span class='op'>!</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_matches_all'>matches_all</span><span class='lparen'>(</span><span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='symbol'>:moved</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
+      <span class='kw'>case</span> <span class='id identifier rubyid_a'>a</span>
+      <span class='kw'>when</span> <span class='const'>TrueClass</span>
+        <span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_old_channel'>old_channel</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span> <span class='op'>!=</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_old_channel'>old_channel</span>
+      <span class='kw'>when</span> <span class='const'>FalseClass</span>
+        <span class='op'>!</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_old_channel'>old_channel</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span> <span class='op'>!=</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_old_channel'>old_channel</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
     <span class='kw'>end</span>
   <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='kw'>true</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='symbol'>:&amp;</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -361,7 +409,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:46 2026 by
+  Generated on Tue Sep 29 18:43:25 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

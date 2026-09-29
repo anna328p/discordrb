@@ -693,7 +693,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether this file is an image file.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Check if the attachment is an image.</p></div></span>
   
 </li>
 
@@ -715,7 +715,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The message this attachment object belongs to.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Get the message associated with the attachment.</p></div></span>
   
 </li>
 
@@ -737,7 +737,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The message snapshot this attachment object belongs to.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Get the message snapshot associated with the attachment.</p></div></span>
   
 </li>
 
@@ -759,7 +759,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether this file is tagged as a spoiler.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Whether or not the attachment is marked as a spoiler.</p></div></span>
   
 </li>
 
@@ -1836,7 +1836,7 @@ do with CDNs.</p></div>
       <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 127</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Attachment::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='ivar'>@flags</span><span class='period'>.</span><span class='id identifier rubyid_anybits?'>anybits?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>!=</span> <span class='symbol'>:spoiler</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='ivar'>@flags</span><span class='period'>.</span><span class='id identifier rubyid_anybits?'>anybits?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1891,7 +1891,7 @@ do with CDNs.</p></div>
       <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 127</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Attachment::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='ivar'>@flags</span><span class='period'>.</span><span class='id identifier rubyid_anybits?'>anybits?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>!=</span> <span class='symbol'>:spoiler</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='ivar'>@flags</span><span class='period'>.</span><span class='id identifier rubyid_anybits?'>anybits?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1909,7 +1909,7 @@ do with CDNs.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether this file is an image file.</p>
+    <p>Check if the attachment is an image.</p>
 
   </div>
 </div>
@@ -1938,12 +1938,12 @@ do with CDNs.</p></div>
       <pre class="lines">
 
 
-102
 103
-104</pre>
+104
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_image?'>image?</span>
   <span class='op'>!</span><span class='lparen'>(</span><span class='ivar'>@width</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='ivar'>@height</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span><span class='rparen'>)</span>
@@ -1964,7 +1964,7 @@ do with CDNs.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the message this attachment object belongs to.</p>
+    <p>Get the message associated with the attachment.</p>
 
   </div>
 </div>
@@ -1993,12 +1993,12 @@ do with CDNs.</p></div>
       <pre class="lines">
 
 
-112
-113
-114</pre>
+109
+110
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message'>message</span>
   <span class='ivar'>@message</span> <span class='kw'>unless</span> <span class='ivar'>@message</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Snapshot.html" title="Discordrb::Snapshot (class)">Snapshot</a></span></span><span class='rparen'>)</span>
@@ -2019,7 +2019,7 @@ do with CDNs.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the message snapshot this attachment object belongs to.</p>
+    <p>Get the message snapshot associated with the attachment.</p>
 
   </div>
 </div>
@@ -2048,12 +2048,12 @@ do with CDNs.</p></div>
       <pre class="lines">
 
 
-117
-118
-119</pre>
+115
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_snapshot'>snapshot</span>
   <span class='ivar'>@message</span> <span class='kw'>unless</span> <span class='ivar'>@message</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Message.html" title="Discordrb::Message (class)">Message</a></span></span><span class='rparen'>)</span>
@@ -2074,7 +2074,7 @@ do with CDNs.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns whether this file is tagged as a spoiler.</p>
+    <p>Returns whether or not the attachment is marked as a spoiler.</p>
 
   </div>
 </div>
@@ -2091,7 +2091,7 @@ do with CDNs.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>whether this file is tagged as a spoiler.</p></div>
+        <div class='inline'><p>whether or not the attachment is marked as a spoiler.</p></div>
       
     </li>
   
@@ -2103,15 +2103,15 @@ do with CDNs.</p></div>
       <pre class="lines">
 
 
-107
-108
-109</pre>
+127
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 127</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_spoiler?'>spoiler?</span>
-  <span class='ivar'>@filename</span><span class='period'>.</span><span class='id identifier rubyid_start_with?'>start_with?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SPOILER_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@flags</span><span class='period'>.</span><span class='id identifier rubyid_anybits?'>anybits?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Attachment::FLAGS (constant)">FLAGS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:spoiler</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Attachment::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='ivar'>@flags</span><span class='period'>.</span><span class='id identifier rubyid_anybits?'>anybits?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2166,7 +2166,7 @@ do with CDNs.</p></div>
       <pre class="code"><span class="info file"># File 'lib/discordrb/data/attachment.rb', line 127</span>
 
 <span class='const'><span class='object_link'><a href="#FLAGS-constant" title="Discordrb::Attachment::FLAGS (constant)">FLAGS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='ivar'>@flags</span><span class='period'>.</span><span class='id identifier rubyid_anybits?'>anybits?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>!=</span> <span class='symbol'>:spoiler</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='ivar'>@flags</span><span class='period'>.</span><span class='id identifier rubyid_anybits?'>anybits?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2178,7 +2178,7 @@ do with CDNs.</p></div>
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:42 2026 by
+  Generated on Tue Sep 29 18:43:20 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

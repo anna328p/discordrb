@@ -123,7 +123,7 @@
         <dt id="CHANNEL_TYPES-constant" class="">CHANNEL_TYPES =
           <div class="docstring">
   <div class="discussion">
-    <p>Channel types that can be provided to #channel</p>
+    <p>Channel types that can be provided to <span class='object_link'><a href="#channel-instance_method" title="Discordrb::Interactions::OptionBuilder#channel (method)">#channel</a></span>.</p>
 
   </div>
 </div>
@@ -143,7 +143,10 @@
   <span class='label'>news_thread:</span> <span class='int'>10</span><span class='comma'>,</span>
   <span class='label'>public_thread:</span> <span class='int'>11</span><span class='comma'>,</span>
   <span class='label'>private_thread:</span> <span class='int'>12</span><span class='comma'>,</span>
-  <span class='label'>stage:</span> <span class='int'>13</span>
+  <span class='label'>stage:</span> <span class='int'>13</span><span class='comma'>,</span>
+  <span class='label'>directory:</span> <span class='int'>14</span><span class='comma'>,</span>
+  <span class='label'>forum:</span> <span class='int'>15</span><span class='comma'>,</span>
+  <span class='label'>media:</span> <span class='int'>16</span>
 <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
     </dl>
@@ -198,7 +201,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#attachment-instance_method" title="#attachment (instance method)">#<strong>attachment</strong>(name, description, required: nil)  &#x21d2; Object </a>
+      <a href="#attachment-instance_method" title="#attachment (instance method)">#<strong>attachment</strong>(name, description, required: nil, types: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; Object </a>
     
 
     
@@ -220,7 +223,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#boolean-instance_method" title="#boolean (instance method)">#<strong>boolean</strong>(name, description, required: nil)  &#x21d2; Object </a>
+      <a href="#boolean-instance_method" title="#boolean (instance method)">#<strong>boolean</strong>(name, description, required: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; Object </a>
     
 
     
@@ -242,7 +245,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#channel-instance_method" title="#channel (instance method)">#<strong>channel</strong>(name, description, required: nil, types: nil)  &#x21d2; Object </a>
+      <a href="#channel-instance_method" title="#channel (instance method)">#<strong>channel</strong>(name, description, required: nil, types: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; Object </a>
     
 
     
@@ -264,7 +267,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#integer-instance_method" title="#integer (instance method)">#<strong>integer</strong>(name, description, required: nil, min_value: nil, max_value: nil, choices: nil, autocomplete: nil)  &#x21d2; Object </a>
+      <a href="#integer-instance_method" title="#integer (instance method)">#<strong>integer</strong>(name, description, required: nil, min_value: nil, max_value: nil, choices: nil, autocomplete: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; Object </a>
     
 
     
@@ -286,7 +289,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#mentionable-instance_method" title="#mentionable (instance method)">#<strong>mentionable</strong>(name, description, required: nil)  &#x21d2; Object </a>
+      <a href="#mentionable-instance_method" title="#mentionable (instance method)">#<strong>mentionable</strong>(name, description, required: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; Object </a>
     
 
     
@@ -308,7 +311,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#number-instance_method" title="#number (instance method)">#<strong>number</strong>(name, description, required: nil, min_value: nil, max_value: nil, choices: nil, autocomplete: nil)  &#x21d2; Object </a>
+      <a href="#number-instance_method" title="#number (instance method)">#<strong>number</strong>(name, description, required: nil, min_value: nil, max_value: nil, choices: nil, autocomplete: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; Object </a>
     
 
     
@@ -330,7 +333,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#role-instance_method" title="#role (instance method)">#<strong>role</strong>(name, description, required: nil)  &#x21d2; Object </a>
+      <a href="#role-instance_method" title="#role (instance method)">#<strong>role</strong>(name, description, required: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; Object </a>
     
 
     
@@ -352,7 +355,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#string-instance_method" title="#string (instance method)">#<strong>string</strong>(name, description, required: nil, min_length: nil, max_length: nil, choices: nil, autocomplete: nil)  &#x21d2; Object </a>
+      <a href="#string-instance_method" title="#string (instance method)">#<strong>string</strong>(name, description, required: nil, min_length: nil, max_length: nil, choices: nil, autocomplete: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; Object </a>
     
 
     
@@ -374,7 +377,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#subcommand-instance_method" title="#subcommand (instance method)">#<strong>subcommand</strong>(name, description) {|| ... } &#x21d2; Object </a>
+      <a href="#subcommand-instance_method" title="#subcommand (instance method)">#<strong>subcommand</strong>(name, description, name_localizations: nil, description_localizations: nil) {|| ... } &#x21d2; Object </a>
     
 
     
@@ -396,7 +399,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#subcommand_group-instance_method" title="#subcommand_group (instance method)">#<strong>subcommand_group</strong>(name, description) {|| ... } &#x21d2; Object </a>
+      <a href="#subcommand_group-instance_method" title="#subcommand_group (instance method)">#<strong>subcommand_group</strong>(name, description, name_localizations: nil, description_localizations: nil) {|| ... } &#x21d2; Object </a>
     
 
     
@@ -440,7 +443,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#user-instance_method" title="#user (instance method)">#<strong>user</strong>(name, description, required: nil)  &#x21d2; Object </a>
+      <a href="#user-instance_method" title="#user (instance method)">#<strong>user</strong>(name, description, required: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; Object </a>
     
 
     
@@ -506,12 +509,12 @@
       <pre class="lines">
 
 
-646
-647
-648</pre>
+664
+665
+666</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 646</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 664</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_options'>options</span>
   <span class='ivar'>@options</span>
@@ -531,7 +534,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="attachment-instance_method">
   
-    #<strong>attachment</strong>(name, description, required: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>attachment</strong>(name, description, required: nil, types: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -591,6 +594,55 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>types</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>, Symbol&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The file extensions or file groups to
+restrict the option to. This restriction is <strong>only</strong> a client-side check.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -616,15 +668,15 @@
       <pre class="lines">
 
 
-773
-774
-775</pre>
+815
+816
+817</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 773</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 815</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_attachment'>attachment</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_attachment'>attachment</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>types:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>file_types:</span> <span class='id identifier rubyid_types'>types</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -634,7 +686,7 @@
       <div class="method_details ">
   <h3 class="signature " id="boolean-instance_method">
   
-    #<strong>boolean</strong>(name, description, required: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>boolean</strong>(name, description, required: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -694,6 +746,38 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the argument.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -719,15 +803,15 @@
       <pre class="lines">
 
 
-719
-720
-721</pre>
+747
+748
+749</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 719</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 747</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_boolean'>boolean</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:boolean</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_boolean'>boolean</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:boolean</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -737,7 +821,7 @@
       <div class="method_details ">
   <h3 class="signature " id="channel-instance_method">
   
-    #<strong>channel</strong>(name, description, required: nil, types: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>channel</strong>(name, description, required: nil, types: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -813,6 +897,38 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the argument.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -838,17 +954,17 @@
       <pre class="lines">
 
 
-736
-737
-738
-739</pre>
+768
+769
+770
+771</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 736</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 768</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_channel'>channel</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>types:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_channel'>channel</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>types:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_types'>types</span> <span class='op'>=</span> <span class='id identifier rubyid_types'>types</span><span class='op'>&amp;.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='op'>|</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Numeric</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="#CHANNEL_TYPES-constant" title="Discordrb::Interactions::OptionBuilder::CHANNEL_TYPES (constant)">CHANNEL_TYPES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
-  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:channel</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>channel_types:</span> <span class='id identifier rubyid_types'>types</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:channel</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>channel_types:</span> <span class='id identifier rubyid_types'>types</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -858,7 +974,7 @@
       <div class="method_details ">
   <h3 class="signature " id="integer-instance_method">
   
-    #<strong>integer</strong>(name, description, required: nil, min_value: nil, max_value: nil, choices: nil, autocomplete: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>integer</strong>(name, description, required: nil, min_value: nil, max_value: nil, choices: nil, autocomplete: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -982,6 +1098,38 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the argument.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -1007,17 +1155,17 @@
       <pre class="lines">
 
 
-710
-711
-712
-713</pre>
+736
+737
+738
+739</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 710</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 736</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_integer'>integer</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>min_value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_integer'>integer</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>min_value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:integer</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
-         <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>min_value:</span> <span class='id identifier rubyid_min_value'>min_value</span><span class='comma'>,</span> <span class='label'>max_value:</span> <span class='id identifier rubyid_max_value'>max_value</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='id identifier rubyid_choices'>choices</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='id identifier rubyid_autocomplete'>autocomplete</span><span class='rparen'>)</span>
+         <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>min_value:</span> <span class='id identifier rubyid_min_value'>min_value</span><span class='comma'>,</span> <span class='label'>max_value:</span> <span class='id identifier rubyid_max_value'>max_value</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='id identifier rubyid_choices'>choices</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='id identifier rubyid_autocomplete'>autocomplete</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1027,7 +1175,7 @@
       <div class="method_details ">
   <h3 class="signature " id="mentionable-instance_method">
   
-    #<strong>mentionable</strong>(name, description, required: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>mentionable</strong>(name, description, required: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1087,6 +1235,38 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the argument.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -1112,15 +1292,15 @@
       <pre class="lines">
 
 
-753
-754
-755</pre>
+789
+790
+791</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 753</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 789</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_mentionable'>mentionable</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:mentionable</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_mentionable'>mentionable</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:mentionable</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1130,7 +1310,7 @@
       <div class="method_details ">
   <h3 class="signature " id="number-instance_method">
   
-    #<strong>number</strong>(name, description, required: nil, min_value: nil, max_value: nil, choices: nil, autocomplete: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>number</strong>(name, description, required: nil, min_value: nil, max_value: nil, choices: nil, autocomplete: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1238,6 +1418,38 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the argument.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -1263,17 +1475,17 @@
       <pre class="lines">
 
 
-764
-765
-766
-767</pre>
+802
+803
+804
+805</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 764</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 802</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_number'>number</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>min_value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_number'>number</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>min_value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_value:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:number</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
-         <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>min_value:</span> <span class='id identifier rubyid_min_value'>min_value</span><span class='comma'>,</span> <span class='label'>max_value:</span> <span class='id identifier rubyid_max_value'>max_value</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='id identifier rubyid_choices'>choices</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='id identifier rubyid_autocomplete'>autocomplete</span><span class='rparen'>)</span>
+         <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>min_value:</span> <span class='id identifier rubyid_min_value'>min_value</span><span class='comma'>,</span> <span class='label'>max_value:</span> <span class='id identifier rubyid_max_value'>max_value</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='id identifier rubyid_choices'>choices</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='id identifier rubyid_autocomplete'>autocomplete</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1283,7 +1495,7 @@
       <div class="method_details ">
   <h3 class="signature " id="role-instance_method">
   
-    #<strong>role</strong>(name, description, required: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>role</strong>(name, description, required: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1343,6 +1555,38 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the argument.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -1368,15 +1612,15 @@
       <pre class="lines">
 
 
-745
-746
-747</pre>
+779
+780
+781</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 745</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 779</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_role'>role</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:role</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_role'>role</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:role</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1386,7 +1630,7 @@
       <div class="method_details ">
   <h3 class="signature " id="string-instance_method">
   
-    #<strong>string</strong>(name, description, required: nil, min_length: nil, max_length: nil, choices: nil, autocomplete: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>string</strong>(name, description, required: nil, min_length: nil, max_length: nil, choices: nil, autocomplete: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1510,6 +1754,38 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the argument.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -1535,17 +1811,17 @@
       <pre class="lines">
 
 
-697
-698
-699
-700</pre>
+721
+722
+723
+724</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 697</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 721</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_string'>string</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>min_length:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_length:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_string'>string</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>min_length:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>max_length:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:string</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
-         <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>min_length:</span> <span class='id identifier rubyid_min_length'>min_length</span><span class='comma'>,</span> <span class='label'>max_length:</span> <span class='id identifier rubyid_max_length'>max_length</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='id identifier rubyid_choices'>choices</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='id identifier rubyid_autocomplete'>autocomplete</span><span class='rparen'>)</span>
+         <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>min_length:</span> <span class='id identifier rubyid_min_length'>min_length</span><span class='comma'>,</span> <span class='label'>max_length:</span> <span class='id identifier rubyid_max_length'>max_length</span><span class='comma'>,</span> <span class='label'>choices:</span> <span class='id identifier rubyid_choices'>choices</span><span class='comma'>,</span> <span class='label'>autocomplete:</span> <span class='id identifier rubyid_autocomplete'>autocomplete</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1555,7 +1831,7 @@
       <div class="method_details ">
   <h3 class="signature " id="subcommand-instance_method">
   
-    #<strong>subcommand</strong>(name, description) {|| ... } &#x21d2; <tt>Object</tt> 
+    #<strong>subcommand</strong>(name, description, name_localizations: nil, description_localizations: nil) {|| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1611,6 +1887,38 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the subcommand.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the subcommand.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Yield Parameters:</p>
@@ -1651,21 +1959,21 @@
       <pre class="lines">
 
 
-663
-664
-665
-666
-667
-668</pre>
+683
+684
+685
+686
+687
+688</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 663</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 683</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_subcommand'>subcommand</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_subcommand'>subcommand</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_builder'>builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Discordrb::Interactions::OptionBuilder (class)">OptionBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='kw'>yield</span> <span class='id identifier rubyid_builder'>builder</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
 
-  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:subcommand</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:subcommand</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1675,7 +1983,7 @@
       <div class="method_details ">
   <h3 class="signature " id="subcommand_group-instance_method">
   
-    #<strong>subcommand_group</strong>(name, description) {|| ... } &#x21d2; <tt>Object</tt> 
+    #<strong>subcommand_group</strong>(name, description, name_localizations: nil, description_localizations: nil) {|| ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1733,6 +2041,38 @@ end</code></pre>
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the subcommand group.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the subcommand group.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Yield Parameters:</p>
@@ -1773,21 +2113,21 @@ end</code></pre>
       <pre class="lines">
 
 
-682
-683
-684
-685
-686
-687</pre>
+704
+705
+706
+707
+708
+709</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 682</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 704</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_subcommand_group'>subcommand_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_subcommand_group'>subcommand_group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_builder'>builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Discordrb::Interactions::OptionBuilder (class)">OptionBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='kw'>yield</span> <span class='id identifier rubyid_builder'>builder</span>
 
-  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:subcommand_group</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:subcommand_group</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1831,12 +2171,12 @@ end</code></pre>
       <pre class="lines">
 
 
-803
-804
-805</pre>
+848
+849
+850</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 803</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 848</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
   <span class='ivar'>@options</span>
@@ -1849,7 +2189,7 @@ end</code></pre>
       <div class="method_details ">
   <h3 class="signature " id="user-instance_method">
   
-    #<strong>user</strong>(name, description, required: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>user</strong>(name, description, required: nil, name_localizations: nil, description_localizations: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1909,6 +2249,38 @@ end</code></pre>
       
     </li>
   
+    <li>
+      
+        <span class='name'>name_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized names of the argument.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description_localizations</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The localized descriptions of the argument.</p></div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -1934,15 +2306,15 @@ end</code></pre>
       <pre class="lines">
 
 
-727
-728
-729</pre>
+757
+758
+759</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 727</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/interaction.rb', line 757</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_user'>user</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'>TYPES</span><span class='lbracket'>[</span><span class='symbol'>:user</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span> <span class='label'>name_localizations:</span> <span class='id identifier rubyid_name_localizations'>name_localizations</span><span class='comma'>,</span> <span class='label'>description_localizations:</span> <span class='id identifier rubyid_description_localizations'>description_localizations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1954,7 +2326,7 @@ end</code></pre>
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:44 2026 by
+  Generated on Tue Sep 29 18:43:22 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>

@@ -356,13 +356,13 @@ initialized.</p>
       <pre class="lines">
 
 
+52
 53
 54
-55
-56</pre>
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@socket</span> <span class='op'>=</span> <span class='const'>UDPSocket</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -425,12 +425,12 @@ initialized.</p>
       <pre class="lines">
 
 
+38
 39
-40
-41</pre>
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_encrypted'>encrypted</span>
   <span class='ivar'>@encrypted</span>
@@ -466,12 +466,12 @@ initialized.</p>
       <pre class="lines">
 
 
+45
 46
-47
-48</pre>
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mode'>mode</span>
   <span class='ivar'>@mode</span>
@@ -507,12 +507,12 @@ initialized.</p>
       <pre class="lines">
 
 
+42
 43
-44
-45</pre>
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_secret_key='>secret_key=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@secret_key</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -600,14 +600,14 @@ on the same endpoint.</p></div>
       <pre class="lines">
 
 
+62
 63
 64
 65
-66
-67</pre>
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='id identifier rubyid_ip'>ip</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='comma'>,</span> <span class='id identifier rubyid_ssrc'>ssrc</span><span class='rparen'>)</span>
   <span class='ivar'>@ip</span> <span class='op'>=</span> <span class='id identifier rubyid_ip'>ip</span>
@@ -659,16 +659,16 @@ on the same endpoint.</p></div>
       <pre class="lines">
 
 
+70
 71
 72
 73
 74
 75
-76
-77</pre>
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_receive_discovery_reply'>receive_discovery_reply</span>
   <span class='comment'># Wait for a UDP message
@@ -753,6 +753,7 @@ sequence number multiplied by 960)</p></div>
       <pre class="lines">
 
 
+83
 84
 85
 86
@@ -761,11 +762,10 @@ sequence number multiplied by 960)</p></div>
 89
 90
 91
-92
-93</pre>
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 83</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_send_audio'>send_audio</span><span class='lparen'>(</span><span class='id identifier rubyid_buf'>buf</span><span class='comma'>,</span> <span class='id identifier rubyid_sequence'>sequence</span><span class='comma'>,</span> <span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span>
   <span class='comment'># Header of the audio packet
@@ -807,6 +807,7 @@ be received using <span class='object_link'><a href="#receive_discovery_reply-in
       <pre class="lines">
 
 
+96
 97
 98
 99
@@ -823,11 +824,10 @@ be received using <span class='object_link'><a href="#receive_discovery_reply-in
 110
 111
 112
-113
-114</pre>
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/voice/network.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_send_discovery'>send_discovery</span>
   <span class='comment'># Create empty packet
@@ -857,7 +857,7 @@ be received using <span class='object_link'><a href="#receive_discovery_reply-in
 </div>
 
       <div id="footer">
-  Generated on Tue Sep 29 17:01:40 2026 by
+  Generated on Tue Sep 29 18:43:18 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.45 (ruby-3.3.12).
 </div>
