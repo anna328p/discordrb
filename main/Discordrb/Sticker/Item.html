@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Discordrb::Sticker::Item
+  
+    &mdash; Documentation by YARD 0.9.45
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "Discordrb::Sticker::Item";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Sticker.html" title="Discordrb::Sticker (class)">Sticker</a></span></span>
+     &raquo; 
+    <span class="title">Item</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Discordrb::Sticker::Item
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Discordrb::Sticker::Item</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="../IDObject.html" title="Discordrb::IDObject (module)">IDObject</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/discordrb/data/sticker.rb
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>The smallest amount of data required to render a sticker.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#format_type-instance_method" title="#format_type (instance method)">#<strong>format_type</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The format type of the sticker item.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The name of the sticker item.</p></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="../IDObject.html" title="Discordrb::IDObject (module)">IDObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../IDObject.html#id-instance_method" title="Discordrb::IDObject#id (method)">#id</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#apng%3F-instance_method" title="#apng? (instance method)">#<strong>apng?</strong>  &#x21d2; true, false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether or not the sticker item is an animated APNG file.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extension-instance_method" title="#extension (instance method)">#<strong>extension</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get the extension that can be used to access the sticker's URL.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gif%3F-instance_method" title="#gif? (instance method)">#<strong>gif?</strong>  &#x21d2; true, false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether or not the sticker item is an animated GIF file.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lottie%3F-instance_method" title="#lottie? (instance method)">#<strong>lottie?</strong>  &#x21d2; true, false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether or not the sticker item is a lottie JSON file.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#png%3F-instance_method" title="#png? (instance method)">#<strong>png?</strong>  &#x21d2; true, false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether or not the sticker item is a PNG file.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_sticker-instance_method" title="#to_sticker (instance method)">#<strong>to_sticker</strong>  &#x21d2; Sticker<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Convert the sticker item into a full sticker object.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#url-instance_method" title="#url (instance method)">#<strong>url</strong>(query: true)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Utility method to get a sticker item's CDN URL.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+    
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../IDObject.html" title="Discordrb::IDObject (module)">IDObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../IDObject.html#==-instance_method" title="Discordrb::IDObject#== (method)">#==</a></span>, <span class='object_link'><a href="../IDObject.html#creation_time-instance_method" title="Discordrb::IDObject#creation_time (method)">#creation_time</a></span>, <span class='object_link'><a href="../IDObject.html#synthesise-class_method" title="Discordrb::IDObject.synthesise (method)">synthesise</a></span></p>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="format_type-instance_method">
+  
+    #<strong>format_type</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Integer.html" title="Integer (class)">Integer</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the format type of the sticker item.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the format type of the sticker item.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+231
+232
+233</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/sticker.rb', line 231</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_format_type'>format_type</span>
+  <span class='ivar'>@format_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the name of the sticker item.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the name of the sticker item.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/sticker.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="apng?-instance_method">
+  
+    #<strong>apng?</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns whether or not the sticker item is an animated APNG file.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>whether or not the sticker item is an animated APNG file.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+249
+250
+251
+252
+253</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/sticker.rb', line 249</span>
+
+<span class='const'><span class='object_link'><a href="../Sticker.html#FORMATS-constant" title="Discordrb::Sticker::FORMATS (constant)">FORMATS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@format_type</span> <span class='op'>==</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extension-instance_method">
+  
+    #<strong>extension</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get the extension that can be used to access the sticker's URL.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The file extension of the sticker. Will be one of <code>png</code>, <code>json</code>, or <code>gif</code>.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+257
+258
+259
+260
+261
+262
+263
+264
+265</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/sticker.rb', line 257</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_extension'>extension</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_png?'>png?</span> <span class='op'>||</span> <span class='id identifier rubyid_apng?'>apng?</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>png</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_lottie?'>lottie?</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>json</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_gif?'>gif?</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>gif</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gif?-instance_method">
+  
+    #<strong>gif?</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns whether or not the sticker item is an animated GIF file.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>whether or not the sticker item is an animated GIF file.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+249
+250
+251
+252
+253</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/sticker.rb', line 249</span>
+
+<span class='const'><span class='object_link'><a href="../Sticker.html#FORMATS-constant" title="Discordrb::Sticker::FORMATS (constant)">FORMATS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@format_type</span> <span class='op'>==</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lottie?-instance_method">
+  
+    #<strong>lottie?</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns whether or not the sticker item is a lottie JSON file.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>whether or not the sticker item is a lottie JSON file.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+249
+250
+251
+252
+253</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/sticker.rb', line 249</span>
+
+<span class='const'><span class='object_link'><a href="../Sticker.html#FORMATS-constant" title="Discordrb::Sticker::FORMATS (constant)">FORMATS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@format_type</span> <span class='op'>==</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="png?-instance_method">
+  
+    #<strong>png?</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns whether or not the sticker item is a PNG file.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>whether or not the sticker item is a PNG file.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+249
+250
+251
+252
+253</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/sticker.rb', line 249</span>
+
+<span class='const'><span class='object_link'><a href="../Sticker.html#FORMATS-constant" title="Discordrb::Sticker::FORMATS (constant)">FORMATS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@format_type</span> <span class='op'>==</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_sticker-instance_method">
+  
+    #<strong>to_sticker</strong>  &#x21d2; <tt><span class='object_link'><a href="../Sticker.html" title="Discordrb::Sticker (class)">Sticker</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Convert the sticker item into a full sticker object.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Sticker.html" title="Discordrb::Sticker (class)">Sticker</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The full sticker object, or <code>nil</code> if the sticker was deleted.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+279
+280
+281</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/sticker.rb', line 279</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_sticker'>to_sticker</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_sticker'>sticker</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="url-instance_method">
+  
+    #<strong>url</strong>(query: true)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Utility method to get a sticker item's CDN URL.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>query</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not to append the
+size query parameter for <code>gif</code> sticker items.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The CDN URL to the sticker item's file.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+271
+272
+273
+274
+275</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/sticker.rb', line 271</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_url'>url</span><span class='lparen'>(</span><span class='label'>query:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../API.html" title="Discordrb::API (module)">API</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sticker_url'><span class='object_link'><a href="../API.html#sticker_url-class_method" title="Discordrb::API.sticker_url (method)">sticker_url</a></span></span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_extension'>extension</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_gif?'>gif?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_query'>query</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>?size=4096</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_url'>url</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Sep 29 17:01:33 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.45 (ruby-3.3.12).
+</div>
+
+    </div>
+  </body>
+</html>

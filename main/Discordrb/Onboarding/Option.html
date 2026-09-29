@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Discordrb::Onboarding::Option
+  
+    &mdash; Documentation by YARD 0.9.45
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "Discordrb::Onboarding::Option";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Onboarding.html" title="Discordrb::Onboarding (class)">Onboarding</a></span></span>
+     &raquo; 
+    <span class="title">Option</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Discordrb::Onboarding::Option
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Discordrb::Onboarding::Option</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="../IDObject.html" title="Discordrb::IDObject (module)">IDObject</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/discordrb/data/onboarding.rb
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>An onboarding option.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#description-instance_method" title="#description (instance method)">#<strong>description</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The description of the option.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#title-instance_method" title="#title (instance method)">#<strong>title</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The title of the option.</p></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="../IDObject.html" title="Discordrb::IDObject (module)">IDObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../IDObject.html#id-instance_method" title="Discordrb::IDObject#id (method)">#id</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#channels-instance_method" title="#channels (instance method)">#<strong>channels</strong>  &#x21d2; Array&lt;Role&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get the channels that will be made visible to a user who selects the option.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(reason: nil)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Delete the prompt option.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#emoji-instance_method" title="#emoji (instance method)">#<strong>emoji</strong>  &#x21d2; Emoji<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get the emoji for the option.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#modify-instance_method" title="#modify (instance method)">#<strong>modify</strong>(title: :undef, description: :undef, emoji: :undef, roles: :undef, channels: :undef, reason: nil)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Modify the prompt option.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#roles-instance_method" title="#roles (instance method)">#<strong>roles</strong>  &#x21d2; Array&lt;Role&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get the roles that will be given to a user who selects the option.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+    
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../IDObject.html" title="Discordrb::IDObject (module)">IDObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../IDObject.html#==-instance_method" title="Discordrb::IDObject#== (method)">#==</a></span>, <span class='object_link'><a href="../IDObject.html#creation_time-instance_method" title="Discordrb::IDObject#creation_time (method)">#creation_time</a></span>, <span class='object_link'><a href="../IDObject.html#synthesise-class_method" title="Discordrb::IDObject.synthesise (method)">synthesise</a></span></p>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="description-instance_method">
+  
+    #<strong>description</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the description of the option.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the description of the option.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+329
+330
+331</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 329</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
+  <span class='ivar'>@description</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="title-instance_method">
+  
+    #<strong>title</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the title of the option.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the title of the option.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+326
+327
+328</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 326</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_title'>title</span>
+  <span class='ivar'>@title</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="channels-instance_method">
+  
+    #<strong>channels</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../Role.html" title="Discordrb::Role (class)">Role</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get the channels that will be made visible to a user who selects the option.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Role.html" title="Discordrb::Role (class)">Role</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The channels that are made visible when the option is selected.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+353
+354
+355</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 353</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_channels'>channels</span>
+  <span class='ivar'>@channel_ids</span><span class='period'>.</span><span class='id identifier rubyid_filter_map'>filter_map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='op'>|</span> <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete-instance_method">
+  
+    #<strong>delete</strong>(reason: nil)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Delete the prompt option.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason to show in the server's audit log for deleting the option.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+386
+387
+388</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 386</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@prompt</span><span class='period'>.</span><span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span><span class='label'>options:</span> <span class='ivar'>@prompt</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_array'>array</span><span class='op'>|</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="emoji-instance_method">
+  
+    #<strong>emoji</strong>  &#x21d2; <tt><span class='object_link'><a href="../Emoji.html" title="Discordrb::Emoji (class)">Emoji</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get the emoji for the option.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Emoji.html" title="Discordrb::Emoji (class)">Emoji</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The emoji of the option.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+341
+342
+343</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 341</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_emoji'>emoji</span>
+  <span class='ivar'>@emoji</span><span class='op'>&amp;.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>?</span> <span class='ivar'>@prompt</span><span class='period'>.</span><span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_emojis'>emojis</span><span class='lbracket'>[</span><span class='ivar'>@emoji</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='ivar'>@emoji</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="modify-instance_method">
+  
+    #<strong>modify</strong>(title: :undef, description: :undef, emoji: :undef, roles: :undef, channels: :undef, reason: nil)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Modify the prompt option.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>title</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new title of the prompt.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new description of the prompt.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>emoji</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Emoji.html" title="Discordrb::Emoji (class)">Emoji</a></span></tt>, <tt><span class='object_link'><a href="../../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new emoji of the prompt.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>roles</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Role.html" title="Discordrb::Role (class)">Role</a></span>, <span class='object_link'><a href="../../Integer.html" title="Integer (class)">Integer</a></span>, <span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new roles of the prompt.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>channels</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Channel.html" title="Discordrb::Channel (class)">Channel</a></span>, <span class='object_link'><a href="../../Integer.html" title="Integer (class)">Integer</a></span>, <span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new channels of the prompt.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason to show in the audit log for modifying the prompt.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 365</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span>
+  <span class='label'>title:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>emoji:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>roles:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+  <span class='label'>channels:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span>
+<span class='rparen'>)</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>id:</span> <span class='ivar'>@id</span><span class='comma'>,</span>
+    <span class='label'>title:</span> <span class='id identifier rubyid_title'>title</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@title</span> <span class='op'>:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+    <span class='label'>description:</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@description</span> <span class='op'>:</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span>
+    <span class='label'>channel_ids:</span> <span class='id identifier rubyid_channels'>channels</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@channel_ids</span> <span class='op'>:</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_channels'>channels</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:resolve_id</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>role_ids:</span> <span class='id identifier rubyid_roles'>roles</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@role_ids</span> <span class='op'>:</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_roles'>roles</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:resolve_id</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='op'>**</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="" title="Discordrb::Onboarding::Option (class)">Option</a></span></span><span class='period'>.</span><span class='id identifier rubyid_convert_emoji'>convert_emoji</span><span class='lparen'>(</span><span class='ivar'>@emoji</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="" title="Discordrb::Onboarding::Option (class)">Option</a></span></span><span class='period'>.</span><span class='id identifier rubyid_convert_emoji'>convert_emoji</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='comma'>,</span> <span class='ivar'>@prompt</span><span class='period'>.</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@prompt</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_array'>array</span><span class='op'>|</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+  <span class='ivar'>@prompt</span><span class='period'>.</span><span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span><span class='label'>options:</span> <span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_h</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="roles-instance_method">
+  
+    #<strong>roles</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../Role.html" title="Discordrb::Role (class)">Role</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get the roles that will be given to a user who selects the option.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Role.html" title="Discordrb::Role (class)">Role</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The roles that are given when the option is selected.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+347
+348
+349</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 347</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_roles'>roles</span>
+  <span class='ivar'>@role_ids</span><span class='period'>.</span><span class='id identifier rubyid_filter_map'>filter_map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_role_id'>role_id</span><span class='op'>|</span> <span class='ivar'>@prompt</span><span class='period'>.</span><span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_role'>role</span><span class='lparen'>(</span><span class='id identifier rubyid_role_id'>role_id</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Sep 29 17:01:37 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.45 (ruby-3.3.12).
+</div>
+
+    </div>
+  </body>
+</html>

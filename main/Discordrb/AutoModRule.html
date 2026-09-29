@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Discordrb::AutoModRule
+  
+    &mdash; Documentation by YARD 0.9.45
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "Discordrb::AutoModRule";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span>
+     &raquo; 
+    <span class="title">AutoModRule</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Discordrb::AutoModRule
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Discordrb::AutoModRule</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="IDObject.html" title="Discordrb::IDObject (module)">IDObject</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/discordrb/data/auto_moderation.rb
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>An auto moderation rule on a server.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="AutoModRule/Action.html" title="Discordrb::AutoModRule::Action (class)">Action</a></span>, <span class='object_link'><a href="AutoModRule/Trigger.html" title="Discordrb::AutoModRule::Trigger (class)">Trigger</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="EVENT_TYPES-constant" class="">EVENT_TYPES =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Mapping of event types.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>message_send:</span> <span class='int'>1</span><span class='comma'>,</span>
+  <span class='label'>member_update:</span> <span class='int'>2</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#actions-instance_method" title="#actions (instance method)">#<strong>actions</strong>  &#x21d2; Array&lt;Action&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The actions of the auto moderation rule.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enabled-instance_method" title="#enabled (instance method)">#<strong>enabled</strong>  &#x21d2; true, false </a>
+    
+
+    
+      (also: #enabled?)
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether or not the auto moderation rule is enabled.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#event_type-instance_method" title="#event_type (instance method)">#<strong>event_type</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The type of event that can trigger the auto moderation rule.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The name of the auto moderation rule.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#trigger-instance_method" title="#trigger (instance method)">#<strong>trigger</strong>  &#x21d2; Trigger </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The trigger of the auto moderation rule.</p></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="IDObject.html" title="Discordrb::IDObject (module)">IDObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="IDObject.html#id-instance_method" title="Discordrb::IDObject#id (method)">#id</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#creator-instance_method" title="#creator (instance method)">#<strong>creator</strong>  &#x21d2; User </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get the user who was responsible for creating the auto moderation rule.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(reason: nil)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Delete the auto moderation rule.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exempt%3F-instance_method" title="#exempt? (instance method)">#<strong>exempt?</strong>(other)  &#x21d2; true, false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check if a specific role, channel, or member is exempt from the auto moderation rule.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exempt_channels-instance_method" title="#exempt_channels (instance method)">#<strong>exempt_channels</strong>  &#x21d2; Array&lt;Channel&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get the channels that will be ignored by the auto moderation rule.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exempt_roles-instance_method" title="#exempt_roles (instance method)">#<strong>exempt_roles</strong>  &#x21d2; Array&lt;Role&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get the roles that will be ignored by the auto moderation rule.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#member_event%3F-instance_method" title="#member_event? (instance method)">#<strong>member_event?</strong>  &#x21d2; true, false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check if the auto moderation rule can be triggered via a member event.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#message_event%3F-instance_method" title="#message_event? (instance method)">#<strong>message_event?</strong>  &#x21d2; true, false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check if the auto moderation rule can be triggered via a message event.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#modify-instance_method" title="#modify (instance method)">#<strong>modify</strong>(name: :undef, event_type: :undef, enabled: :undef, actions: :undef, exempt_roles: :undef, exempt_channels: :undef, mention_limit: :undef, keyword_filter: :undef, regex_patterns: :undef, exempt_keywords: :undef, keyword_presets: :undef, mention_raid_protection: :undef, reason: nil) {|builder| ... } &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Modify the properties of the auto moderation rule.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+    
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="IDObject.html" title="Discordrb::IDObject (module)">IDObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="IDObject.html#==-instance_method" title="Discordrb::IDObject#== (method)">#==</a></span>, <span class='object_link'><a href="IDObject.html#creation_time-instance_method" title="Discordrb::IDObject#creation_time (method)">#creation_time</a></span>, <span class='object_link'><a href="IDObject.html#synthesise-class_method" title="Discordrb::IDObject.synthesise (method)">synthesise</a></span></p>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="actions-instance_method">
+  
+    #<strong>actions</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="AutoModRule/Action.html" title="Discordrb::AutoModRule::Action (class)">Action</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the actions of the auto moderation rule.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="AutoModRule/Action.html" title="Discordrb::AutoModRule::Action (class)">Action</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the actions of the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_actions'>actions</span>
+  <span class='ivar'>@actions</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="enabled-instance_method">
+  
+    #<strong>enabled</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='enabled?-instance_method'>enabled?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns whether or not the auto moderation rule is enabled.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>whether or not the auto moderation rule is enabled.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enabled'>enabled</span>
+  <span class='ivar'>@enabled</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="event_type-instance_method">
+  
+    #<strong>event_type</strong>  &#x21d2; <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the type of event that can trigger the auto moderation rule.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the type of event that can trigger the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#EVENT_TYPES-constant" title="Discordrb::AutoModRule::EVENT_TYPES (constant)">EVENT_TYPES</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_event_type'>event_type</span>
+  <span class='ivar'>@event_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the name of the auto moderation rule.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the name of the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="trigger-instance_method">
+  
+    #<strong>trigger</strong>  &#x21d2; <tt><span class='object_link'><a href="AutoModRule/Trigger.html" title="Discordrb::AutoModRule::Trigger (class)">Trigger</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the trigger of the auto moderation rule.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="AutoModRule/Trigger.html" title="Discordrb::AutoModRule::Trigger (class)">Trigger</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the trigger of the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_trigger'>trigger</span>
+  <span class='ivar'>@trigger</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="creator-instance_method">
+  
+    #<strong>creator</strong>  &#x21d2; <tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get the user who was responsible for creating the auto moderation rule.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The user who was responsible for creating the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_creator'>creator</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='lparen'>(</span><span class='ivar'>@creator_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete-instance_method">
+  
+    #<strong>delete</strong>(reason: nil)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Delete the auto moderation rule. Use this with caution, as it cannot be undone.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason to show in the server's audit log for deleting the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_delete_automod_rule'><span class='object_link'><a href="API/Server.html#delete_automod_rule-class_method" title="Discordrb::API::Server.delete_automod_rule (method)">delete_automod_rule</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@server</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+  <span class='ivar'>@server</span><span class='period'>.</span><span class='id identifier rubyid_delete_automod_rule'>delete_automod_rule</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='rparen'>)</span>
+  <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exempt?-instance_method">
+  
+    #<strong>exempt?</strong>(other)  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Check if a specific role, channel, or member is exempt from the auto moderation rule.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>other</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span></tt>, <tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="Member.html" title="Discordrb::Member (class)">Member</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The role, channel, or member that should be checked.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not the role, channel, or member is exempt from the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 134</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exempt?'>exempt?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_other'>other</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Member.html" title="Discordrb::Member (class)">Member</a></span></span>
+    <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_bot_account?'>bot_account?</span> <span class='op'>||</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_can_manage_server?'>can_manage_server?</span> <span class='op'>||</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_roles'>roles</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span> <span class='ivar'>@exempt_roles</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></span>
+    <span class='ivar'>@exempt_channels</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span></span>
+    <span class='ivar'>@exempt_roles</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unsupported type: &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; (expected one of &#39;Member&#39;, &#39;Role&#39;, &#39;Channel&#39;)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exempt_channels-instance_method">
+  
+    #<strong>exempt_channels</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get the channels that will be ignored by the auto moderation rule.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The channels that should be ignored by the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exempt_channels'>exempt_channels</span>
+  <span class='ivar'>@exempt_channels</span><span class='period'>.</span><span class='id identifier rubyid_filter_map'>filter_map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span> <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exempt_roles-instance_method">
+  
+    #<strong>exempt_roles</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get the roles that will be ignored by the auto moderation rule.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The roles that should be ignored by the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exempt_roles'>exempt_roles</span>
+  <span class='ivar'>@exempt_roles</span><span class='period'>.</span><span class='id identifier rubyid_filter_map'>filter_map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span> <span class='ivar'>@server</span><span class='period'>.</span><span class='id identifier rubyid_role'>role</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="member_event?-instance_method">
+  
+    #<strong>member_event?</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Check if the auto moderation rule can be triggered via a member event.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not the auto moderation rule will trigger when a member edits their profile.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_member_event?'>member_event?</span>
+  <span class='ivar'>@event_type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#EVENT_TYPES-constant" title="Discordrb::AutoModRule::EVENT_TYPES (constant)">EVENT_TYPES</a></span></span><span class='lbracket'>[</span><span class='symbol'>:member_update</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="message_event?-instance_method">
+  
+    #<strong>message_event?</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Check if the auto moderation rule can be triggered via a message event.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not the auto moderation rule will trigger when a message is sent or edited.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_message_event?'>message_event?</span>
+  <span class='ivar'>@event_type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#EVENT_TYPES-constant" title="Discordrb::AutoModRule::EVENT_TYPES (constant)">EVENT_TYPES</a></span></span><span class='lbracket'>[</span><span class='symbol'>:message_send</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="modify-instance_method">
+  
+    #<strong>modify</strong>(name: :undef, event_type: :undef, enabled: :undef, actions: :undef, exempt_roles: :undef, exempt_channels: :undef, mention_limit: :undef, keyword_filter: :undef, regex_patterns: :undef, exempt_keywords: :undef, keyword_presets: :undef, mention_raid_protection: :undef, reason: nil) {|builder| ... } &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Modify the properties of the auto moderation rule.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new 1-100 character name of the auto moderation rule.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>event_type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new event type of the auto moderation rule; see <span class='object_link'><a href="#EVENT_TYPES-constant" title="Discordrb::AutoModRule::EVENT_TYPES (constant)">EVENT_TYPES</a></span>.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>enabled</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not the auto moderation rule should be enabled.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>actions</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;#to_h, <span class='object_link'><a href="AutoModRule/Action.html" title="Discordrb::AutoModRule::Action (class)">Action</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new actions to set for the auto moderation rule.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exempt_roles</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>, <span class='object_link'><a href="../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new roles that should be ignored by the auto moderation rule.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exempt_channels</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>, <span class='object_link'><a href="../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new channels that should be ignored by the auto moderation rule.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mention_limit</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new max amount of role and user mentions allowed per message; max 50.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>keyword_filter</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new substrings which will be searched for in content; max 1000.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>regex_patterns</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new regular expression patterns (rust flavoured) to match against in content; max 10.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exempt_keywords</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new substrings which should not trigger the auto moderation rule; max 1000.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>keyword_presets</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>, Symbol&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new pre-defined set of keywords to match against in content; see <span class='object_link'><a href="AutoModRule/Trigger.html#PRESET_TYPES-constant" title="Discordrb::AutoModRule::Trigger::PRESET_TYPES (constant)">PRESET_TYPES</a></span>.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mention_raid_protection</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not to automatically detect when a mention raid is occuring.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason to show in the server's audit log for updating the auto moderation rule.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>builder</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="AutoModRule/Action/Builder.html" title="Discordrb::AutoModRule::Action::Builder (class)">Action::Builder</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An optional builder for auto moderation actions. Overrides the <code>actions:</code> argument if passed.</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/auto_moderation.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span>
+  <span class='label'>name:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>event_type:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>enabled:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>actions:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>exempt_roles:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+  <span class='label'>exempt_channels:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>mention_limit:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>keyword_filter:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>regex_patterns:</span> <span class='symbol'>:undef</span><span class='comma'>,</span>
+  <span class='label'>exempt_keywords:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>keyword_presets:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>mention_raid_protection:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span>
+<span class='rparen'>)</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>name:</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>enabled:</span> <span class='id identifier rubyid_enabled'>enabled</span><span class='comma'>,</span>
+    <span class='label'>event_type:</span> <span class='id identifier rubyid_event_type'>event_type</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='id identifier rubyid_event_type'>event_type</span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="#EVENT_TYPES-constant" title="Discordrb::AutoModRule::EVENT_TYPES (constant)">EVENT_TYPES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_event_type'>event_type</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_event_type'>event_type</span><span class='comma'>,</span>
+    <span class='label'>actions:</span> <span class='id identifier rubyid_actions'>actions</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='id identifier rubyid_actions'>actions</span> <span class='op'>:</span> <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_h</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>exempt_roles:</span> <span class='id identifier rubyid_exempt_roles'>exempt_roles</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='id identifier rubyid_exempt_roles'>exempt_roles</span> <span class='op'>:</span> <span class='id identifier rubyid_exempt_roles'>exempt_roles</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:resolve_id</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>exempt_channels:</span> <span class='id identifier rubyid_exempt_channels'>exempt_channels</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='id identifier rubyid_exempt_channels'>exempt_channels</span> <span class='op'>:</span> <span class='id identifier rubyid_exempt_channels'>exempt_channels</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:resolve_id</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_partial_params'>partial_params</span> <span class='op'>=</span> <span class='id identifier rubyid_mention_raid_protection'>mention_raid_protection</span> <span class='op'>!=</span> <span class='symbol'>:undef</span> <span class='op'>||</span> <span class='id identifier rubyid_exempt_keywords'>exempt_keywords</span> <span class='op'>!=</span> <span class='symbol'>:undef</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_partial_params'>partial_params</span> <span class='op'>||</span> <span class='id identifier rubyid_regex_patterns'>regex_patterns</span> <span class='op'>!=</span> <span class='symbol'>:undef</span> <span class='op'>||</span> <span class='id identifier rubyid_keyword_filter'>keyword_filter</span> <span class='op'>!=</span> <span class='symbol'>:undef</span> <span class='op'>||</span> <span class='id identifier rubyid_mention_limit'>mention_limit</span> <span class='op'>!=</span> <span class='symbol'>:undef</span> <span class='op'>||</span> <span class='id identifier rubyid_keyword_presets'>keyword_presets</span> <span class='op'>!=</span> <span class='symbol'>:undef</span>
+    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:trigger_metadata</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>mention_total_limit:</span> <span class='id identifier rubyid_mention_limit'>mention_limit</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@trigger</span><span class='period'>.</span><span class='id identifier rubyid_mention_limit'>mention_limit</span> <span class='op'>:</span> <span class='id identifier rubyid_mention_limit'>mention_limit</span><span class='comma'>,</span>
+      <span class='label'>keyword_filter:</span> <span class='id identifier rubyid_keyword_filter'>keyword_filter</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@trigger</span><span class='period'>.</span><span class='id identifier rubyid_keyword_filter'>keyword_filter</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id identifier rubyid_keyword_filter'>keyword_filter</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>regex_patterns:</span> <span class='id identifier rubyid_regex_patterns'>regex_patterns</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@trigger</span><span class='period'>.</span><span class='id identifier rubyid_regex_patterns'>regex_patterns</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id identifier rubyid_regex_patterns'>regex_patterns</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>allow_list:</span> <span class='id identifier rubyid_exempt_keywords'>exempt_keywords</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@trigger</span><span class='period'>.</span><span class='id identifier rubyid_exempt_keywords'>exempt_keywords</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id identifier rubyid_exempt_keywords'>exempt_keywords</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='label'>presets:</span> <span class='lparen'>(</span><span class='id identifier rubyid_keyword_presets'>keyword_presets</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@trigger</span><span class='period'>.</span><span class='id identifier rubyid_keyword_presets'>keyword_presets</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id identifier rubyid_keyword_presets'>keyword_presets</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="AutoModRule/Trigger.html" title="Discordrb::AutoModRule::Trigger (class)">Trigger</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="AutoModRule/Trigger.html#PRESET_TYPES-constant" title="Discordrb::AutoModRule::Trigger::PRESET_TYPES (constant)">PRESET_TYPES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+      <span class='label'>mention_raid_protection_enabled:</span> <span class='id identifier rubyid_mention_raid_protection'>mention_raid_protection</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='ivar'>@trigger</span><span class='period'>.</span><span class='id identifier rubyid_mention_raid_protection?'>mention_raid_protection?</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id identifier rubyid_mention_raid_protection'>mention_raid_protection</span> <span class='op'>||</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_builder'>builder</span> <span class='op'>=</span> <span class='const'>Actions</span><span class='op'>::</span><span class='const'>Builder</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:actions</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_update_data'>update_data</span><span class='lparen'>(</span><span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_automod_rule'><span class='object_link'><a href="API/Server.html#update_automod_rule-class_method" title="Discordrb::API::Server.update_automod_rule (method)">update_automod_rule</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@server</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Sep 29 17:01:40 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.45 (ruby-3.3.12).
+</div>
+
+    </div>
+  </body>
+</html>

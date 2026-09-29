@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Discordrb::NewMemberWelcome
+  
+    &mdash; Documentation by YARD 0.9.45
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "Discordrb::NewMemberWelcome";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (N)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span>
+     &raquo; 
+    <span class="title">NewMemberWelcome</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Discordrb::NewMemberWelcome
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Discordrb::NewMemberWelcome</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/discordrb/data/new_member_welcome.rb
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Represents the server guide for a server.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="NewMemberWelcome/Action.html" title="Discordrb::NewMemberWelcome::Action (class)">Action</a></span>, <span class='object_link'><a href="NewMemberWelcome/ResourceChannel.html" title="Discordrb::NewMemberWelcome::ResourceChannel (class)">ResourceChannel</a></span>, <span class='object_link'><a href="NewMemberWelcome/WelcomeMessage.html" title="Discordrb::NewMemberWelcome::WelcomeMessage (class)">WelcomeMessage</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#actions-instance_method" title="#actions (instance method)">#<strong>actions</strong>  &#x21d2; Array&lt;Action&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The actions new server members should complete.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enabled-instance_method" title="#enabled (instance method)">#<strong>enabled</strong>  &#x21d2; true, false </a>
+    
+
+    
+      (also: #enabled?)
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>If the new member experience is enabled.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resource_channels-instance_method" title="#resource_channels (instance method)">#<strong>resource_channels</strong>  &#x21d2; Array&lt;ResourceChannel&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The resource channels for new server members.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#server-instance_method" title="#server (instance method)">#<strong>server</strong>  &#x21d2; Server </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The server for the new member experience.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#welcome_message-instance_method" title="#welcome_message (instance method)">#<strong>welcome_message</strong>  &#x21d2; WelcomeMessage </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The welcome message shown to new server members.</p></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; true, false </a>
+    
+
+    
+      (also: #eql?)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check if the new member experience is equivalent to another one.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#banner_id-instance_method" title="#banner_id (instance method)">#<strong>banner_id</strong>  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get the hash of the banner for the new member experience.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#banner_url-instance_method" title="#banner_url (instance method)">#<strong>banner_url</strong>(format: &#39;webp&#39;, size: nil)  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Utility method to get a URL to the banner of the new member experience.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+    
+  
+
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="actions-instance_method">
+  
+    #<strong>actions</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="NewMemberWelcome/Action.html" title="Discordrb::NewMemberWelcome::Action (class)">Action</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the actions new server members should complete.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="NewMemberWelcome/Action.html" title="Discordrb::NewMemberWelcome::Action (class)">Action</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the actions new server members should complete.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/new_member_welcome.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_actions'>actions</span>
+  <span class='ivar'>@actions</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="enabled-instance_method">
+  
+    #<strong>enabled</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='enabled?-instance_method'>enabled?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns if the new member experience is enabled.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if the new member experience is enabled.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/new_member_welcome.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enabled'>enabled</span>
+  <span class='ivar'>@enabled</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="resource_channels-instance_method">
+  
+    #<strong>resource_channels</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="NewMemberWelcome/ResourceChannel.html" title="Discordrb::NewMemberWelcome::ResourceChannel (class)">ResourceChannel</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the resource channels for new server members.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="NewMemberWelcome/ResourceChannel.html" title="Discordrb::NewMemberWelcome::ResourceChannel (class)">ResourceChannel</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the resource channels for new server members.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/new_member_welcome.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resource_channels'>resource_channels</span>
+  <span class='ivar'>@resource_channels</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="server-instance_method">
+  
+    #<strong>server</strong>  &#x21d2; <tt><span class='object_link'><a href="Server.html" title="Discordrb::Server (class)">Server</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the server for the new member experience.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Server.html" title="Discordrb::Server (class)">Server</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the server for the new member experience.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/new_member_welcome.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_server'>server</span>
+  <span class='ivar'>@server</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="welcome_message-instance_method">
+  
+    #<strong>welcome_message</strong>  &#x21d2; <tt><span class='object_link'><a href="NewMemberWelcome/WelcomeMessage.html" title="Discordrb::NewMemberWelcome::WelcomeMessage (class)">WelcomeMessage</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the welcome message shown to new server members.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="NewMemberWelcome/WelcomeMessage.html" title="Discordrb::NewMemberWelcome::WelcomeMessage (class)">WelcomeMessage</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the welcome message shown to new server members.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/new_member_welcome.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_welcome_message'>welcome_message</span>
+  <span class='ivar'>@welcome_message</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="==-instance_method">
+  
+    #<strong>==</strong>(other)  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='eql?-instance_method'>eql?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Check if the new member experience is equivalent to another one.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>other</span>
+      
+      
+        <span class='type'>(<tt>HomeSettings</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The new member experience to compare against.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If the new member experiences are equivalent to one another.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/new_member_welcome.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>HomeSettings</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='ivar'>@server</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_server'>server</span> <span class='op'>:</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="banner_id-instance_method">
+  
+    #<strong>banner_id</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get the hash of the banner for the new member experience.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The hash of the banner for the new member exerpeice, or <code>nil</code>.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/new_member_welcome.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_banner_id'>banner_id</span>
+  <span class='ivar'>@server</span><span class='period'>.</span><span class='id identifier rubyid_home_banner_id'>home_banner_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="banner_url-instance_method">
+  
+    #<strong>banner_url</strong>(format: &#39;webp&#39;, size: nil)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Utility method to get a URL to the banner of the new member experience.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>format</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;webp&#39;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The URL will default to <code>webp</code>. You can otherwise specify one of <code>jpg</code> or <code>png</code> to override this.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>size</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The URL will default to <code>4096</code>. You can otherwise specify any number that's a power of two to override this.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The URL to the banner of the new member experience, or <code>nil</code> if the new member experience doesn't have a banner set.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/new_member_welcome.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_banner_url'>banner_url</span><span class='lparen'>(</span><span class='label'>format:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>webp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>size:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@server</span><span class='period'>.</span><span class='id identifier rubyid_home_banner_url'>home_banner_url</span><span class='lparen'>(</span><span class='label'>format:</span> <span class='id identifier rubyid_format'>format</span><span class='comma'>,</span> <span class='label'>size:</span> <span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Sep 29 17:01:41 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.45 (ruby-3.3.12).
+</div>
+
+    </div>
+  </body>
+</html>

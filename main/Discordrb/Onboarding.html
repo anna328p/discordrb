@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Discordrb::Onboarding
+  
+    &mdash; Documentation by YARD 0.9.45
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+
+<script type="text/javascript">
+  pathId = "Discordrb::Onboarding";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Discordrb.html" title="Discordrb (module)">Discordrb</a></span></span>
+     &raquo; 
+    <span class="title">Onboarding</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Discordrb::Onboarding
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Discordrb::Onboarding</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/discordrb/data/onboarding.rb
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>The onboarding flow for a server.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Onboarding/Option.html" title="Discordrb::Onboarding::Option (class)">Option</a></span>, <span class='object_link'><a href="Onboarding/OptionBuilder.html" title="Discordrb::Onboarding::OptionBuilder (class)">OptionBuilder</a></span>, <span class='object_link'><a href="Onboarding/Prompt.html" title="Discordrb::Onboarding::Prompt (class)">Prompt</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="MODES-constant" class="">MODES =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Mapping of modes.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>default:</span> <span class='int'>0</span><span class='comma'>,</span>
+  <span class='label'>advanced:</span> <span class='int'>1</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enabled-instance_method" title="#enabled (instance method)">#<strong>enabled</strong>  &#x21d2; true, false </a>
+    
+
+    
+      (also: #enabled?)
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Whether or not the onboarding is enabled.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mode-instance_method" title="#mode (instance method)">#<strong>mode</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The criteria mode of the onboarding.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prompts-instance_method" title="#prompts (instance method)">#<strong>prompts</strong>  &#x21d2; Array&lt;Prompt&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The prompts shown during onboarding.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#server-instance_method" title="#server (instance method)">#<strong>server</strong>  &#x21d2; Server </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The server the onboarding object is for.</p></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; true, false </a>
+    
+
+    
+      (also: #eql?)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check if the onboarding object is equal to another onboarding object.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#advanced_mode%3F-instance_method" title="#advanced_mode? (instance method)">#<strong>advanced_mode?</strong>  &#x21d2; true, false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>If onboarding will count default channels <strong>and</strong> questions toward constraints.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_prompt-instance_method" title="#create_prompt (instance method)">#<strong>create_prompt</strong>(title:, required: false, type: :grid, single_select: true, in_onboarding: true, options: nil, reason: nil) {|builder| ... } &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Create a prompt for the onboarding.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_channels-instance_method" title="#default_channels (instance method)">#<strong>default_channels</strong>  &#x21d2; Array&lt;Channel&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get the default channels for the onboarding object.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_mode%3F-instance_method" title="#default_mode? (instance method)">#<strong>default_mode?</strong>  &#x21d2; true, false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>If onboarding will only count default channels toward constraints.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mention-instance_method" title="#mention (instance method)">#<strong>mention</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get a string that will mention the Channels &amp; Roles tab.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#modify-instance_method" title="#modify (instance method)">#<strong>modify</strong>(mode: :undef, prompts: :undef, enabled: :undef, default_channels: :undef, reason: nil)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Modify the properties of the onboarding object.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#option-instance_method" title="#option (instance method)">#<strong>option</strong>(option_id)  &#x21d2; Option<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get an option associated with the onboarding.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prompt-instance_method" title="#prompt (instance method)">#<strong>prompt</strong>(prompt_id)  &#x21d2; Prompt<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get a prompt associated with the onboarding.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+    
+  
+
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="enabled-instance_method">
+  
+    #<strong>enabled</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='enabled?-instance_method'>enabled?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns whether or not the onboarding is enabled.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>whether or not the onboarding is enabled.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enabled'>enabled</span>
+  <span class='ivar'>@enabled</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="mode-instance_method">
+  
+    #<strong>mode</strong>  &#x21d2; <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the criteria mode of the onboarding.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the criteria mode of the onboarding.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mode'>mode</span>
+  <span class='ivar'>@mode</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="prompts-instance_method">
+  
+    #<strong>prompts</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Onboarding/Prompt.html" title="Discordrb::Onboarding::Prompt (class)">Prompt</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the prompts shown during onboarding.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Onboarding/Prompt.html" title="Discordrb::Onboarding::Prompt (class)">Prompt</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the prompts shown during onboarding.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prompts'>prompts</span>
+  <span class='ivar'>@prompts</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="server-instance_method">
+  
+    #<strong>server</strong>  &#x21d2; <tt><span class='object_link'><a href="Server.html" title="Discordrb::Server (class)">Server</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the server the onboarding object is for.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Server.html" title="Discordrb::Server (class)">Server</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the server the onboarding object is for.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_server'>server</span>
+  <span class='ivar'>@server</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="==-instance_method">
+  
+    #<strong>==</strong>(other)  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='eql?-instance_method'>eql?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Check if the onboarding object is equal to another onboarding object.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>other</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Discordrb::Onboarding (class)">Onboarding</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The object to compare this one against.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not the onboarding is equal to the other object.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+128
+129
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 128</span>
+
+<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Discordrb::Onboarding (class)">Onboarding</a></span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_server'>server</span> <span class='op'>==</span> <span class='ivar'>@server</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_mode'>mode</span> <span class='op'>==</span> <span class='ivar'>@mode</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_prompts'>prompts</span> <span class='op'>==</span> <span class='ivar'>@prompts</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="advanced_mode?-instance_method">
+  
+    #<strong>advanced_mode?</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns if onboarding will count default channels <strong>and</strong> questions toward constraints.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if onboarding will count default channels <strong>and</strong> questions toward constraints.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 121</span>
+
+<span class='const'><span class='object_link'><a href="#MODES-constant" title="Discordrb::Onboarding::MODES (constant)">MODES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_mode?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='ivar'>@mode</span> <span class='op'>==</span> <span class='id identifier rubyid_value'>value</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_prompt-instance_method">
+  
+    #<strong>create_prompt</strong>(title:, required: false, type: :grid, single_select: true, in_onboarding: true, options: nil, reason: nil) {|builder| ... } &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Create a prompt for the onboarding.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>title</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The title of the prompt.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:grid</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The type of the prompt. See <span class='object_link'><a href="Onboarding/Prompt.html#TYPES-constant" title="Discordrb::Onboarding::Prompt::TYPES (constant)">Discordrb::Onboarding::Prompt::TYPES</a></span>.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>single_select</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether users can only select one option for the prompt.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>required</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>If the prompt must be completed during the initial onboarding flow.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>in_onboarding</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not the prompt is present in the onboarding flow. If set
+to <code>false</code>, the prompt will only appear in the &quot;Channels &amp; Roles&quot; tab.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;#to_h&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The selectable answers to the prompt. There's also a yielded builder.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason to show in the server's audit log for creating the onboarding prompt.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>builder</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Onboarding/OptionBuilder.html" title="Discordrb::Onboarding::OptionBuilder (class)">OptionBuilder</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An optional option builder. Overrides the <code>options:</code> argument if passed.</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_prompt'>create_prompt</span><span class='lparen'>(</span>
+  <span class='label'>title:</span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>type:</span> <span class='symbol'>:grid</span><span class='comma'>,</span> <span class='label'>single_select:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>in_onboarding:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span>
+<span class='rparen'>)</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_builder'>builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Onboarding/OptionBuilder.html" title="Discordrb::Onboarding::OptionBuilder (class)">OptionBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@server</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+
+  <span class='id identifier rubyid_new_prompt'>new_prompt</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>id:</span> <span class='int'>1</span><span class='comma'>,</span>
+    <span class='label'>title:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+    <span class='label'>options:</span> <span class='id identifier rubyid_block_given?'>block_given?</span> <span class='op'>?</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='op'>:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_h</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>required:</span> <span class='id identifier rubyid_required'>required</span><span class='comma'>,</span>
+    <span class='label'>in_onboarding:</span> <span class='id identifier rubyid_in_onboarding'>in_onboarding</span><span class='comma'>,</span>
+    <span class='label'>single_select:</span> <span class='id identifier rubyid_single_select'>single_select</span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='const'><span class='object_link'><a href="Onboarding/Prompt.html" title="Discordrb::Onboarding::Prompt (class)">Prompt</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Onboarding/Prompt.html#TYPES-constant" title="Discordrb::Onboarding::Prompt::TYPES (constant)">TYPES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_type'>type</span>
+  <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span><span class='label'>prompts:</span> <span class='ivar'>@prompts</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_new_prompt'>new_prompt</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_channels-instance_method">
+  
+    #<strong>default_channels</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get the default channels for the onboarding object.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The default onboarding channels.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_channels'>default_channels</span>
+  <span class='ivar'>@default_channel_ids</span><span class='period'>.</span><span class='id identifier rubyid_filter_map'>filter_map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='op'>|</span> <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_id'>channel_id</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_mode?-instance_method">
+  
+    #<strong>default_mode?</strong>  &#x21d2; <tt>true</tt>, <tt>false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns if onboarding will only count default channels toward constraints.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if onboarding will only count default channels toward constraints.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 121</span>
+
+<span class='const'><span class='object_link'><a href="#MODES-constant" title="Discordrb::Onboarding::MODES (constant)">MODES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_mode?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='ivar'>@mode</span> <span class='op'>==</span> <span class='id identifier rubyid_value'>value</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="mention-instance_method">
+  
+    #<strong>mention</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get a string that will mention the Channels &amp; Roles tab.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a string that can be used to mention the onboarding object.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mention'>mention</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;id:customize&gt;</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="modify-instance_method">
+  
+    #<strong>modify</strong>(mode: :undef, prompts: :undef, enabled: :undef, default_channels: :undef, reason: nil)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Modify the properties of the onboarding object.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mode</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new crtieria mode of onboarding.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>prompts</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;#to_h, <span class='object_link'><a href="Onboarding/Prompt.html" title="Discordrb::Onboarding::Prompt (class)">Prompt</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new prompts of onboarding.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>enabled</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether or not onboarding should be enabled.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>default_channels</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span>, <span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>, <span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:undef</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The new default channels of onboarding.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The reason to show in the server's audit log for modifying the onboarding.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_modify'>modify</span><span class='lparen'>(</span><span class='label'>mode:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>prompts:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>enabled:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>default_channels:</span> <span class='symbol'>:undef</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>mode:</span> <span class='const'><span class='object_link'><a href="#MODES-constant" title="Discordrb::Onboarding::MODES (constant)">MODES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_mode'>mode</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_mode'>mode</span><span class='comma'>,</span>
+    <span class='label'>enabled:</span> <span class='id identifier rubyid_enabled'>enabled</span> <span class='op'>||</span> <span class='kw'>false</span><span class='comma'>,</span>
+    <span class='label'>prompts:</span> <span class='id identifier rubyid_prompts'>prompts</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='id identifier rubyid_prompts'>prompts</span> <span class='op'>:</span> <span class='id identifier rubyid_prompts'>prompts</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_h</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='label'>default_channel_ids:</span> <span class='id identifier rubyid_default_channels'>default_channels</span> <span class='op'>==</span> <span class='symbol'>:undef</span> <span class='op'>?</span> <span class='symbol'>:undef</span> <span class='op'>:</span> <span class='id identifier rubyid_default_channels'>default_channels</span><span class='op'>&amp;.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:resolve_id</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_update_data'>update_data</span><span class='lparen'>(</span><span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_onboarding'><span class='object_link'><a href="API/Server.html#update_onboarding-class_method" title="Discordrb::API::Server.update_onboarding (method)">update_onboarding</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@server</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="option-instance_method">
+  
+    #<strong>option</strong>(option_id)  &#x21d2; <tt><span class='object_link'><a href="Onboarding/Option.html" title="Discordrb::Onboarding::Option (class)">Option</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get an option associated with the onboarding.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>option_id</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ID of the option to find.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Onboarding/Option.html" title="Discordrb::Onboarding::Option (class)">Option</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The option that was found, or <code>nil</code> if it couldn't be found.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='id identifier rubyid_option_id'>option_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option_id'>option_id</span> <span class='op'>=</span> <span class='id identifier rubyid_option_id'>option_id</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span>
+
+  <span class='ivar'>@prompts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_prompt'>prompt</span><span class='op'>|</span>
+    <span class='id identifier rubyid_option'>option</span> <span class='op'>=</span> <span class='id identifier rubyid_prompt'>prompt</span><span class='period'>.</span><span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='id identifier rubyid_option_id'>option_id</span><span class='rparen'>)</span>
+
+    <span class='kw'>return</span> <span class='id identifier rubyid_option'>option</span> <span class='kw'>if</span> <span class='id identifier rubyid_option'>option</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="prompt-instance_method">
+  
+    #<strong>prompt</strong>(prompt_id)  &#x21d2; <tt><span class='object_link'><a href="Onboarding/Prompt.html" title="Discordrb::Onboarding::Prompt (class)">Prompt</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get a prompt associated with the onboarding.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>prompt_id</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ID of the prompt to find.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Onboarding/Prompt.html" title="Discordrb::Onboarding::Prompt (class)">Prompt</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The prompt that was found, or <code>nil</code> if it couldn't be found.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/onboarding.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prompt'>prompt</span><span class='lparen'>(</span><span class='id identifier rubyid_prompt_id'>prompt_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_prompt_id'>prompt_id</span> <span class='op'>=</span> <span class='id identifier rubyid_prompt_id'>prompt_id</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span>
+
+  <span class='ivar'>@prompts</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_prompt'>prompt</span><span class='op'>|</span> <span class='id identifier rubyid_prompt'>prompt</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_prompt_id'>prompt_id</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Sep 29 17:01:36 2026 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.45 (ruby-3.3.12).
+</div>
+
+    </div>
+  </body>
+</html>
