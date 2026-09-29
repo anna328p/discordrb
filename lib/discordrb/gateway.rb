@@ -52,6 +52,15 @@ module Discordrb
       @check_heartbeats = true
       @should_reconnect = Queue.new
       @compression = (compression || :large)
+
+      return unless @compression == :stream
+
+      begin
+        require 'zstd-ruby'
+        @compression = :zstd_stream
+      rescue LoadError
+        # Fall back to zlib-stream compression.
+      end
     end
 
     # Block execution until the gateway permanently closes.
@@ -183,7 +192,7 @@ module Discordrb
         params = {
           v: VERSION,
           encoding: :json,
-          compress: ('zlib-stream' if @compression == :stream)
+          compress: { stream: 'zlib-stream', zstd_stream: 'zstd-stream' }[@compression]
         }
 
         @query_params = URI.encode_www_form(params.compact)

@@ -26,7 +26,14 @@ module Discordrb
 
       @websocket = ::WebSocket::Driver.client(self)
       @compression_mode = compression
-      @zlib = Zlib::Inflate.new if @compression_mode != :none
+
+      case @compression_mode
+      when :large, :stream
+        @zlib = Zlib::Inflate.new
+      when :zstd_stream
+        @zstd = Zstd::StreamingDecompress.new
+        @buffer = +''
+      end
     rescue ::SocketError => e
       raise(e) unless should_retry
 
@@ -95,17 +102,35 @@ module Discordrb
 
     # @!visibility private
     def handle_message(message)
-      if @zlib
-        case @compression_mode
-        when :large
-          message = Zlib::Inflate.inflate(message) if message.byteslice(0) == 'x'
-        when :stream
-          @zlib << message
-          message.end_with?(ZLIB_SUFFIX) ? (message = @zlib.inflate('')) : return
-        end
+      case @compression_mode
+      when :large
+        message = Zlib::Inflate.inflate(message) if message.byteslice(0) == 'x'
+      when :stream
+        @zlib << message
+        message.end_with?(ZLIB_SUFFIX) ? (message = @zlib.inflate('')) : return
+      when :zstd_stream
+        message = decompress_zstd(message)
+        return if message.empty?
       end
 
       @gateway.notify_message(message)
+    end
+
+    # @!visibility private
+    def decompress_zstd(message)
+      output = +''
+      @buffer << message
+
+      loop do
+        chunk, consumed = @zstd.decompress_with_pos(@buffer)
+        output << chunk
+
+        break unless consumed.positive?
+
+        @buffer = (@buffer.byteslice(consumed..) || +'')
+      end
+
+      output
     end
 
     # @!visibility private
