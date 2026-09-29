@@ -428,8 +428,9 @@ module Discordrb
     # @param enforce_nonce [true, false] Whether the nonce should be enforced and used for message de-duplication.
     # @param poll [Hash, Poll::Builder, Poll, nil] The poll that should be attached to this message.
     # @param stickers [Array<Integer, String, Sticker>, Integer, String, Sticker, nil] The stickers that should be sent with the message; max of 3.
+    # @param client_theme [hash, ClientTheme::Builder, ClientTheme, nil] The client-side theme to share via this message.
     # @return [Message] The message that was sent.
-    def send_message(channel, content, tts = false, embeds = nil, attachments = nil, allowed_mentions = nil, message_reference = nil, components = nil, flags = 0, nonce = nil, enforce_nonce = false, poll = nil, stickers = nil)
+    def send_message(channel, content, tts = false, embeds = nil, attachments = nil, allowed_mentions = nil, message_reference = nil, components = nil, flags = 0, nonce = nil, enforce_nonce = false, poll = nil, stickers = nil, client_theme = nil)
       channel = channel.resolve_id
       debug("Sending message to #{channel} with content '#{content}'")
       allowed_mentions = { parse: [] } if allowed_mentions == false
@@ -437,7 +438,7 @@ module Discordrb
       embeds = (embeds.instance_of?(Array) ? embeds.map(&:to_hash) : [embeds&.to_hash]).compact
       stickers = (stickers.instance_of?(Array) ? stickers.map(&:resolve_id) : [stickers.resolve_id]) if stickers
 
-      response = API::Channel.create_message(token, channel, content, tts, embeds, nonce, attachments, allowed_mentions&.to_hash, message_reference, components, flags, enforce_nonce, poll&.to_h, stickers)
+      response = API::Channel.create_message(token, channel, content, tts, embeds, nonce, attachments, allowed_mentions&.to_hash, message_reference, components, flags, enforce_nonce, poll&.to_h, stickers, client_theme&.to_h)
       Message.new(JSON.parse(response), self)
     end
 
@@ -457,11 +458,12 @@ module Discordrb
     # @param enforce_nonce [true, false] Whether the nonce should be enforced and used for message de-duplication.
     # @param poll [Hash, Poll::Builder, Poll, nil] The poll that should be attached to this message.
     # @param stickers [Array<Integer, String, Sticker>, Integer, String, Sticker, nil] The stickers that should be sent with the message; max of 3.
-    def send_temporary_message(channel, content, timeout, tts = false, embeds = nil, attachments = nil, allowed_mentions = nil, message_reference = nil, components = nil, flags = 0, nonce = nil, enforce_nonce = false, poll = nil, stickers = nil)
+    # @param client_theme [hash, ClientTheme::Builder, ClientTheme, nil] The client-side theme to share via this message.
+    def send_temporary_message(channel, content, timeout, tts = false, embeds = nil, attachments = nil, allowed_mentions = nil, message_reference = nil, components = nil, flags = 0, nonce = nil, enforce_nonce = false, poll = nil, stickers = nil, client_theme = nil)
       Thread.new do
         Thread.current[:discordrb_name] = "#{@current_thread}-temp-msg"
 
-        message = send_message(channel, content, tts, embeds, attachments, allowed_mentions, message_reference, components, flags, nonce, enforce_nonce, poll, stickers)
+        message = send_message(channel, content, tts, embeds, attachments, allowed_mentions, message_reference, components, flags, nonce, enforce_nonce, poll, stickers, client_theme)
         sleep(timeout)
         message.delete
       end
