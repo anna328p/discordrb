@@ -31,7 +31,8 @@ module Discordrb
       pinned: 1 << 1,
       requires_tag: 1 << 4,
       hide_download_options: 1 << 15,
-      obfuscated: 1 << 17
+      obfuscated: 1 << 17,
+      spoiler: 1 << 21
     }.freeze
 
     # Map of forum layouts.
@@ -439,9 +440,21 @@ module Discordrb
     # Get the time at when this channel was created at.
     # @return [Time] The time at when the channel was created.
     def creation_time
-      return @create_timestamp if @create_timestamp
+      @create_timestamp || super
+    end
 
-      Time.at(((@id >> 22) + Discordrb::DISCORD_EPOCH) / 1000.0)
+    # Check if the channel is a spoiler channel.
+    # @return [true, false] Whether or not this channel is marked as a spoiler channel.
+    def spoiler?
+      return false if nsfw?
+
+      # Somehow, this flags can be set on individual threads that don't
+      # have a spoiler parent as well, through the raw API (as of 7/25/2026).
+      if thread?
+        @flags.anybits?(FLAGS[:spoiler]) || parent&.spoiler?
+      else
+        @flags.anybits?(FLAGS[:spoiler])
+      end
     end
 
     # Sets whether this channel is NSFW
